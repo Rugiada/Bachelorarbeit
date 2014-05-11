@@ -1,0 +1,727 @@
+\documentclass[a4paper, 11pt, oneside, BCOR=20mm, DIV=calc, headings=small, abstracton, parskip=half*, headsepline, numbers=enddot, toc=bibliography, toc=listof]{scrreprt}
+
+\usepackage[bibencoding=latin1, backend=bibtex8, sorting=nty,language=ngerman, style=authoryear-icomp, citestyle=authoryear-icomp,bibstyle=authoryear-icomp]{biblatex}
+
+\addbibresource{literatur}
+\usepackage[latin1]{inputenc}
+\usepackage[babel, german=quotes]{csquotes}
+\usepackage[ngerman]{babel}
+\usepackage[automark]{scrpage2}	%FuÃŸnoten formatieren
+\pagestyle{scrheadings}					%FuÃŸnotenformatierung Ã¼bernehmen
+\usepackage{graphicx}						%Einbinden von Grafiken
+\usepackage{pdfpages}
+\usepackage{array}							%Tabellenextra
+\usepackage{setspace}
+\usepackage{url}
+\usepackage[colorlinks=false, allcolors=black, urlbordercolor={1 1 1}, linkbordercolor={1 1 1}, pdftitle = {Konzeption eines Ressourceneffizienz-Quickcheck},pdfauthor = {Daniel Becker}]{hyperref}
+\typearea[current]{calc}
+\addtolength{\skip\footins}{8mm}
+\addtolength{\footnotesep}{2mm}
+\onehalfspacing
+\setlength{\parskip}{6pt}
+
+\usepackage[tocgraduated]{tocstyle}
+\usetocstyle{allwithdot} 
+
+
+\setlength{\bibhang}{1em} %Länge ggf. anpassen
+\setlength{\bibitemsep}{0.25\baselineskip} %Länge ggf. anpassen
+
+\renewcommand*\chapterheadstartvskip{\vspace*{-1cm}}
+\renewcommand*{\sectfont}{\bfseries}
+\usepackage{geometry}
+\geometry{includehead, includefoot, left=3.5cm,right=2.5cm,top=1cm,bottom=2cm}%\usepackage[headings]{fullpage}
+\usepackage[format=default,font=footnotesize,labelfont=bf]{caption}
+
+\begin{document}
+\pagenumbering{roman}
+\include{title}
+\include{Angaben}
+\tableofcontents
+\listoffigures
+\chapter{Einleitung}\label{Einleitung}
+\pagenumbering{arabic}
+
+\section{Zielstellung dieser Arbeit}\label{Zielstellung der Arbeit}
+Die bereits in den 1970er Jahren prognostizierte Verknappung der Ressourcen und der stetig steigende Rohstoffbedarf der wachsenden Entwicklungs- und Schwellenländer machen einen verantwortungsvollen Umgang mit den verfügbaren Ressourcen unabdingbar [\citeauthor[vgl.][]{Meadows1972} \citeyear{Meadows1972}]. Die infolge dessen steigenden Rohstoffpreise machen den effizienten Einsatz der natürlichen Ressourcen zu einem wesentlichen Kostenfaktor. In einer Zeit, in der Nachhaltigkeit immer stärker im Bewusstsein der Gesellschaft verankert ist, erwächst aus dem verantwortungsvollen Umgang mit der Natur auch ein moralischer Wettbewerbsvorteil für entsprechend agierende Produzenten [\cite{Prof.DrMarioSchmidt2010}].
+
+Der Volkswagen Konzern hat das Thema Nachhaltigkeit als wichtiges Handlungsfeld erkannt. Um eine kontinuierliche Verbesserung der Produktionsprozesse zu erreichen werden immer neue Möglichkeiten der Prozess-Visualisierung und -Optimierung gesucht, um Handlungsfelder und Potentiale für eine Steigerung der Ressourceneffizienz aufzuzeigen. Im Bereich der Forschung bietet der Volkswagen Konzern auch angehenden Hochschulabsolventen die Möglichkeit, dieses Themengebiet in ihren Abschlussarbeiten zu erörtern.  
+
+Mit der Bearbeitung dieser Bachelorarbeit soll das Konzept für einen Ressourcen-Effizienz-Quickcheck als Webanwendung, für die \emph{Volkswagen AG}, entwickelt und ein erster Prototyp realisiert werden. Die Anforderung an eine webbasierte Softwarelösung begründet sich hierbei aus der Tatsache, dass sowohl das Ergebnis dieser Arbeit als auch die Anwendergruppe nicht im Vorhinein festgelegt sind. Eine webbasierte Anwendung kann dem somit im Rahmen dieser Arbeit zu identifizierenden Anwender ohne großen administrativen Aufwand, im Browser, zugänglich gemacht werden.
+
+Nach der grundlegenden Betrachtung, was Ressourceneffizienz für die \emph{Volkswagen AG} bedeutet und welche Vorteile dem Unternehmen daraus erwachsen, sollen in dieser Arbeit folgende zwei Fragestellungen beantwortet werden:
+\begin{itemize}
+	\item Wie kann ein Ressourceneffizienz-Quickcheck aussehen und welche Funktionalitäten muss dieser haben?
+	\item Für welche Anwendergruppe ist ein solcher Quickcheck sinnvoll zu konzipieren, um eine verbesserte Ressouceneffizienz zu erreichen?
+\end{itemize}
+
+Um die Beantwortung dieser offenen Fragestellung sicherzustellen und zugleich einen funktionsfähigen Prototypen einer Webanwendung zu realisieren ist ein besonders strukturiertes Vorgehen notwendig, welches im Folgenden dargestellt wird.
+
+\section{Vorgehen und Struktur dieser Arbeit}
+Bei der Konzeption und Realisierung eines \emph{Ressourceneffizienz-Quickcheck} handelt es sich um ein Softwareprojekt. Für eine erfolgreiche Umsetzung soll die Vorgehensweise sowohl zur Realisierung, als auch zur Erstellung dieser Arbeit nach den klar strukturierten Phasen der Softwareentwicklung ausgerichtet werden. Diese Phasen sind allgemein wie in Abbildung \ref{SoftwareentwicklungPhasen} gegliedert.
+\begin{figure}[htbp]%
+\includegraphics[width=\columnwidth]{SoftwareentwicklungPhasen.pdf}%
+\caption{Die Phasen der Softwareentwicklung [\cite{Abts2011}, S. 338]}%
+\label{SoftwareentwicklungPhasen}%
+\end{figure}
+
+Je nach Projektumfang, Risiken und Zahl der Projektbeteiligten gibt es verschiedene Vorgehensmodelle, die diese Phasen unterschiedlich durchlaufen. Diese lassen sich in zwei Kategorien unterteilen: linear oder iterativ.
+
+\paragraph{Lineare Vorgehensmodelle} folgen der Idealvorstellung, jeden der Schritte nacheinander in sich abzuschließen, um am Ende ein fertiges Produkt zu besitzen. Hierbei wird davon ausgegangen, dass das geforderte Ziel der jeweils vorherigen Phase zu 100\% und fehlerfrei erreicht wurde. Wenn ein Fehler auftritt, ist wenn im Projekt vorgesehen, nur ein schwieriger Rückschritt in die jeweils vorherige Phase möglich. Kommen während des Projektes neue Anforderungen hinzu, können diese nicht spontan berücksichtigt werden, sondern erfordern ein neues Softwareprojekt. Vorteilhaft bei dieser Vorgehensweise ist, dass der Projektverlauf sehr klar strukturiert ist und die Erreichung von Meilensteinen und somit der Projektfortschritt und Erfolg sehr gut überprüft  und die Projektdauer prognostiziert werden kann [\cite[vgl.][]{Kersken2011}]. 
+
+\paragraph{Iterative Vorgehensmodelle} dagegen durchlaufen die Phasen Analyse, Entwurf, Implementierung und Test mehrfach. Jeder Durchlauf erweitert und vervollständigt hierbei das Produkt. Erkenntnisse des letzten Durchlaufs, sowie geänderte Anforderungen können hierbei entsprechend berücksichtigt werden. Durch das schnelle entwickeln erster Programmentwürfe kann zudem der Kunde bereits während der Entwicklung einbezogen werden, dessen Feedback entsprechend direkt in die nächste Phase einfließen kann. Hierbei besteht die Gefahr, dass ständige Änderung der Anforderungen und nur schrittweise Annäherung an das Projektziel zu einem zahlreichen Durchlauf der Phasen führt. Nachteilig ist auch die schwierigere Prognose der Projektdauer und die Beurteilung des Projektfortschrittes. Zudem steigt der Dokumentationsaufwand, durch den mehrfachen Durchlauf der Phasen und die ständige Änderung der Anforderungen [\cite[vgl.][]{Kersken2011}].
+
+Sowohl für das lineare als auch das iterative Vorgehen gibt es mehrere Vorgehensmodelle, mit entsprechenden Vorteilen und verschiedenen Ansätzen, die immanenten Nachteile zu kompensieren. Einen guten Überblick über das Vorgehen und die Vor- und Nachteile der jeweiligen Vorgehensmodelle gibt das Buch:\newline\citetitle{AlexanderSchatten2010} (\citeauthor{AlexanderSchatten2010}, \citeyear{AlexanderSchatten2010}). Eines davon ist das inkrementelle Vorgehensmodell.
+
+\paragraph{Das inkrementelle Vorgehensmodell} gehört zu den iterativen Vorgehensmodellen, da es die eingangs genannten vier Phasen mehrfach durchlaufen kann. Hierbei wird der Fokus so gesetzt, dass die Kernanforderung des Kunden bzw. der am schwersten zu realisierende Teil der Software zuerst erarbeitet wird. In der nächsten Iteration wird diese Kernanforderung um entsprechend weitere Funktionen ergänzt oder erweitert. Dem Kunden kann nach Umsetzung der Kernanforderung ein erstes Programm gezeigt und dieses ggf. angepasst werden. Ist die Kernanwendung definiert, wird diese möglichst nicht mehr geändert und die Erweiterungen werden realisiert. Die Umsetzung der weiteren Funktionen kann nach Umfang oder Kundenwunsch priorisiert werden. Durch diesen Kompromiss aus beiden Vorgehensarten kann der Projektverlauf noch recht gut eingeschätzt werden. Die Gefahr endloser Schleifendurchläufe ist durch die grundlegende Erfüllung der Kernanforderungen nahezu ausgeschlossen, eine spätere grundlegende Änderung dieses Kernes aber auch. Trotz eines relativ starr linearen Vorgehens zur Erreichung der Kernanforderungen bleibt das Projekt flexibel für Änderungen und Erweiterungen [\cite{AlexanderSchatten2010}].
+
+
+Für die Erstellung dieser Arbeit und die Realisierung der Software wird das inkrementelle Vorgehensmodell gewählt, da es einen guten Kompromiss zwischen dem starr linearen Vorgehen und dem flexiblen iterativen Vorgehen darstellt.
+
+Für die Bearbeitung dieser Arbeit bedeutet dies, die vier Phasen Analyse, Entwurf, Implementierung und Test werden einmal durchlaufen. Ergeben sich während der Bearbeitung neue Erkenntnisse oder Anforderungen, werden diese in einer weiteren Iteration hinzugefügt. Am Ende der Arbeit existiert ein funktionsfähiger Prototyp mit einer Beschreibung und Priorisierung der noch zu realisierenden Funktionen.
+
+Die Definition der System- und Softwarevoraussetzungen wird hierbei in die Entwurfsphase verlegt, wie dies in \citetitle{AlexanderSchatten2010} [\citeauthor{AlexanderSchatten2010}, \citeyear{AlexanderSchatten2010}] als "`offenes Konzept"' beschrieben ist. Dies ist erforderlich, da der Anwender und resultierend die Systemanforderungen noch nicht identifiziert werden können.
+
+Die Analysephase orientiert sich an dem sehr vereinfachten Analysekonzept aus den Vorlesungsfolien von Marco \citeauthor{Fuchs2009} (\citetitle{Fuchs2009}, \citeyear{Fuchs2009}), da die Softwareanforderungen ebenfalls noch nicht bekannt sind. Mithilfe dieser allgemeinen Struktur können diese entfallen und die Spezifikation während der Bearbeitung erfolgen. Das Vorgehen bietet eine gute Struktur um sicherzustellen, systematisch alle für die Entwurfsphase benötigten Information und Zusammenhänge zu erfassen. Die sich an ein Softwareprojekt anschließende Dokumentation erfolgt mit dieser Bachelorarbeit. Diese wird um ein Benutzerhandbuch und eine Installationsanleitung ergänzt und ebenso wie der Quellcode dem Anhang dieser Arbeit beigefügt.
+
+Mit Anwendung der dem Projekt angepassten Vorgehensweise auf den Aufbau dieser Bachelorarbeit ergibt sich die in Abbildung \ref{GliederungBT} dargestellte Gliederung.
+\addtolength{\oddsidemargin}{2cm}
+\addtolength{\evensidemargin}{-2cm}
+\begin{figure}[htbp]%
+\includegraphics[width=1.05\columnwidth]{GliederungBT.pdf}%
+\caption{Schematische Darstellung des Aufbaus der Bachelorarbeit [eigener Entwurf]}%
+\label{GliederungBT}%
+\end{figure}
+\addtolength{\evensidemargin}{2cm}
+\addtolength{\oddsidemargin}{-2cm}
+
+Vor der sich anschließenden thematischen Analyse soll hier ein erster Überblick über die \emph{Volkswagen AG} gegeben werden, um das Umfeld der Betrachtungen darzustellen und als Grundlage für die nähere Analyse zu dienen. 
+
+\section{Vorstellung des Unternehmens}
+\subsection{Der Volkswagen Konzern}
+Der Volkswagen Konzern ist einer der führenden Automobilproduzenten der Welt, mit über 8.2 Mio. produzierten Fahrzeugen und über 500.00 Beschäftigten im Jahr 2011. Die 12 unter dem Dach des Volkswagen Konzerns eigenständig operierenden Marken bieten dabei eine breite Modellvielfalt, vom verbrauchsoptimalen Kleinwagen über Fahrzeuge der Luxusklasse hin zu Nutzfahrzeugen und LKW. Die Produktion der Fahrzeuge erfolgt an über 100 Standorten verteilt über 27 Länder weltweit [\cite{Kommunikation2013}]. 
+
+\begin{quote}
+Ziel des Konzerns ist es, attraktive, sichere und umweltschonende Produkte anzubieten, die im zunehmend scharfen Wettbewerb auf dem Markt konkurrenzfähig und jeweils Weltmaßstab in ihrer Klasse sind [Internet: \cite{Volkswagen2013}].
+\end{quote}
+
+An der Spitze der hierarchischen Organisationsstruktur des Volkswagen Konzerns steht, wie vom Aktienrecht vorgeschrieben, der Konzernvorstand und der Aufsichtsrat. Die 12 Marken sind ebenso hierarchisch, wie sie historisch zusammengewachsen sind, in Markengruppen gegliedert. 
+
+Die Zentrale des Konzerns und größter Produktionsstandort der Marke VW ist Wolfsburg. Die hier zur Zeit mehr als 50.000 Mitarbeiter haben im Jahr 2011 mehr als 800.000 Fahrzeuge produziert. Wobei der Großteil der Beschäftigten hier nicht in der Produktion, sondern in indirekten Bereichen des Konzerns beschäftigt ist.
+
+Der Konzern ist in Organisationseinheiten gegliedert ausgehend von der Konzernleitung führt die Hierarchie weiter in die Bereiche Forschung und Entwicklung, Beschaffung,Vertrieb und Marketing, Produktion, Personal und Organisation sowie Finanzen und Controlling. Diese sind in Abteilungen und Unterabteilungen gegliedert.
+
+\subsection{Die Abteilung Umwelt-Produktion}
+Der Konzernweite Umweltschutz ist im Bereich Forschung und Entwicklung angesiedelt und teilt sich wiederum in die Abteilungen Umwelt-Produkt, Umwelt-Produktion und Umwelt-Strategie, die entsprechend die Umweltaspekte des Fahrzeuges selbst oder der Fahrzeugherstellung betrachten, bzw. die längerfristige strategische Entwicklung der Umweltaspekte gestalten.
+
+Die Abteilung Umwelt-Produktion, in der die Bearbeitung dieser Bachelorarbeit erfolgt, gliedert sich weiter in Unterabteilungen nach ökologisch und gesetzlich relevanten Themenschwerpunkten wie Gewässerschutz, Abfall, Energie, Immissionsschutz, Umweltmanagement und Umweltschutz Wolfsburg. Diese über\-nehmen themenbezogen die Beratung, Förderung, Planung, Steuerung und Koordination in produktionsbezogenen, umweltschutzrelevanten Belangen. Weitere Aufgabenfelder stellen die Aggregation von Umweltkennzahlen, die Sicherung der relevanten Gesetzteskonformität sowie die Durchführung behördlicher Genehmigungsverfahren dar.
+
+Darüber hinaus werden strategische Umweltziele auf Konzernebene und deren Umsetzung mit Hilfe von Umweltbenchmarks erarbeitet und verifiziert.
+
+Die Bachelorarbeit wird in der Unterabteilung Immissionsschutz angefertigt. Hier wird zum einen die Einhaltung der relevanten gesetzlichen Vorgaben, z.B. des Bundesimmissionsschutzgesetzes (BImSchG), der BImSch-Verordnungen, der IED\footnote{Industrial Emissions Directive(IED): Richtlinie über Industrieemissionen} oder des TEHG\footnote{Treibhaus-Emissions-Handelsgesetz (TEHG)  oder korrekt "`Gesetz über den Handel mit Berechtigungen zur Emission von Treibhausgasen"'}, für die einzelnen Standorte besorgt. Zum anderen wird mit Fachkompetenz die Planung neuer Fabrikationsstätten und die Optimierung bestehender Standorte unterstützt. Dazu werden strategische Maßnahmen und Ziele formuliert, die geeignet sind, die Emissionen in die Umwelt zu reduzieren. Die Umsetzung dieser Maßnahmen wird fachlich begleitet und der gewünschte Erfolg verifiziert.
+
+Nachdem aus der Problemstellung folgend das weitere Vorgehen für diese Arbeit festgelegt und ein erster Einblick in den Volkswagen Konzern gegeben wurde, sind nachfolgend die erforderlichen Grundlagen zu erörtern. Wie in Abbildung \ref{GliederungBT} dargestellt, wird zuerst das Themenfeld Ressourceneffizienz analysiert, um die Grundlage für eine thematisch nähere Betrachtung des Volkswagen Konzerns zu ermöglichen. Dafür soll das nachfolgende Kapitel eine Definition von Ressourceneffizienz und \emph{Ressourceneffizienz-Quickcheck} geben, um diese in einer detailierteren Betrachtung der \emph{Volkswagen AG}  anwenden zu können.
+
+\chapter{Ressourceneffizienz und Ressourceneffizienz-Quickcheck}
+\section{Ressourceneffizienz und Nachhaltigkeit}\label{RessourceneffizienzNachhaltigkeit}
+In der Literatur wird der Begriff Ressourceneffizienz ganz selbstverständlich verwendet, ohne diesen zu definieren. Im Duden ist der Begriff ebenfalls nicht definiert. Hier finden sich aber die Definitionen von "`Ressource"' und "`Effizienz"'. Der Begriff \emph{Ressource} ist wie folgt definiert: \emph{"`natürlich vorhandener Bestand von etwas, was für einen bestimmten Zweck, besonders zur Ernährung der Menschen und zur wirtschaftlichen Produktion, (ständig) benötigt wird."'} Für den Begriff \emph{Effizienz} findet sich die Definition: \emph{"`Wirksamkeit und Wirtschaftlichkeit"'}. Ressourceneffizienz bedeutet demnach den wirksamen und wirtschaftlichen Einsatz von etwas, aus einem natürlichen Bestand für etwas mit einem bestimmten Zweck zur Ernährung des Menschen und zur wirtschaftlichen Produktion, das ständig benötigt wird.
+
+Der Einsatz von Etwas für Etwas ist sehr unspezifisch. Um das heutige Verständnis von Ressourceneffizienz aufzuzeigen und eine für diese Arbeit verwendbare Definition zu erhalten, ist die historische Entstehung des Begriffes, die sich eng mit dem Leitbild der Nachhaltigen Entwicklung verbindet, zu betrachten.
+
+In den 1970er Jahren wurde sichtbar, dass die ökonomische Entwicklung und der technologische Fortschritt auf Kosten der Umwelt und ihre natürlichen Ressourcen gehen. Stichworte waren die Wasser- und Bodenverschmutzung, Abholzung, Waldsterben sowie der steigende Konsum, die zunehmende Industrialisierung aber auch eine wachsende Armut in anderen Teilen der Erde. 1972 fand in Stockholm die \emph{UN-Umweltschutz-Konferenz} statt und versuchte erstmals, diese Probleme zu lösen [\cite{Gardizi2009}].
+
+Die Grenzen eines Wachstums, das auf Ressourcenverbrauch und Umweltzerstörung beruht, sind schon seit dem Bericht des Club of Rome Anfang der 1970er Jahre bekannt [\cite{Borgwardt2010}]. Die Politik reagiert mit Umweltschutzprogrammen und erlässt erste Gesetze. Dies führt zu so genannten End-of-Pipe-Technologien, welche die Umweltauswirkungen der industriellen Produktion mit nachgelagerten Prozessen und Technologien reduzieren sollen.
+
+Technologische Innovationen ermöglichen eine Steigerung der Ressourceneffizienz, welche, wie nachfolgende Definition zeigt, hauptsächlich als ökonomischer Wettbewerbsvorteil gesehen wird, der auch ökologische Vorteile mit sich bringt:
+\begin{quote}Eine Steigerung der Ressourceneffizienz bedeutet schlicht: ``Mehr mit weniger zu erreichen''. Das heißt, Rohstoffe, Materialien und Energie werden effizienter eingesetzt, um die Umwelt zu entlasten und Kosten zu reduzieren. Kurz gefasst: "`Mehr Ressourceneffizienz steigert die Wettbewerbsfähigkeit und entlastet die Umwelt."'
+Die Anreize für eine Steigerung der Ressourceneffizienz sind um so stärker, je höher Rohstoff- und Energiepreise sind. [\cite{Ploetz2009}, S. 42].
+\end{quote}
+
+Die in Folge der Globalisierung wachsende Konsumnachfrage aufstrebender Schwellen- und Entwicklungsländer kompensiert jedoch diese positiven Effekte. Um dieser Entwicklung zu begegnen, gründen die Vereinten Nationen die, häufig nach ihrer Vorsitzenden benannte, Brundtland-Kommission\footnote{Gro Harlem Brundtland ist die Vorsitzende der 1983 gegründeten internationalen Kommission für Umwelt und Entwicklung}. Diese präsentiert 1987 mit dem Zukunftsbericht "`Our Common Future"' ihre Ergebnisse, in dem die mittlerweile klassische Definition für Nachhaltigkeit enthalten ist:
+\begin{quotation}
+Nachhaltige Entwicklung ist eine Entwicklung, die den Bedürfnissen heutiger Generationen Rechnung trägt, ohne die Möglichkeiten zukünftiger Generationen zu gefährden, ihren eigenen Bedürfnissen nachzukommen.
+\end{quotation}
+Der Begriff der nachhaltigen Entwicklung wurde zum Schlüsselbegriff der umwelt- und entwicklungspolitischen Diskussion und diente als Grundlage für die \emph{UN-Umweltkonferenz 1992} in Rio de Janeiro. Hier verständigte sich die Weltgemeinschaft erstmals darauf, ihr politisches Handeln an dem Leitbild der Nachhaltigen Entwicklung(sutainable development) auszurichten, um sowohl die Umwelt und ihre natürlichen Ressourcen für zukünftige Generationen zu erhalten, als auch die wachsende Kluft zwischen Industrie- und Entwicklungsländern wieder zu verringern. Neben der Klima- und Artenschutzkonvention wurde die Agenda 21 verabschiedet, welche konkrete Handlungsempfehlungen gibt, wie Staaten, Bürger und Unternehmen maßgeblich an dieser Nachhaltigen Entwicklung mitwirken können [\cite{Gardizi2009}].
+
+Für Unternehmen ergibt sich hieraus die Herausforderung zur \emph{Coorporate Social Responsibility (CSR)\footnote{unternehmerische Gesellschaftsverantwortung (engl. Coorporate Social Responsibility): freiwilliger Beitrag eines Unternehmens zur nachhaltigen Entwicklung}}. Ziel ist es, die Trias, in welcher der ökonomische Erfolg den ökologischen und sozialen Aspekten der Nachhaltigkeit entgegensteht, zu durchbrechen und als sich bedingende Faktoren für eine Nachhaltigen Entwicklung zu etablieren.
+
+Unter heutigen Gesichtspunkten muss Ressourceneffizienz diesem Leitbild der Nachhaltigkeit Rechnung tragen und sowohl die ökonomischen, ökologischen und sozialen Aspekte berücksichtigen. 
+ 
+\section{Ressouceneffizienz}
+Zusammenfassend beschreibt der vorherige Abschnitt, wie sich der Blick auf Ressourceneffizienz im Laufe der Zeit verändert hat. Bedeutete Ressourceneffizienz erst eine reine Produktivitätssteigerung, das heißt "mehr mit weniger erreichen", wurden später sowohl der Ressourcenverbrauch als auch die resultierenden Emissionen in die Umwelt betrachtet.
+\begin{figure}[htbp]%
+\begin{center}
+	\includegraphics[width=0.6\columnwidth]{Ressourceneffizienz.pdf}%
+\end{center}
+\caption{Ressourceneffizienz als Teilmenge der Nachhaltigkeit [eigener Entwurf]}%
+\label{PicRessourceneffizienz}%
+\end{figure}
+
+Im Querschnittsfeld der Nachhaltigen Entwicklung stellt Ressourceneffizienz hier haupt\-säch\-lich eine Schnittstelle zwischen deren ökonomischen und ökologischen Faktoren dar, wie in Abbildung \ref{PicRessourceneffizienz} dargestellt. Da eine Ressourceneinsparung auch eine ökonomische Einsparung bedeutet und zumeist mit einer Verringerung der resultierenden Emissionen einhergeht. Der soziale Faktor wird nur insofern berührt, als das die resultierende Schonung der Umwelt und ihrer natürlichen Ressourcen, diese für nachfolgende Generationen erhält.
+
+Unter dem Gesichtspunkt der Nachhaltigkeit muss für eine Beurteilung der Ressourceneffizienz der gesamte Lebenszyklus eines Produktes betrachtet werden, welcher sich von der Rohstoffgewinnung über die Produktion hin zur Nutzungsphase und schließlich zum Recycling bzw. der Entsorgung erstreckt.
+
+Unter heutigen Gesichtspunkten muss Ressourceneffizienz also nicht nur mit einem möglichst geringem Einsatz von Rohstoffen, Materialien und Energieträgern eine maximale Produktivität erreichen sondern auch die insgesamt resultierende Umweltbelastung größtmöglich reduzieren. So ist neben der ökonomischen Wertschöpfungskette auch die ökologische Schadschöpfungskette relevant. Hierbei ist eine ganzheitliche Betrachtung des gesamten Lebenszyklusses eines Produktes erforderlich und muss auch die insgesamt entstehenden Abfälle, Abwasser und Emissionen betrachten [\cite{Wirtschaftslexikon2013a}].
+
+Da ein modernes Fahrzeug aus mehr als 10.000 Einzelteilen besteht, deren Produktion zu einem großen Teil in der Vorkette erfolgt und deren Recycling- bzw. Entsorgungswege ebenso komplex sind, wird eine Betrachtung der gesamten Wertschöpfungskette sehr umfangreich. Diese Arbeit beschränkt sich auf die Betrachtung des Produktionsstandortes, um die Komplexität entsprechend zu reduzieren. Da hier der unternehmenseigene Eintrag in die Schadschöpfungskette erfolgt, den es mit Hilfe des Ressourceneffizienz-Quickcheck zu reduzieren gilt, soll diese Betrachtung genügen.
+
+
+
+\section{branchenspezifische Ressourceneffizienz-Schnelltests (Ressourceneffizienz-Quickchecks)}\label{Branchencheck}
+Ein branchenspezifischer Ressourceneffizienz-Schnelltest soll eine schnelle Überprüfung der unternehmerischen Tätigkeiten auf Potentiale zur Steigerung der Ressourceneffizienz ermöglichen. Eine Erfassung und grobe Analyse der Produktionsabläufe und Prozesse soll mögliche Maßnahmen aufzeigen, die zu einer Steigerung der Ressourceneffizienz führen.
+
+Etablierte Ressourceneffizienz-Quickchecks (z.B. des Fraunhofer Instituts\footnote{http://www.oekobench.de/Seite\_02.htm} oder der Deutschen Material Effizienz Agentur, kurz DEMEA\footnote{http://www.materialeffizienz-selbstcheck.de/demea-selbstcheck}) ermitteln die erforderlichen Informationen mit Hilfe eines Fragebogens. Hier werden die relevanten, soweit bekannten, Unternehmenskennzahlen erfasst. So ist ein erster Vergleich des Verhältnisses von Umsatz und Produktmenge zu Material- und Rohstoffeinsatz sowie Energie und Wasserverbrauch mit anderen Unternehmen möglich.
+
+In einem weiteren Schritt wird eine erste grobe Bewertung der Produktionsprozesse vorgenommen. Hierbei steht das Alter der Produktionsanlagen und die somit zum Einsatz kommende Technologie im Vordergrund. Aus den Erfahrungswerten anderer Branchenteilnehmer, kann so für mögliche Massnahmen und Methoden ein Verbesserungspotential approximiert werden, ohne die detaillierten Prozesse zu kennen. Der von der DEMEA entwickelte Maßnahmenkatalog enthält neben den technologischen Maßnahmen auch solche zur Mitarbeiterschulung, -sensibilisierung, und zur Optimierung der logistischen, organisatorischen Abläufe und anderer Prozesse.
+
+Ist die grobe Einordnung erfolgt und Produktionsprozesse sind bekannt, können konkrete Maßnahmen sowohl effizientere Alternativprozesse als auch mögliche Prozessänderungen aufzeigen, die zu einer Verbesserung der Ressourceneffizienz führen. Die softwarebasierte Darstellung eines \emph{Ressourceneffizienz-Quickcheck} strukturiert die Daten hier in der Form, dass die verfügbaren Maßnahmen nach Branche und Produktionsprozessen bzw. Gewerken gefiltert und sortiert dargestellt werden. Der Nutzer kann sich so alle für seine Produktionsprozesse verfügbaren Maßnahmen anzeigen lassen.
+
+Die BAYER AG hat zur Senkung des Ressourcenverbrauchs einen "`Ressource Efficiency Check"' eingeführt. Dieses Instrument soll prozessorientierte Optimierungspotentiale beim Recycling, der Nutzung von Nebenprodukten sowie zur Aufbereitung von Abwaser und Abluft aufzeigen, um entsprechende Einsparpotentiale auszuschöpfen. Das modular aufgebaute Konzept ermöglicht spezifische, auf den Betrieb zugeschnittene Fragestellungen. Neben Energie und Rohstoffen werden hier auch bereits getroffene Maßnahmen erfasst, um zielgerichtete Maßnahmenkataloge und Optimierungswege auszuarbeiten. Diese werden anschließend nach Aufwand und Nutzen priorisiert [\cite{AG2013}].
+
+\section{Ressourceneffizienz-Quickcheck}\label{Ressourceneffizienz-Quickcheck}
+Aus der vorhergehenden Betrachtung folgernd ist ein Ressourceneffizienz-Quickcheck also ein Instrument, welches eine Systematik zur Ermittlung relevanter Daten der Produktionsprozesse vorgibt und aus einer Grobanalyse entsprechende Optimierungsmaßnahmen aufzeigt. Aus den Daten werden Kennzahlen gebildet, die eine quantitative Aussage über das aufgedeckte Potential sowohl wirtschaftlich als auch ökologisch zulassen und eine Bewertung von Aufwand und Nutzen zulassen.
+
+Nach der grundlegenden Betrachtung von Ressourceneffizienz und einer ersten Definition eines Ressourceneffizienz-Quickcheck ist im nachfolgenden Kapitel zu betrachten, wie Ressourceneffizienz im Volkswagen Konzern erreicht wird. So ist zu untersuchen, welche Methoden zur Steigerung der Ressourceneffizienz im Unternehmen erarbeitet und erfolgreich umgesetzt werden.
+
+\chapter{Ressourceneffizienz bei Volkswagen}
+Mit dem Ziel bis zum Jahr 2018 mehr als 10 Millionen Fahrzeuge zu produzieren trägt der Volkswagen Konzern eine besondere Verantwortung im Umgang mit den natürlichen Ressourcen. Eine Steigerung der Ressourceneffizienz ist hier sowohl ein entscheidender Faktor für mehr Wirtschaftlichkeit, als auch Ausdruck ökologischer Verantwortung. Sie leistet zudem einen Beitrag, die geopolitischen Auswirkungen auf die Rohstoffpreise abzufedern.
+
+\section{Think Blue.Factory}\label{TBF}
+Um einen effizienteren Ressourceneisatz in der Produktion zu erreichen, hat die Marke Volkswagen das Programm Think Blue.Factory initiiert. Diese hat das Ziel bis zum Jahr 2018 die Umweltbelastungen in allen Werken um 25\% zu reduzieren und zielt dabei auf die vier nachfolgend dargestellten Handlungsfelder ab:
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=1.0\columnwidth]{TBFFelder.pdf}%
+	\caption{Think Blue.Factory Handlungsfelder [\cite{Stauss}]}
+	\label{fig:tbf-Handlungsfelder}
+\end{figure}
+
+In Hinblick auf die Gesellschaft hat \emph{Think Blue.Factory} das Ziel, die ökologische Produktion transparent zu machen und durch Erreichen der Zielsetzung von den Kunden, Investoren und weiteren Stakeholdern als der ökologischste Automobilproduzent der Welt wahrgenommen zu werden.
+Der Wechsel von Kohlekraft auf Erdgaskraftwerke und einen fortlaufenden Ausbau des Anteils an erneuerbaren Energien ist ein wesentlicher Beitrag sowohl zur Ressourcenschonung als auch Emissionsminderung.
+
+Durch eine umfassende interne Berichterstattung werden die Mitarbeiter gezielt für Ressourceneffizienz sensibilisiert. Sowohl aus Verbesserungsvorschlägen der Mitarbeiter, als auch aus Ergebnissen der Umweltforschung werden Optimierungsmaßnahmen generiert und neue Fertigungstechniken etabliert, so dass eine kontinuierliche Verbesserung der Ressourceneffizienz erreicht wird.
+
+Experten aus der Produktion, der Planung und der Umweltabteilung des Volkswagen Konzerns haben die Maßnahmen hinsichtlich ihres Optimierungspotentials bewertet. Die erfolgversprechendsten Maßnahmen wurden in einem Maßnahmenkatalog gesammelt und den einzelnen Standorten zur Verfügung gestellt.
+
+Historisch bedingt haben die einzelnen Standorte unterschiedliche Ausgangsvoraussetzungen, hinsichtlich ihrer Umweltleistung. So begründet sich der Stand der Technik bereits aus unterschiedlichen Errichtungszeiträumen der Standorte. Zudem werden an den  Standorten unterschiedliche Fahrzeugtypen gefertigt, was eine weitere Diversifikation der Produktionsprozesse zur Folge hat. Daher erfolgt die Auswahl geeigneter Maßnahmen zur Erreichung der 25\%-Ziele direkt in den Standorten. Diese werden individuell auf ihr Optimierungspotential hin bewertet und priorisiert. Unter Berücksichtigung der zur Umsetzung benötigten Zeit werden Migrationspfade erstellt, welche die einzelnen Maßnahmenschritte und den zeitlichen Verlauf bis zur Zielerreichung im Jahr 2018 darstellen [\cite{Stauss}].
+
+Um eine Reduzierung der Umweltbelastung, die von einem Standort ausgeht, beurteilen zu können, muss diese sowohl für den Ausgangszustand als auch nach Umsetzung der einzelnen Maßnahmen quantifiziert werden. So kann der Erfolg einer Maßnahme und die resultierende Verbesserung ermittelt werden. Aus den, für die Umweltberichterstattung zu ermittelnden Kennzahlen, wurden fünf repräsentative Kennzahlen ausgewählt, die als Indikator sowohl eine Bewertung der Umweltauswirkungen als auch Rückschlüsse auf die Ressourceneffizienz ermöglichen. Erfasst werden hier der Energieverbrauch (elektrisch und thermisch), der Frischwasserverbrauch, die Emissionen von Kohlendioxid (CO$_{2}$) und Lösemitteln (VOC - Volatile Organic Compounds), sowie das zu beseitigende Abfallaufkommen. Der prozentuale Vergleich des Ausgangs- zum Ist-Zustand ergibt die bewertbare Leistungskennzahl, die in der Betriebswirtschaftslehre auch Key Perfomance Indikator (KPI) genannt wird.
+
+Sowohl die Zielsetzung der \emph{Think Blue.Factory} als auch die so verifizierbaren Zwischenerfolge werden im Nachhaltigkeitsbericht des Unternehmens kommuniziert. Über die Steigerung der eigenen Ressourceneffizienz hinaus engagiert sich Volkswagen in Verbänden und dem Arbeitskreis Energie- und Ressourceneffizienz des Niedersächsischen Landesministeriums für Umweltschutz und im Bundesverband der Deutschen Industrie (BDI) um eine branchenübergreifende effizientere Ressourcennutzung und -schonung zu erreichen.
+
+\section{Stoffstrommanagement}\label{Stoffstrommanagement}
+Um in der Fertigung einen effizienteren Ressourceneinsatz zu erreichen ist das sogenannte Stoffstrommanagement hilfreich. Dieses ermöglicht eine transparente, verursachungsgerechte Zuordnung von Energie- und Stoffströmen zu einzelnen Prozessschritten und erlaubt den Vergleich unterschiedlicher Szenarien und Technologien, so dass Optimierungspotentiale aufgedeckt werden können. Im Jahr 2011 wurde mit der Entwicklung eines Stoffstrommanagement-Systems begonnen, das mitlerweile in der Planung und Analyse von Lackieranlagen eingesetzt wird. Zur Zeit wird geprüft, ob dieses Tool auch Konzernweit eingesetzt werden kann [\cite{Stauss}].
+
+Das Stoffstrommanagement stellt eine besondere Form des Umweltmanagement dar, welches insbesondere auf die Optimierung der Ressourceneffizienz abzielt. Es ermöglicht die systematische Erfassung, Analyse und Optimierung von Energie- und Stoffströmen innerhalb eines betrachteten Systems mit dem Ziel, die Menge der benutzten Stoffe zu reduzieren, ihre Nutzung zu intensivieren, Emissionen zu reduzieren und ihren Kreislauf so weit wie möglich zu gewährleisten [\cite{Gebhardt2013}].
+
+Eine Stoffstromanalyse zerlegt den Betrieb dazu in seine stoffstromrelevanten Elemente und stellt diese in ihre stoffliche Beziehung zueinander. Sie zeigt so den Weg, den Stoffe und Energien durch den Betrieb nehmen und welche Transformationen auf diesem Weg erfolgen. Auf dieser Grundlage kann eine Schwachstellenanalyse erfolgen die zur Formulierung von Maßnahmen und Verbesserungen der Prozesse führt[\cite[vgl.][170]{Wohlgemuth2005}].
+
+Zur Erfassung der Daten, Verfolgung von Maßnahmen und Identifikation von Optimierungspotentialen kommen im Volkswagen Konzern verschiedene Softwareprodukte zum Einsatz. Da die systematische Datenerfassung, wie im Abschnitt \ref{Ressourceneffizienz-Quickcheck} wichtiger Bestandteil eines Ressourceneffizienz-Quickcheck ist, auf deren Grundlage Maßnahmen generiert und Schwachstellen identifiziert werden können, soll im nachfolgenden die relevante Software näher betrachtet werden, um von der Datenlage ausgehend ein eigenes Konzept für einen Ressourceneffizienz-Quickcheck entwickeln zu können.
+
+\section{Im Volkswagen Konzern eingesetzte Software und deren Anwendungsziele}
+\paragraph{Umwelt-Informations-System (UIS):}
+Ein Umweltinformationssystem stellt allgemein ein organisatorisch-technisches System zur systematischen Erfassung, Verarbeitung und Bereitstellung umweltrelevanter Informationen dar[\cite[143]{Wohlgemuth2005}].
+Das UIS im Volkswagen Konzern ist ein unternehmenseigenes Softwareprodukt, das die Umweltinformationen der Standorte dezentral erfassbar und die Informationen zentral verfügbar und auswertbar macht. Die Umweltbeauftragten der Standorte (oder von ihnen Beauftragte) können hier ihre standortspezifischen Umweltdaten melden und somit dem Konzern-Umweltschutz in der Abteilung Umwelt-Produktion oder zur Umweltberichterstattung der Abteilung Umwelt-Strategie zur Verfügung stellen. Diese nutzen diese Daten, um die Umweltkennzahlen für die Standorte zu generieren. Darüber hinaus bietet die Software die Möglichkeit, in entprechenden Modulen die Umweltinformationen zur behördlichen Berichterstattung zu dokumentieren und archivieren. Ein Altlasten-Modul ermöglicht sowohl eine geografische Zuordnung über ein Geoinformationssystem, als auch eine Dokumentation des Schadens und der Beseitigung, sowie eine Erfassung eventuell gegebener Messwerte. Ein VAwS\footnote{Verfahrensanweisung für Anlagen mit wassergefährdenden Stoffen}-Modul ermöglicht die Erfassung von Anlagen mit wassergefährdenden Stoffen in einem VAwS-Kataster und die Dokumentation und Planung gesetzlich vorgeschriebener Prüfintervalle. Nutzer hier sind die Sachkundigen für Umweltschutz, die in den einzelnen Gewerken die Einhaltung der Arbeits- und Betriebssicherheit besorgen.
+
+Für die Entwicklung eines Ressourceneffizienz-Quickcheck liegt hier eine Datenquelle vor, deren Auswertung wie im Abschnitt \ref{Ressourceneffizienz-Quickcheck} beschrieben die Grundlage für eine Analyse darstellen. Aus den hier gewonnenen Daten werden auch die im Abschnitt \ref{TBF} beschriebenen Key Performance Indikatoren(KPI) generiert, die eine Beurteilung der Umweltauswirkungen und Schlussfolgerungen auf die Ressourceneffizienz ermöglichen. Die Auswertung erfolgt allerdings nur auf Standortebene, so dass eine Beurteilung der einzelnen Prozesse und Prozessschritte nicht möglich ist. Auf Grund der magelnden Granularität können diese Daten somit nicht für die Erstellung des Ressourceneffizienz-Quickcheck genutzt werden.
+
+\paragraph{Digitale Fabrik:}
+In der Produktionsplanung kommt die Softwaresammlung "`Digitale Fabrik"' zum Einsatz. Diese ermöglicht die Planung zukünftiger Produktionsstätten mit Hilfe einer CAD-Software\footnote{Computer Aided Design}. Der Grundriss bzw. das erstellte 3D-Modell dient als Grundlage für die eigentliche Produktionsplanungssoftware, die es ermöglicht, die Produktionsprozesse darzustellen und zu simulieren. Ein weiterer Softwarebestandteil ermöglicht die Prozessdokumentation und Erfassung von Messwerten, mit deren Hilfe eine Schwachstellenanalyse bereits bestehender Produktionssysteme erfolgen kann. 
+
+Hauptaufgabe der Software ist es, die Produktionsprozesse vor dem Bau der realen Fabrik so zu strukturieren und optimieren, dass eine reibungslose Produktion möglich ist. Der Fokus liegt hierzu auf dem möglichst nahtlosen ineinander greifen der Prozesse und der bedarfsgerechten Bereitstellung der Prozessmaterialien. Ziel ist es, Engpässe und Staus in der realen Produktion später auszuschließen.
+
+Da mit der Optimierung der Produktionsprozesse meist eine gewisse Steigerung der Ressourceneffizienz einher geht, hat diese hier lange Zeit keinen besonderen Stellenwert erhalten und wurde als positiver Nebeneffekt betrachtet. Die Zielvorgaben der "`Think Blue.Fac\-tory"' haben hier dazu geführt, dass bereits bestehende Produktionssysteme simuliert werden. Die Simulation wird mit Messwerten aus der realen Produktion und die Auswirkung von Prozessänderungen auf dieser Grundlage dargestellt. Mit Hilfe einer Schwachstellenanalyse und anschließender Simulation verschiedener Optimierungsansätze konnte hier eine Absenkung der Grundlast im Energieverbrauch für mehrere Gewerke erreicht werden. Zur Zeit wird an effektiven Möglichkeiten gearbeitet, auch die anderen Material- und Stoffströme möglichst genau zu erfassen um auch hier eine Schwachstellenanalyse der bestehenden Systeme zu ermöglichen.
+Sowohl die so erhaltenen Messwerte, als auch die Erfahrungen der Schwachstellenanalyse können wiederum in die Planung neuer Produktionsprozesse einfließen, somit die Simulationsergebnisse präzisieren und Produktionsprozesse weiter optimieren.
+
+Gelingt die Erhebung aller Stoffströme und deren Analyse, stellt die Digitale Fabrik ein bedeutendes Instrument zur Steigerung der Ressourceneffizienz dar. Im praktischen Einsatz ist eine detaillierte Erfassung direkt am Prozess allerdings nur bedingt möglich, so dass die Werte nur für mehrere Produktionsschritte oder gar ganze Gewerke erfasst werden können.
+
+Der zu erstellende Ressourceneffizienz-Quickcheck kann hier von den Messwerten der Prozesse profitieren. Liegen diese für verschiedene Prozessoptionen vor, ist ein Vergleich möglich. Aber auch eine wie im Abschnitt \ref{Ressourceneffizienz-Quickcheck} beschriebene Schätzung gewinnt durch die konkretere Grundlage an Genauigkeit.
+Die Software selbst kommt für einen Quickcheck nicht in Frage, da das Produktionssystem aufwendig abgebildet und die Simulation mit sehr detaillierten Daten durchgeführt werden muss. Dafür bietet die Software aber eine wesentlich genauere Betrachtung der Prozesse und ermöglicht eine detaillierte Schwachstellenanalyse, wie sie für die Prozessplanung benötigt wird.
+
+\paragraph{Prozess-Wissens-Management (PWMS):}
+Das Prozess-Wissens-Management ist eine webbasierte Softwareanwendung, die eine ARIS\footnote{Architektur integrierter Informationssysteme (ARIS): Methode, die als Vorgehensmodell zur Abbildung und Optimierung von Geschäftsprozessen dient.\cite{2013a}}-kompatible Prozessdarstellung mit der Möglichkeit einer Prozessdokumentation und der Darstellung von Verbesserungsmaßnahmen kombiniert.
+
+Das Programm zeigt neben der Prozeßstruktur auch die Abhängigkeiten zu anderen Prozessen und die an den Prozessen beteiligten Akteure auf. Die Dokumentation der Prozesse soll das für den Prozess benötigte Wissen zur Verfügung stellen und zugleich die eventuell benötigten Unterlagen und Formulare bereithalten. Eine Versionierung der Prozesse ermöglicht das Aufrufen einer Prozesshistorie bzw. ausgehend von einem vorherigen Prozess die erforderliche Neustrukturierung und das damit verbundene Verbesserungspotential. Eine Übersicht stellt alle Prozessbeteiligten dar und ermöglicht zielgerichtete Kontaktaufnahme und Dokumentweiterleitung innerhalb der Anwendung.
+
+Aufgrund der Betrachtung als Geschäftsprozesse ist die Software nicht für die Produktionsprozesse ausgelegt und eine entsprechende Betrachtung von Material- und Stoffströmen nicht möglich. In Geschäftsbereichen jenseits der Produktion, z.B. Beschaffung, Logistik, Vertrieb, verspricht der Einsatz eine Verbesserung der Ressourceneffizienz in diesen Bereichen, wenn gleich hier keine Bewertung der Maßnahmen erfolgt und auf Grund mangelnder Vergleichsparameter keine prozentuale Verbesserung angegeben werden kann.
+Die Möglichkeit, die Verbesserungsvorschläge und Maßnahmen direkt am Prozess abzubilden, stellt allerdings einen guten Ansatz dar, der bei der Entwicklung eines Ressourceneffizienz-Quickcheck berücksichtigt werden sollte.
+
+\paragraph{Umberto:}
+Umberto\footnote{Stoffstrommanagementsoftware der ifu Hamburg GmbH} ist ein Softwarewerkzeug zur Stoffstrommodellierung, welches im Volkswagenkonzern in der Markenplanung Lackiererei und der Abteilung Umwelt-Produktion als Pilotprojekt zum Einsatz kommt. Es ermöglicht die Modellierung, Visualisierung und Berechnung sowie die Simulation und Bewertung von Stoff- und Energieströmen [\cite[28 ff.]{Witte2010}].
+
+Die Modellierung der Produktionsprozesse erfolgt auf Basis der Petrinetz-Logik und ermöglicht eine strukturiert systematische Erfassung der für eine stoffstromorientierte Betrachtung notwendigen Informationen. Das generierte Netz kann als Grundlage für eine ebenfalls verfügbare Sankey-Darstellung dienen, welche die Stoffströme innerhalb des Systems quantitativ visualisiert und die Beziehungen der in Transitionen dargestellten stofflichen Umwandlungsprozesse zueinander darstellt.
+
+An definierten Input- und Outputstellen können die von den Transitionen benötigten Stoff- und Energieströme in das System gelangen bzw. dieses verlassen. Die Erhebung der Input- und Outputmengen ermöglicht die Erstellung von Material-, Energie- und Ökobilanzen. Da neben der Erfassung der Stoff- und Energieströme auch deren monetäre Bewertung möglich ist, kann auch eine Darstellung der Wertströme innerhalb des Systems erfolgen. Die Visualisierung erfolgt hier mit Hilfe der Sankey-Darstellung, welche die Stoff-, Energie- und Wertströme im System quantitativ visualisiert. Die gleichzeitige Bilanzierung auch der Wertströme ermöglicht eine stoffstrombasierte Kostenrechnung. 
+
+Ausgehend von der grafischen Darstellung und Bilanzierung, die auch für Teilsysteme möglich ist, können die ressourcenintensiven Prozesse identifiziert und analysiert werden. In Szenarien können nun alternative Prozesse simuliert und die resultierenden Stoff- und Energieströme berechnet werden. Die unterschiedlichen Szenarien können zudem für unterschiedliche Bilanzzeiträume betrachtet werden.
+
+Umberto ermöglicht so ausgehend von der Analyse, die Identifikation von ressourcenintensiven Prozessen, die Simulation von Alternativprozessen und Verbesserungsmaßnahmen und durch die kombinierte Stoff- und Wertstrombilanz eine Bewertung der ökologischen und ökonomischen Auswirkungen. 
+
+Umberto ist ein speziell zur Optimierung der Stoffströme und damit zur Steigerung der Ressourceneffizienz entwickeltes Softwareinstrument. Neben einer sehr guten Prozesskenntnis ist für die Nutzung ein gutes Systemverständnis und die Fähigkeit zur Systemmodellierung Voraussetzung. Die Abbildung von Produktionsprozessen in Umberto und die Beschaffung der zur Simulation notwendigen Daten sowie die Ermittlung der Prozessbeziehungen zu einander ist sehr zeitaufwendig, so dass ein Quickcheck mit der Software selbst nicht möglich ist.
+
+Für einen Ressourceneffizienz-Quickcheck kann die Software entscheidende Daten zur Verfügung stellen, insofern die zu betrachtenden Prozesse bereits modelliert sind. Andererseits können die mit Hilfe des Quickchecks gegebenenfalls ermittelten Maßnahmen mit Hilfe von Umberto detaillierter untersucht und deren Optimierungspotential präzisiert werden.
+
+\paragraph{Maßnahmen@web:}\label{massnahmen@web}
+Maßnahmen@web ist der Name einer Konzern-eigenen in Java programmierten Intranetanwendung. Sie ermöglicht die Erfassung von Maßnahmen zur Optimierung von Produktionsprozessen, sowie die Zielverfolgung der Umsetzung mit anschließender Bewertung der Umsetzbarkeit und des Verbesserungspotentials.
+
+Die als Intranetanwendung Konzern-weit verfügbare Software richtet sich sowohl an Mitarbeiter in der Produktion, als auch in der Planung. Diese können einen Verbesserungsvorschlag, unter Angabe des Standortes und des betreffenden Gewerkes, direkt in das System einpflegen. Nach fachlicher Prüfung der Umsetzbarkeit erfolgt die Planung zur konkreten Umsetzung. Maßnahmen@web ermöglicht hier die Erfassung des Investitionsbedarf und die Definition wichtiger Projektschritte als Meilensteine zur Zielverfolgung. So genannte Härtegrade zeigen den Status der Maßnahme auf, die reichen von (1)"`in Planung"' bis (5)"`Maßnahme umgesetzt"', oder entsprechend (9)"'Umsetzung gescheitert"'.
+
+In weiteren Eingabefeldern kann das Verbesserungspotential der Maßnahme angegeben und die entsprechende Berechnung zur Nachvollziehbarkeit hinterlegt werden. Hier kann das jährliche finanzielle Einsparpotential ebenso angegeben werden, wie die zuvor in Abschnitt \ref{TBF} beschriebenen fünf Kennzahlen Energie, Wasser, Abfall, CO$_{2}$ und VOC, ebenfalls für ein Jahr. Die Werte für Energie können in elektrische Energie, Wärmeenergie und pneumatische Energie differenziert werden. Da im Softwaresystem die Emissionsfaktoren differenziert für die einzelnen Standorte und Energiearten hinterlegt sind, kann die Berechnung der CO$_{2}$-Einsparung automatisch erfolgen. Aus dem Investitionsbedarf und dem angegebenen finanziellen Einsparpotential wird zudem der "`Return On Investment"'(ROI) berechnet.
+
+Ist eine Maßnahme erfolgreich umgesetzt, wird diese an die Umweltbeauftragten aller Standorte weitergeleitet, damit diese die in den Fachabteilungen die Übertragbarkeit der Maßnahme auf die eigenen Produktionsprozesse prüfen. Die Übertragbarkeit einer Maßnahme wird ebenso im System hinterlegt. Die Mitarbeiter und Planer der Standorte können über ein Formular, mit diversen Such- und Filteroptionen, auf die hinterlegten Maßnahmen zugreifen und mit Hilfe der hinterlegten Informationen sowohl die Anwendbarkeit, als auch das damit verbundene Verbesserungspotential für das eigene Gewerk ermitteln. Die über 10.000 verfügbaren Maßnahmen können hier nach Suchbegriffen (Maßnahmenbezeichnung und Volltextsuche) und Gewerk gefiltert werden. Weitere Filterkriterien sind z.B. Umsetzbarkeit, Härtegrad und Standort, so dass eine gezielte Eingrenzung der anzuzeigenden Maßnahmen möglich ist.
+Die im Abschnitt \ref{TBF} beschriebenen besonders effizienten "`Think Blue.Factory"'-Maßnahmen sind hier ebenfalls hinterlegt. Ein Screenshot der "`Maßnahmen-Suchfunktion"' mit diesen Filterkriterien zeigt die Abbildung \ref{mweb-Suche}.
+\begin{figure}[htbp]%
+\includegraphics[width=1.0\columnwidth]{mweb-Suche.pdf}%
+\caption{Maßnahme@web Screenshot [Intranet der Volkswagen AG]}%
+\label{mweb-Suche}%
+\end{figure}
+
+Durch das Aufzeigen konkreter Maßnahmen zur Verbesserung der Produktionsprozesse stellt \emph{Maßnahmen@web} eine wichtige Software zur Steigerung der Ressourceneffizienz dar. Da es sich um eine unternehmensinterne Software handelt kann eine Beschreibung der Maßnahmen auch für einzelne Prozessschritte sehr detailliert erfolgen, ohne eine Verletzung möglicher Betriebsgeheimnisse befürchten zu müssen. 
+
+Die erfolgte Bewertung der Maßnahmen und die Möglichkeit zur Projekt- und Zielverfolgung integriert hier zudem die Aspekte des Umweltmanagements und ermöglicht die Priorisierung der Maßnahmen genauso, wie die Bewertung und Umsetzung. \emph{Maßnahmen@web} geht somit über die Anforderungen an einen Ressourceneffizienz-Quickcheck hinaus.
+
+Nachfolgend ist dargestellt, wie \emph{Maßnahmen@web} sinnvoll ergänzt werden kann um einen Ressourceneffizienz-Quickcheck zu ermöglichen:
+
+\begin{itemize}
+	\item \emph{spezifische Filterkriterien:}\\ 
+Die in Abbildung \ref{mweb-Suche} dargestellten Filterkriterien ermöglichen nur eine grobe Auswahl der Maßnahmen nach Gewerk oder Organisationseinheit. In einigen Gewerken enthält die gefilterte Listenansicht rund 1000 verfügbare Maßnahmen. Hier wäre eine spezifischere Zuordnung zu Prozessen oder Prozessschritten wünschenswert.
+	\item \emph{Mehrsprachigkeit erweitern:}\\
+	Es ist nur eine Änderung der Sprache der Benutzeroberfläche möglich, die Menü\-punkte und Funktionen werden übersetzt, aber die Beschreibungen der Maßnahmen nicht. So sind viele Maßnahmen nur in der Landessprache der jeweiligen Standorte verfügbar, die die Maßnahme erstellt haben.
+	\item \emph{Übertragbarkeit des Verbesserungspotentials:}\\
+	Das ebenfalls vom Pilotstandort angegebene Verbesserungspotential lässt sich auf Grund mangelnder Angaben häufig nicht auf andere Standorte übertragen. In vielen Fällen wird die Möglichkeit, die Berechnung des Verbesserungspotentials zu hinterlegen, nicht genutzt. Somit sind die angegebenen Potentiale nicht nachvollziehbar. Hierfür und für die Übertragbarkeit der Verbesserungspotentiale fehlt die Angabe einer Bezugsgröße. Eine Angabe der produzierten Einheiten würde hier eine Relation bieten, mit deren Hilfe das Verbesserungspotential auf andere Standorte skaliert werden kann.
+\end{itemize}
+
+Die Anforderungen der Fachkräfte und Planer der einzelnen Produktionsprozesse sollen im nachfolgenden Kapitel näher betrachtet werden, um deren Anforderungen, über die reine Beseitigung der Schwachstellen hinaus berücksichtigen zu können. Wie in Abschnitt \ref{TBF} gezeigt gibt es über die Produktion hinaus weitere Anspruchsgruppen, die ein Interesse daran haben, mit welchen Maßnahmen und Bemühungen der Volkswagen Konzern versucht, die Ressourceneffizienz zu steigern. Eine Betrachtung dieser Zielgruppen kann zeigen, ob und wie die Informationen aus \emph{Maßnahmen@web} aufbereitet und sinnvoll dargestellt werden können, um die Informationen des Ressourceneffizienz-Quickcheck über die Produktion hinaus verfügbar zu machen.
+ 
+\chapter{Fachliche Konzeption des Ressourceneffizienz-Quickcheck}
+\section{Zielgruppen und deren Anforderungen an einen Ressourceneffizienz-Quickcheck}
+Die zu betrachtenden Zielgruppen haben sehr unterschiedliche Perspektiven auf die Steigerung der Ressourceneffizienz.  Diese unterscheiden sich hauptsächlich in der fachlichen Kenntnis der Produktionsprozesse und im Informationsbedarf zur Beurteilung der Umsetzbarkeit und Auswirkungen der einzelnen Optimierungsmaßnahmen. So sind nachfolgend die benötigten und gewün\-sch\-ten Informationen der Zielgruppen und deren Verfügbarkeit zu untersuchen sowie der resultierende Mehrwert eines Ressourceneffizienz-Quickcheck aufzuzeigen.
+
+\paragraph{Betreiber in der Produktion:}\label{Betreiber}
+Die für die Produktionsprozesse verantwortlichen Mitarbeiter nehmen eine Schlüsselrolle für die Steigerung der Ressourceneffizienz in der Produktion ein und stellen, wie zuvor gezeigt, die hauptsächliche Ziel- und Anwendergruppe für Maßnahmen@web dar. Mit Ihrer Fachkenntnis haben sie eine sehr detaillierte Sicht auf die einzelnen Prozessschritte.
+
+Eine direkte Zuordnung von Maßnahmen zu den einzelnen Prozessschritten würde die Identifikation verfügbarer und geeigneter Maßnahmen erleichtern. Sind für einen Prozessschritt mehrere Maßnahmen verfügbar, könnten diese schneller verglichen werden. Voraussetzung dafür ist allerdings, dass eine rechnerische Übertragbarkeit der Maßnahme vom Pilotstandort auf den eigenen Prozess möglich ist. Aus einem Vergleich der produzierten Einheiten kann hier der benötigte Skalierungsfaktor ermittelt werden, der entsprechend eine Umrechnung der standortspezifischen Einsparpotentiale ermöglicht. Hierfür wird die Zahl der produzierten Fahrzeuge des Pilotstandortes im Jahr der Umsetzung der Maßnahme benötigt, welche im Geschäftsbericht enthalten ist.
+
+Im Sinne einer ganzheitlichen Betrachtung der innerbetrieblichen Wert- und Schad\-schöp\-fungskette sollte die Auswirkung einer Maßnahme nicht nur für den zugehörigen Prozessschritt, sondern für den Gesamtprozess aufgezeigt werden. Sind die Prozessschritte, wie in Abschnitt \ref{Stoffstrommanagement} beschrieben, in Beziehung zueinander gesetzt, können die direkten und indirekten Einflüsse einer Maßnahme für alle Prozessschritte und die Auswirkungen auf das Gesamtsystem dargestellt werden. Hierzu wäre eine Stoffstromanalyse erforderlich.
+
+Zeigt das, im Rahmen der Stoffstromanalyse zu erstellende Modell, dass sich die Effekte einer Maßnahme insgesamt potenzieren, minimieren, neutralisieren oder gar negativ auswirken, kann auch eine Neubewertung der erforderlichen Investition erfolgen. Aus einem Vergleich verschiedener Maßnahmen des gesamten Prozess können die effektivsten ermittelt und entsprechend deren Umsetzung priorisiert werden.
+
+\paragraph{Planer in der Produktion:}
+Die Planer der Produktionsprozesse haben eine ebenso detaillierte, fachspezifische Sicht auf die Prozessabläufe und eine mögliche Steigerung der Ressourceneffizienz, wie die Fachkräfte in der Produktion. Über die Bewertung von Optimierungsmaßnahmen für die vorliegenden Prozesse hinaus, muss die Planung auch neue Produktionsprozesse und Technologien auf ihr Potential untersuchen. Zudem sollte die Anwendbarkeit bestehender Maßnahmen auf neue Prozessabläufe überprüft und bewertet werden können.
+
+Auf genau dieses Anwendungsszenario zielt die Software Umberto ab. Diese ermöglicht auf Grundlage eines zu erstellenden Modells die Stoffstromanalyse und Bewertung. In verschiedenen Szenarien können Prozessalternativen analysiert und miteinander verglichen werden. Das Modell kann zudem auf vielfältige Weise manipuliert werden. So können die Parameter der Prozessschritte und deren Beziehungen zueinander verändert und die resultierenden Auswirkungen auf das System dargestellt werden. Wie im Kapitel zuvor beschrieben, ist die Modellbildung und deren Abbildung in Umberto sehr aufwendig und daher für einen Ressourceneffizienz-Quickcheck nicht geeignet.  
+
+Der Ressourceneffizienz-Quickcheck müsste hier die Manipulation existierender und die Erstellung eigener Prozessabläufe ermöglichen und die Auswirkungen sowohl der Manipulation als auch der Maßnahmen aufzeigen.  
+
+
+\paragraph{Mitarbeiter allgemein:}
+Um die Mitarbeiter im Sinne von Think Blue.Factory  einzubinden und zu motivieren, müssen diese über erfolgreiche oder geplante Optimierungsmaßnahmen informiert werden. Das Wissen und Bewusstsein um ökologische Zusammenhänge und konkrete Verbesserungsmaßnahmen ist die Grundvoraussetzung um die Umweltziele des Unternehmens zu unterstützen. So stärkt es nicht nur die Identifikation mit dem Unternehmen, sondern kann auch zu eigenen Ideen anregen und konkrete Handlungsspielräume eröffnen [\cite[5]{Ruettinger2009}]. 
+
+Da die Mitarbeiter nicht das Fachwissen haben und über eine detaillierte Prozesskenntnis verfügen, müsste ein Ressourceneffizienz-Quickcheck die Ziele und Auswirkungen einer Maßnahme auf verständliche Weise vermitteln.
+Das zum Prozessverständnis benötigte Wissen und die Information über die Optimierungsmaßnahme und deren Ergebnisse sollte dabei nicht zu theoretisch, trocken oder belehrend vermittelt werden. Am besten ... "`geschieht dies, wenn die Mitarbeiter die Verbesserungen ausprobieren und Wirkungen unmittelbar erleben können"' [\cite{Ruettinger2009}].
+
+Um die Auswirkungen einer Maßnahme darzustellen, müssen die Prozessschritte, wie bereits für die Fachkräfte in der Produktion beschrieben, geeignet visualisiert werden. Das aus der Stoffstromanalyse erhaltene Modell muss bei zu großer Komplexität geeignet vereinfacht werden, ohne die Aussagekraft zu sehr einzuschränken. Die Auswirkungen der Maßnahmen sind in diesem Fall ebenso vereinfacht darzustellen.
+
+Eine gegebenenfalls einzuschränkende Möglichkeit, die Prozessschritte und deren Beziehungen zu manipulieren, kann die Auswirkungen der einzelnen Parameter "`erfahrbar"' und die Auswirkungen erlebbar machen.
+
+\paragraph{Kunden / Stakeholder:}
+Die unternehmensexternen Interessengruppen haben ein Interesse daran, mit welchen Maßnahmen das Unternehmen versucht, die Umweltauswirkungen seines betrieblichen Handelns zu reduzieren. Ein Ressourceneffizienz-Quickcheck mit den gleichen Anforderungen wie für die \emph{Mitarbeiter allgemein} dargestellt, wäre hier geeignet, die Herausforderung einer Ressourceneffizienzsteigerung greifbar und die innerbetrieblichen Prozesse transparent zu machen.
+
+Im externen Einsatz muss darauf geachtet werden, dass mit der Darstellung der Maßnahme und der Auswirkungen keine Betriebsgeheimnisse an die Öffentlichkeit gelangen. Zudem muss die Anwendung den Vorgaben der Coorporate Identity des Volkswagen Konzerns entsprechen, um repräsentativ zu wirken und mit dem Unternehmen identifiziert zu werden.
+
+\section{Skizzierung möglicher Konzepte und deren Grundlagen}
+
+\paragraph{Grundlagen:}\label{Grundlagen}
+Ausgehend von der Definition eines Ressourceneffizienz-Quickcheck in Abschnitt \ref{Ressourceneffizienz-Quickcheck} hat die Betrachtung der bereits vorhandenen Software und möglicher Zielgruppen unterschiedliche Aspekte aufgezeigt, die bei der Konzipierung des in dieser Arbeit zu entwickelnden Ressourceneffizienz-Quickcheck zu berücksichtigen sind. Allen gemein ist die Zuordnung von Maßnahmen zu einzelnen Prozessschritten und die Darstellung, wie sich die Änderung eines Prozessschrittes auf den gesamten Prozess auswirkt.
+
+Die Grundlage dafür bilden Kennzahlen, die einen Vergleich der Ressourcen\-effizienz ermög\-lichen. Eben solche Kennzahlen werden im Rahmen der Think Blue.Factory Strategie in Form der fünf KPI bereits erhoben. Die Beurteilung der Ressourcen\-effizienz mit Hilfe des Ressourcen\-effizienz-Quickcheck sollte auf der gleichen Basis erfolgen, um eine unternehmensweit einheitliche Bewertung zu gewährleisten. Die Betrachtung sollte dabei wie in den Abschnitten \ref{Branchencheck} und \ref{Stoffstrommanagement} gezeigt auf Ebene der Prozessschritte erfolgen.
+
+Um die Auswirkungen einer Maßnahme berechnen zu können, werden die Kennzahlen mindestens auf Prozessebene benötigt, im Idealfall sind diese auch für die einzelnen Prozessschritte verfügbar. Wird eine Zuordnung der Maßnahmen zu einem Prozessschritt ermöglicht, kann in jedem Fall eine Berechnung und Visualisierung des Einsparpotentials an einem Prozessschritt erfolgen. Für den Fall dass das Verbesserungspotential einer Optimierungsmaßnahme zwar für den Gesamtprozess angegeben ist, aber einem Prozessschritt eindeutig zugeordnet werden kann, ist dies ebenso möglich. Wie im Abschnitt \ref{massnahmen@web} dargestellt, ist eine Übertragbarkeit nur mit Hilfe einer entsprechenden Skalierung des Optimierungspotentials möglich, um die Ausgangswerte des Pilotstandortes auf andere Standorte zu übertragen. Während diese Skalierung für Energie, Wasser, Abfall und VOC direkt erfolgen kann, muss die Berechnung der aus dem Energieverbrauch resultierenden CO$_{2}$-Emissionen auf Grundlage der standortspezifischen Emissionsfaktoren erfolgen. Dafür müssen thermische und elektrische Energie voneinander getrennt betrachtet werden, da sich die Emissionsfaktoren unterscheiden.
+
+Sind die Beziehungen zwischen den einzelnen Prozessschritten bekannt, eröffnen sich weitere Möglichkeiten. So kann dargestellt werden, wie sich die Veränderung eines Prozessschrittes auf die übrigen auswirkt unabhängig davon ob diese Änderung aus einer Maßnahme oder durch Manipulation des Anwenders resultiert. So können eventuelle Potenzierungseffekte und Gegenläufigkeiten dargestellt werden, wie im Kapitel \ref{Betreiber} beschrieben. Die Grundlage hierfür ist eine Stoffstromanalyse. 
+
+\paragraph{Konzeptskizzen zur Differenzierung:}
+Während die beschriebenen Grundlagen den Anforderungen aller Zielgruppen gemein ist, unterscheiden sich diese in der zur Betrachtung notwendigen Detaillierung, in der die Prozessschritte darzustellen sind. Zudem haben diese unterschiedliche Anforderungen an die Manipulierbarkeit der Prozessbeziehungen.
+\subparagraph{Betreiber und Planer:}
+Die Betreiber und Planer benötigen eine sehr detaillierte Darstellung der einzelnen Prozessschritte, um die Effizienz auch einzelner Bauteile und kleinster Prozesstechnik beurteilen zu können. Diese detaillierte Darstellung erfordert eine ebenso detaillierte Verfügbarkeit der Daten und Zuordnung der Maßnahmen. 
+
+Sind die zuvor genannten Grundlagen für den operativ eingesetzten Prozess entsprechend detailliert umgesetzt, kann auf dieser Basis eine Eingabe der aktuellen Verbräuche ermöglicht werden. Eine Hochrechnung der Daten des Erfassungszeitraumes auf die des hinterlegten Betrachtungszeitraumes ermöglicht das Erkennen von Abweichungen in einzelnen Prozessschritten und kann als Indiz für eventuelle Fehler oder Defekte dienen. Ist eine Optimierungsmaßnahme erfolgreich umgesetzt, kann so eine Hochrechnung erfolgen, ob die geplanten Ziele erreicht werden.
+Erfolgt selbige Eingabe auf Grundlage planerisch approximierter Werte, kann der geplante Prozess mit dem hinterlegten verglichen werden.
+
+Sowohl Planer als auch Betreiber benötigen hierfür die Möglichkeit, die, wie im Abschnitt \ref{TBF} beschriebenen, sehr individuellen Prozessschritte, abzubilden. Hierzu müsste ein Prozess-Editor erstellt werden, der die Erstellung eines individuellen Prozesses ermöglicht. Insbesondere für die Planung muss ein solcher Editor die Erstellung und Manipulation der Prozessbeziehungen zueinander ermöglichen, um so verschiedene Prozessszenarien miteinander vergleichen zu können. Dieser müsste eine im Vergleich zu Umberto vereinfachte, abstrahierte Erfassung der Stoffströme bzw. resultierenden Kennzahlen ermöglichen, die dennoch detaillierte Aussagen über einzelne Prozessschritte zulässt.
+
+\subparagraph{Mitarbeiter und Stakeholder:}
+
+Für die Mitarbeiter und Stakeholder sollten der Prozess mit seinen zahlreichen Prozessschritten vereinfacht dargestellt werden um so die Übersichtlichkeit und somit das Verständnis zu erhöhen. Die Ermittlung der Daten muss hierfür nicht so detailliert erfolgen, wie für die Betreiber und Planer, ebenso genügt eine gröbere Zuordnung der Maßnahmen zu den vereinfachten Prozessschritten.
+
+Die Manipulation der Prozessschritte und deren Beziehungen zueinander ist nur bedingt erforderlich, oder sollte eingeschränkt werden. So wird hier kein Editor zur Erstellung eigener Prozesse benötigt. Allerdings sollte eine Manipulation der Prozessschritte möglich sein, um die davon ausgehenden Wirkungen auf andere Prozessschritte und das Gesamtsystem darzustellen. So können zum einen Maßnahmen und deren Auswirkungen dargestellt werden, zum anderen kann der Nutzer das dargestellte System beeinflussen und die Auswirkungen interaktiv erleben. 
+
+Diese Manipulationsmöglichkeit ist ggf. soweit einzuschränken, dass der laienhafte Anwender die Werte nicht über ein reales Maß hinaus verändern kann.
+
+\section{Auswahl eines Konzeptes nach Umsetzbarkeit und Verfügbarkeit der Daten}
+Die beiden dargestellten Konzepte unterscheiden sich hauptsächlich in ihrem Detaillierungsgrad und den Manipulationsmöglichkeiten. Beiden gemein ist, dass die Beziehungen der Prozessschritte zueinander dargestellt werden sollen. 
+
+Die Entwicklung eines Editors, der eine abstrahierte, aber dennoch ausreichende Erfassung der Stoffströme ermöglicht, geht im Umfang über die Möglichkeiten dieser Arbeit hinaus. Eine Stoffstromanalyse zur Erstellung eines detaillierten Stoffstrommodells ist ebenfalls sehr aufwendig, daher soll auf bereits verfügbare Stoffstrommodelle zurückgegriffen werden.
+
+Wie in Abschnitt \ref{Stoffstrommanagement} gezeigt, existiert bereits das Stoffstrommodell einer Automobillackiererei\footnote{Das "`Stoffstrommodell einer Automobillackiererei"' wurde von Steffen Witte im Rahmen seiner Masterthesis erstellt.}, weitere Prozesse sollen in Zukunft ebenfalls analysiert werden.
+
+Anhand dieses Modells kann überprüft werden, ob sich die Ergebnisse einer Stoffstromanalyse mit Hilfe des Ressourceneffizienz-Quickcheck vereinfacht abbilden lassen und eine Manipulation zu vergleichbaren Ergebnissen führt.
+Der Prototyp des Ressourceneffizienz-Quickcheck wird daher exemplarisch für die idealisierte Automobillackiererei erstellt. 
+Da die Entwicklung eines Editors sehr aufwendig ist, soll die Konzeption und Realisierung zuerst für die Zielgruppe "`Mitarbeiter"' allgemein erfolgen.
+
+Trotz der konkreten Darstellung der Lackierprozesse ist bei der Umsetzung darauf zu achten, dass eine Darstellung anderer Produktionsprozesse auf Grundlage weiterer Stoffstromanalysen ebenfalls möglich ist. 
+
+Die weiteren Anforderungen der Betreiber und Planer können ausgehend von den Anforderungen der Mitarbeiter und Stakeholder als funktionale Erweiterungen verstanden werden, da die Darstellung der Prozessschritte und deren Beziehungen zueinander allen gemein ist. So soll sowohl bei der Erstellung des Konzeptes als auch des Prototypen darauf geachtet werden, dass eine detailliertere Darstellung der Prozessschritte genau so möglich ist, wie das spätere Einbinden eines Editors. 
+
+\section{Funktionsanalyse und Visualisierungsmöglichkeiten}\label{Analyse}
+
+Die wesentliche Grundlage, um eine Darstellung der KPI an den einzelnen Prozessschritten zu ermöglichen, ist eine modellhafte Abbildung ihrer Beziehungen zueinander. In einer Prozessfolge werden die einzelnen Prozessschritte eines Produktionsprozesses chronologisch durchlaufen. Parallel, das heißt zeitgleich, können weitere Prozessschritte oder Prozessfolgen stattfinden. Findet dieser parallel zu einem Schritt der Hauptprozessfolge statt, besteht die Möglichkeit, das dieser den Prozess optional ergänzt. Entfällt dieser optionale Prozessschritt, funktioniert der Hauptprozessschritt weiterhin\footnote{Beispiel: Die Abluft eines Trockners in der Lackiererei kann optional durch eine TNV abgereinigt werden. Der Trockner würde aber auch ohne Abgasbereinigung funktionieren.}. Eine weitere Möglichkeit ist, dass ein Hauptprozessschritt diesen Prozessschritt in direkter Abhängigkeit erfordert und die Funktion des Hauptprozesses und somit die ganze Prozessfolge nicht möglich wäre\footnote{Beispiel: Das Overspray in der Lackierkabine muss während dem Lackierprozess aufgefangen und abgeschieden werden um einen stabilen und qualitativ hochwertigen Prozess zu gewährleisten.}. Diese parallelen Prozessschritte können in unterschiedlich verknüpfter Beziehung zu den Hauptprozessschritten stehen. So kann ein Hauptprozessschritt mehrere Parallelschritte, also eine Parallelprozessfolge erfordern, anders herum kann ein Parallelprozessschritt auch in Abhängigkeit zu mehreren Hauptprozessschritten stehen. Ein Parallelprozessschritt kann wiederum einen zu ihm abhängigen Prozessschritt erfordern und dieser wiederum, so dass ganze Prozessschritthierarchien entstehen können. 
+
+Die Darstellung der Beziehungen der Prozessschritte zueinander kann so sehr schnell eine große Komplexität erlangen, die es für eine übersichtliche Darstellung zu vereinfachen gilt. Die Software Umberto bedient sich zur Vereinfachung einer solchen Darstellung sogenannter Subsysteme, die mehrere Prozessschritte beinhalten können und in Beziehung zu einem anderen Prozessschritt gestellt werden können. Für eine vereinfachte Darstellung kann eine Prozessfolge also so zusammengefasst werden, dass sie als ein einzelner Prozessschritt dargestellt werden kann, aber die Eigenschaften eines ganzen Subsystems repräsentiert. Mit Hilfe dieser Vereinfachung kann erreicht werden, dass ein Hauptprozessschritt nur Parallelprozessschritte und keine Folgen mehr hat, ebenso können die hierarchischen Abhängigkeiten so weit aufgelöst werden, dass nur noch zwischen optionalen und bedingten Parallelprozessen unterschieden werden muss. 
+
+Liegt einem dargestellten Prozessschritt ein solches Subsystem zu Grunde, kann dieses wiederum in einer Prozessfolge mit seinen jeweiligen Parallelprozessen dargestellt werden. Eine solche hierarchische Verschachtellung gefährdet wiederum die Übersichtlichkeit. Für die Anwendung durch die Mitarbeiter und Stakeholder soll die vereinfachte Darstellung auf der höchsten Ebene ausreichen. Da die Prozessbeziehungen sich in keiner Ebene unterscheiden, kann eine spätere detailliertere Anwendung für Planer und Betreiber die gleiche Darstellung nutzen, muss allerdings einen Wechsel der Betrachtungsebene in solche Subsysteme ermöglichen.
+
+Ist eine solche Prozessfolge erstellt, müssen die Kennzahlen an den einzelnen Prozessschritten visualisiert und zueinander in Beziehung gesetzt werden. Wie im Abschnitt \ref{Grundlagen} gezeigt, sind die fünf KPI und die im Prozess eingesetzten Materialien darzustellen. Die Grundlage hierfür bilden die aus Umberto gewonnenen Daten, die in ihren natürlichen Einheiten vorliegen. Auf Grundlage dieser Werte können prozentuale Veränderungen berechnet und angegeben werden, allerdings stellt das Material keinen KPI dar und sollte daher von diesen optisch getrennt werden. Des Weiteren sind die absoluten Werte ebenfalls sehr interessant für eine Darstellung, da die rein prozentuale Darstellung ohne Angabe einer Dimension nicht sehr aussagekräftig ist.
+
+Daher soll eine zweigeteilte Darstellung erfolgen, die zum einen die KPI anzeigt und zugleich die absoluten Werte. So kann einmal die Hauptprozessfolge dargestellt werden, mit jeweils den fünf KPI und weiterhin eine detaillierte Ansicht, mit den einzelnen Prozessschritten, etwaigen Parallelprozessen und den jeweils absoluten Werten. 
+
+Diese Darstellung bietet zudem den Vorteil, dass wenn die Prozessfolge zu lang ist, diese in logische Gruppen gegliedert werden kann. So kann ausgehend von der Prozessgruppe eine detaillierte Darstellung der inbegriffenen Prozessschritte erfolgen. Neben dieser zusammenfassenden Darstellung der Kennzahlen ist auch eine Gesamtbilanz des Prozesses anzuzeigen, um eben die Auswirkungen auf den Gesamtprozess darzustellen.
+
+Auf Grund der Einschränkung der Prozessbeziehungen können auch die in den Prozessschritten hinterlegten Kennzahlen keine anderen Beziehungen zueinander haben. So kann sich die Veränderung einer Kennzahl nur auf einen parallel liegenden Prozessschritt auswirken, oder innerhalb der Prozessfolge auf den entsprechenden Vorgänger, oder Nachfolger. Beeinflussungen darüber hinaus sind nur indirekt über die Hauptprozessschritte möglich.
+
+Nach der quantitativen Darstellung der Kennzahlen ist eine intuitive grafische Darstellung einer entsprechenden Änderung, insbesondere durch eine Optimierungsmaßnahme, darzustellen. Dafür gibt es verschiedene Visualisierungsmöglichkeiten:
+
+\begin{itemize}
+\item \textbf{Ampel:} Die Ampel kann mit ihren drei Feldern signalisieren, ob sich eine Kennzahl verbessert, verschlechtert oder gleich bleibt und ermöglicht eine einfache Wertung. Dies kann z. B. in Form einer Verkehrsampel (rot, gelb, grün) oder in Form von Smileys (lachend, neutral, traurig) erfolgen
+\item \textbf{Daumen:} Daumen hoch oder Daumen runter, ggf. farblich ebenfalls verdeutlicht, ermöglicht eine positive oder negative Wertung, im Gegensatz zur Dreifach-Ampel ohne neutrales Element. Hier können auch eine nur zweifarbige Ampel oder einfache plus-/minus-Zeichen zum Einsatz kommen.
+\item \textbf{Skala:} Eine Skala, mit einem angegebenen Wertebereich ermöglicht eine prozentuale, detaillierte Wertung. Diese kann in Form eines Prozentbalkens, Tachometers oder anderer Geräte mit Skala dargestellt werden.
+\end{itemize}
+
+Für die Visualisierung der Kennzahlen ist die Darstellung mit Hilfe eines Prozentbalkens die naheliegendste, da auch deren quantitative Darstellung in Prozent erfolgt. Für eine einheitliche Darstellung sollte die Visualisierung der Prozessschritte auf die gleiche Weise erfolgen. Da so eine visuell erfassbare quantitative Darstellung erfolgt, können Maßnahmen, die einen positiven Effekt haben, der aber nicht quantifiziert werden kann, nicht dargestellt werden. In diesem Fall kann die Darstellung um eines der anderen Elemente erweitert werden, damit auch diese dargestellt werden können.
+
+Dem Nutzer soll es möglich sein, die einzelnen Parameter der Prozessschritte manipulieren zu können, das heißt die Kennzahl bzw. deren Wert zu ändern. Nachfolgend sind die gängigsten Manipulationsmöglichkeiten dargestellt:
+\begin{itemize}
+\item \textbf{Textfeld:} Die einfachste Form der Manipulation wird durch ein Textfeld ermöglicht, in dem der gewünschte Wert direkt eingegeben werden kann. Da hier Fehleingaben in Form von Buchstaben oder fehlerhafte Werte eingegeben werden können, ist zusätzlich eine Plausibilitätsprüfung notwendig.
+\item \textbf{Kombiniertes Textfeld:} Ein Textfeld, welches mit Hilfe von Buttons manipuliert werden kann, wird Spinner genannt. Es ermöglicht ebenfalls die Angabe von Werten, die aber in einem zuvor definierten Gültigkeitsbereich liegen müssen.  Die Veränderung über Buttons lässt zudem keine Fehleingaben zu.
+\item \textbf{Regler:} Drehregler und Schieberegler ermöglichen eine schnelle Manipulation, ohne eine Wertangabe zu erfordern. Die Manipulation kann entlang einer Skala erfolgen, die ein Abschätzen des Wertes ermöglicht. Die Regler können ebenfalls auf einen Wertebereich beschränkt werden und lassen keine Fehleingaben zu.
+\end{itemize}
+
+Für den Ressourceneffizienz-Quickcheck empfiehlt sich die Darstellung mit Hilfe von Schiebereglern. Da die Kennzahlen mit Hilfe von Prozentbalken dargestellt werden sollen, ist die Manipulation am intuitivsten, sofern die Veränderungen auf der gleichen Achse erfolgen. Gegebenenfalls lassen sich Schieberegler und Prozentbalken miteinander vereinen, da die Veränderung der Position in Relation zu Gesamtlänge in beiden Fällen prozentual erfolgt.
+
+Eine weitere Funktion stellt die Anzeige verfügbarer Maßnahmen an den einzelnen Prozessschritten dar. Da für einen Prozessschritt mehrere Maßnahmen vorliegen können, empfiehlt sich die Darstellung mit Hilfe eines Buttons oder Symbols, das den Aufruf eines Auswahlmenüs mit den verfügbaren Maßnahmen ermöglicht, sobald eine Maßnahme verfügbar ist.
+
+Da eine Maßnahme unterschiedliche Auswirkungen auf die Prozessschritte und Prozessfolge haben kann, sollten diese differenziert werden können. So gibt es zum einen Maßnahmen die die Prozessstruktur nicht verändern, deren Optimierungspotential sich somit nur auf die Kennzahlen der Prozessschritte auswirken. Hier bleiben die Beziehungen bestehen, nur die Relationen ändern sich. In dem Fall, dass für einen Prozessschritt mehrere Maßnahmen verfügbar sind, können diese auch gleichzeitig Anwendung finden, soweit sie sich nicht technisch ausschließen.
+
+Zum anderen gibt es Maßnahmen, die mit einer veränderten Prozessstruktur eine Optimierung erreichen. Diese können sowohl die Beziehungen der Kennzahlen, als auch die Prozessbeziehungen zueinander verändern, so dass die Prozessfolge ebenfalls verändert wird. Auf Grund der technologischen Veränderung stehen die zuvor beschriebenen Optimierungsmaßnahmen unter Umständen nicht mehr zur Verfügung, oder es eröffnen sich neue. Auf Grund dieser Eigenschaften kann eine solche Prozessalternative im Gegensatz zu einer Optimierungsmaßnahme als eigenständiger Prozessschritt verstanden werden. Eine Prozessalternative kann so einen Prozessschritt ersetzen, entfallen lassen, oder hinzufügen.
+Die Prozessalternativen sind somit gesondert darzustellen, um die Auswahl der verfügbaren Maßnahmen fachlich korrekt einzugrenzen.
+
+In Maßnahmen@web erfolgt die Beschreibung der Umsetzung einer Maßnahme auf textlicher Ebene, die entsprechend auch hier darzustellen ist. Die angegebenen Werte zur Optimierung erfolgt, wie im Abschnitt \ref{Massnahmen} beschrieben, in absoluten Zahlen auf einen Jahreszeitraum bezogen.  Mit Hilfe der beschriebenen Skalierungsfaktoren können diese Werte in prozentuale Angaben umgerechnet und auf den Prozess angewendet werden. Die Darstellung der Optimierung kann somit auch prozentual erfolgen. Da hier keine Manipulation, sondern nur eine Anzeige stattfindet, kann die Darstellung in Form eines Prozentbalkens erfolgen.
+
+In der beschriebenen Form ist nun die Automobillackiererei als repräsentativer Produktionsprozess abzubilden. In dem von Steffen Witte in seiner Masterthesis [\cite{Witte2010}] entwickelten Stoffstrommodell sind die einzelnen Prozessschritte des Lackierprozesses bereits vereinfacht abgebildet.  Nachfolgend sind die verwendeten Methoden beschrieben, mit deren Hilfe das Stoffstrommodell in den Ressourceneffizienz-Quickcheck übertragen werden soll.
+
+\section{Modellbildung und Simulation}
+
+\subsection{System und Modell}\label{SystemModell}
+Eine zentrale Grundlage bei der Stoffstromanalyse ist die Wahl und Abgrenzung des zu untersuchenden Systems. Ein System ist dabei ein gedankliches Konstrukt, das einen Ausschnitt der Realität abbildet und einen in die Lage versetzt, es zielgerichtet zu analysieren und zu verändern. Die Grenzen des Systems können hier materielle (Mauern einer Produktionsstätte, Zäune) oder immaterielle sein und müssen sich nicht zwingend an der Realität orientieren.
+Die Wahl der Systemgrenze bestimmt, was in ein System hinein gelangt (Input) und was nach einer Transformation innerhalb der Systemgrenzen wieder heraus gelangt (Output). Diese Vorgänge werden als Interaktion mit der Systemumgebung bezeichnet, die typisch für offene Systeme ist. Findet keine Interaktion mit der Systemumgebung statt, so spricht man von geschlossenen Systemen [\cite[18 ff.]{Witte2010}, \cite[10 ff.]{Wohlgemuth2005}].
+
+In einem System stellen Elemente die kleinste Einheit eines Systems dar, die nicht weiter unterteilt werden können. Diese Elemente haben dabei Eigenschaften, die man als Attribute bezeichnet. Sind die Attribute der Systemelemente nicht veränderbar, so spricht man von einem statischen System. Bei dynamischen Systemen sind die Attribute veränderbar, so dass sich im Zeitverlauf verschiedene Systemzustände ergeben. Die einzelnen Elemente stehen untereinander in Beziehung, je stärker diese miteinander verknüpft sind um so mehr erhöht sich die Komplexität eines Systems und um so dynamischer kann das Systemverhalten sein. Beeinflussen sich Elemente hierbei direkt oder indirekt, über andere Elemente, selbst spricht man von Rückkopplungsschleifen [\cite[18 ff.]{Witte2010}, \cite[10 ff.]{Wohlgemuth2005}].
+
+Während ein Element als kleinste Einheit nicht weiter unterteilt werden kann, können mehrere Elemente auf eine höhere Ebene zu einem Subsystem aggregiert werden. Ein solches Subsystem kann als Element eines übergeordneten Systems aufgefasst werden [\cite[18 ff.]{Witte2010}, \cite[10 ff.]{Wohlgemuth2005}].
+
+\begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width=0.8\columnwidth]{System.pdf}%
+\end{center}
+	\caption{Grundlegende Systembegriffe [\cite[vgl.][3]{Page1991}]}
+	\label{Systembegriffe}
+\end{figure}
+
+Modelle bilden ein System in einer vereinfachten, dem Untersuchungsziel angemessenen Form ab. Die Vereinfachung erfolgt im Wesentlichen mit den Methoden der Abstraktion und Idealisierung.
+
+Bei der Abstraktion werden einzelne Systemelemente zusammengefasst, um die wesentlichen Teilzusammenhänge darzustellen. Die Idealisierung ermöglicht es dem Modellierer, Schwankungen und nicht relevante Unregelmäßigkeiten im Systemverhalten zu ignorieren. Bei der Anwendung dieser Mechanismen muss jedoch darauf geachtet werden, dass das Modellverhalten und die daraus resultierenden Ergebnisse noch Rückschlüsse auf das zu untersuchende System zulassen [\cite[21 ff.]{Witte2010}, \cite[13 ff.]{Wohlgemuth2005}].
+
+\subsection{Darstellung einer idealisierten Lackiererei}
+Um die Beziehungen der Prozessschritte in einem Modell abbilden zu können, ist es Voraussetzung, die technischen Abläufe des Lackierprozesses zu verstehen. Die Abbildung \ref{PicProzessfolge} stellt die Prozessschritte der Hauptprozessfolge dar, die nachfolgend im Einzelnen beschrieben werden.
+
+\begin{figure}[htbp]%
+\begin{center}
+ \includegraphics[width=1.0\columnwidth]{ProzessfolgeLackiererei.pdf}%
+\end{center}
+\caption{modulare Prozessfolge [eigener Entwurf nach \cite{Quoll2012}]}%
+\label{PicModulFolge}%
+\end{figure}
+
+\paragraph{Vorbehandlung:} Die Vorbehandlung (VBH) ist in drei wesentliche Prozessschritte unterteilt, die Entfettung, die Phosphatierung und die Passivierung. Die Reinigung und Entfettung entfernt die Öle, Fette, Stäube und weitere Verschmutzungen aus den vorherliegenden Produktionsprozessen. Hierzu werden tensidhaltige wässrig-alkalische Lösungen verwendet. Nach der Reinigung erfolgt die Phosphatierung, bei der eine dünne Zink-Phosphatschicht auf die Karosserie aufgebracht wird, die als grundlegender Korrosionsschutz und Haftgrund für die nachfolgenden Schichtaufträge dient. Die abschließende Passivierung verschließt die Poren der Phosphatschicht und erhöht noch einmal die Korrosionsfestigkeit [\cite{Witte2010}]. 
+\paragraph{Kathodische Tauchlackierung:} Die anschließende kathodische Tauchlackierung dient im Wesentlichen dem weiteren Korrosionsschutz. Hier wird durch Elektrophorese ein wasserlöslicher Lack auf die Karosserie abgeschieden, wobei die Karosserie als Kathode und das Tauchlackbecken als Anode polarisiert werden. Dieses Verfahren ermöglicht einen sehr gleichmäßigen Schichtauftrag mit konstanter Schichtdicke und bildet einen sehr beständigen Korrosionsschutz. Nach dem KTL-Prozess wird die Karosserie getrocknet und dem nächsten Prozessschritt zugeführt [\cite{Witte2010}].
+
+\paragraph{Nahtabdichtung und Unterbodenschutz:} Vor dem Füllerauftrag müssen die Fugen und Falzen der Karosserie abgedichtet werden. Der Auftrag der hier eingesetzten PVC-Materialien erfolgt sowohl manuell als auch mit Hilfe von Robotertechnik. Das PVC-Material wird mit Hilfe eines so genannten Geliertrockners anschließend angetrocknet und die Karosserie nochmals gereinigt, bevor der Füller appliziert wird [\cite{Witte2010}].
+
+\paragraph{Füller:} Der Füllerauftrag ist ein wasserlöslicher Lack, der die darunter liegende KTL-Schicht vor UV-Einstrahlung schützen und leichte Unebenheiten der Karosserieoberfläche ausgleichen soll. Die Farbe des Lackauftrages wird auf die nachfolgenden Schichten abgestimmt, um dort die Schichtdicke reduzieren zu können. Im Anschluss an den Lackauftrag wird die Karosserie bei ca. 175°C getrocknet [\cite{Witte2010}].
+
+Zusätzlich zum beschriebenen 5a-Prozess gibt es den neuen Lackierprozess 2010, der auf den separaten Füllerauftrag verzichten kann, in dem der Basislackauftrag angepasst wird und die Funktion des Füllers mit übernimmt.
+\paragraph{Basislack:} Der Basislack (engl. Base Coat, BC) stellt die erste und farbgebende Schicht der Decklackierung dar. Die Schichtdicke variiert hierbei je nach Farbton und dessen Deckkraft. Der Auftrag kann hier manuell oder mit Robotern erfolgen. Im Anschluss wird die Karosserie wiederum getrocknet, um anschließend den Klarlack auftragen zu können [\cite{Witte2010}].
+\paragraph{Klarlack:} Der Klarlack (engl. Clear Coat, CC) ist die zweite und letzte Deckschicht und besteht im Wesentlichen aus zwei Komponenten (2-K-Klarlack), dem eigentlichen Lack und einem speziellen Härter. Er verstärkt die optischen Effekte des Basislack und dient als Schutz vor Umwelteinwirkungen, insbesondere der Sonneneinstrahlung. Schlussendlich wird die Karosserie noch einmal getrocknet [\cite{Witte2010}].
+\paragraph{Hohlraumkonservierung / Dachverstärkung:} Nach der Fahrzeuglackierung werden die Hohlräume der Türen und Träger mit Heißwachs geflutet oder besprüht, um diese zu versiegeln und so zu konservieren. Zusätzlich werden Dämpfungsmaterialien angebracht, um die Fahrzeugakkustik zu verbessern [\cite{Witte2010}].
+
+\paragraph{Abscheideverfahren:}
+Der Farbauftrag in den Prozessschritten Füller, Basislack und Klarlack wird mit Hilfe von Rotationszerstäubern aufgesprüht. Der resultierende Sprühnebel gelangt nur zu 60\%-80\% auf die Karosserie. Das verbleibende sogenannte Overspray muss gebunden bzw. abgeschieden und anschließend entsorgt werden. Derzeit werden dafür drei verschiedene Verfahren eingesetzt, die nachfolgend erläutert werden [\cite{Witte2010}]:
+
+\begin{itemize}
+\item \emph{Nassabscheidung:}\\Unter dem Boden der Lackierkabine befindet sich ein Venturi-System, welches den herabsinkenden Lacknebel mittels Wasser aufnimmt und in den Systemtank führt. Durch hinzufügen von Flockungsmittel und Koagulierchemikalien werden die Festkörper aus dem Wasser gebunden und über eine Flotationsanlage abgeschieden. Ein Dekanter verdickt die feste Phase weiter und führt diese aus dem System. Die flüssige Phase wird in einer Abwasseranlage nachbehandelt und anschließend noch einmal dekantiert. Das Restwasser wird über einen Klarwasserpuffer wieder zurück in das System geleitet. Die hohe Wasserverdunstung des Venturi-Systems der Lackierkabine beeinflusst das Kabinenklima sehr stark, so dass die Kabinenluft kontinuierlich konditioniert werden muss und eine Umluftführung nicht möglich ist.
+\item \emph{Trockenabscheidung:}\\Die Trockenabscheidung ist ein Verfahren, bei welchem die Lackpartikel durch einen kontinuierlichen Luftstrom auf modular aufgebaute Filterelemente gelangen, auf deren Oberfläche Steinmehl aufgebracht ist. Die Luft strömt durch die Filterelemente hindurch und wird so gereinigt wieder der Kabine zugeführt. Durch das Steinmehl wird ein direkter Kontakt des klebrigen Overspray mit dem Filtermaterial verhindert. Das Steinmehl reichert sich im Laufe der Lackabscheidung mit Oberspray an und führt zu einer Druckdifferenz des Luftstromes. Übersteigt diese einen Grenzwert, wird das Steinmehl mittels eines Luftdruckimpulses abgesprengt und in einem Trichter aufgefangen. Anschließend wird neues Steinmehl aufgetragen. Da dieser Prozess in den einzelnen Filtermodulen zeitlich versetzt stattfindet, kann eine kontinuierliche Abreinigung erfolgen.
+\item \emph{Elektrostatische Abreinigung:}\\Für die elektrostatische Lacknebelabscheidung wird das entstehende Overspray in einem konstanten Luftstrom zum Kabinenboden geführt. Dort wird es ionisiert und gelangt in eine Trichterform, die das Overspray einem Hochspannungsabscheidemodul zuführt. Der dort eingesetzte Elektrofilter ist mit einem Trennmittel benetzt, welches das Overspray aufnimmt, sodass es aus dem Abluftstrom abgeschieden wird. Die Abluft wird über einen separaten Kanal aus dem System abgeführt. Der abgeschiedene Lack schwimmt auf dem Trennmittel auf und kann abgeschöpft werden. Da in der Kabine auch hier keine Verdunstung stattfindet ist auch hier eine Umluftführung der Kabinenluft möglich.
+\end{itemize}
+
+\paragraph{Abluftreinigung:} In den Prozessschritten des Lackierprozesses, die mit einem Trocknungsprozess abschließen, werden Lösemittel freigesetzt. Diese können zum Teil mit der Abluft in die Umwelt gelangen. Um dies zu verhindern und die Einhaltung gesetzlicher Grenzwerte zu gewährleisten wird die Abluft aufgereinigt. Dafür finden nachfolgende Verfahren Anwendung:
+
+\begin{itemize}
+\item \emph{Nachverbrennung:}\\Die Abluft wird in eine Thermische Nachverbrennungskammer (TNV) geleitet, in der die Lösungsmittel bei einer Temperatur von rund 750°C verbrannt werden.
+\item \emph{Thermische Nachverbrennung mit Katalysator:}\\Durch Einsatz eines Katalysators kann die Temperatur der Brennkammer auf rund 560°C abgesenkt werden, die Lösungsmittel werden dennoch verbrannt.
+\item \emph{Thermische Nachverbrennung mit Wärmerückgewinnung:}\\Die hohe Prozesswärme der Nachverbrennung wird hier genutzt, um die Luft für die Trocknungsprozesse zu aufzuheizen, so dass für die Trockner kein zusätzlicher Heizbedarf besteht.
+\end{itemize}
+
+Das von Steffen Witte bereits mit Hilfe der Abstraktion und Idealisierung vereinfachte Stoffstrommodell beinhaltet die Daten für alle relevanten Stoffströme innerhalb dieser idealisierten Lackiererei. Die einzelnen Prozessschritte sind dabei in Subnetzen abgebildet. Ein ebenfalls im Rahmen dieser Masterthesis [\cite{Witte2010}] programmierter Assistent ermöglicht die einfache Manipulation des Stoffstrommodells, um die Auswirkungen veränderter Abscheidetechnologien und Luftabreinigungen zu bilanzieren. Für diese Bilanzierung kann dem Assistenten auch die Anzahl der lackierten Fahrzeuge innerhalb einer bestimmten Zeit angegeben werden.Die Möglichkeit auch Subnetze zu bilanzieren, eröffnet hier die Möglichkeit, die benötigten Daten für jeden Prozesschritt zu ermitteln.
+
+Um spätere Berechnungen innerhalb des Ressourceneffizienz-Quickcheck zu erleichtern, werden die Werte skaliert, so dass die Mengenangaben / Verbräuche eines Prozessschrittes einem lackierten Fahrzeug in einer Stunde entsprechen. Dies ist besonders zu berücksichtigen, da es Werte gibt, die nur abhängig von der Zeit oder den produzierten Fahrzeugen sind. So läuft eine thermische Nachverbrennungsanlage kontinuierlich, unabhängig davon wie viele Fahrzeuge produziert werden. Die eingesetzte Menge Basislack ist entsprechend nur von der Anzahl der Fahrzeuge abhängig. 
+
+Die für Stoffströme unablässiche Betrachtung von Stoffmenge pro Zeit muss für den Ressourceneffizienz-Quickcheck somit übernommen werden. Das heißt, die für eine Skalierung notwendige Angabe von Fahrzeugen pro Jahr muss um die tatsächlichen Betriebsstunden erweitert werden.
+
+
+ 
+\section{Entwicklung eines fachlichen Prototypen}\label{Prototyp}
+\subsection{Übertragung des Modells einer Lackiererei in das Konzept des Prototypen}
+Die im Abschnitt zuvor beschriebenen Prozessschritte ergeben, ohne die Abreinigungs- und Abscheidungsprozesse, in ihrem chronologischen Ablauf die Prozessfolge, wie sie in nachfolgender Grafik dargestellt ist.
+
+\begin{figure}[htbp]%
+\includegraphics[width=1.0\columnwidth]{ProzessfolgeLackierereiDetail.pdf}%
+\caption{vereinfachte Prozessfolge [eigener Entwurf nach \cite{Quoll2012}] \\
+{\tiny VBH (Vorbehandlung), KTL (Kathodische Tauchlackierung), Trockn (Trockner), FAD (Feinabdichtung), GAD (Grobnahtabdichtung), UBS (Unterbodenschutz), BC (Base Coat - Basislack), CC (Clear Coat, Klarlack)}}%
+\label{PicProzessfolge}%
+\end{figure}
+
+Um eine Darstellung der Hauptprozessfolge visualisiert mit Prozentbalken zu ermöglichen und diese übersichtlich und gleichzeitig auf dem Bildschirm darstellen zu können, sollen die Prozessschritte wie in Abschnitt \ref{Analyse} gezeigt zu Modulen zusammengefasst werden. Zur Einteilung bietet sich die Abbildung \ref{PicModulFolge} gezeigte Prozessreihenfolge an, die zur Veranschaulichung in die Grafik zuvor eingezeichnet ist. So können für die Module die KPI und die Prozessschritte in Abhängigkeit des ausgewählten Moduls angezeigt werden.
+
+Die Betrachtung der Lackiererei hat gezeigt, dass es zwei unterschiedliche Parallelprozesse gibt, die Abreinigung und die Abscheidung. Die Abreinigung stellt einen in Abschnitt \ref{Analyse} beschriebenen optionalen Prozess dar, da er für die Funktion des Hauptprozesses nicht erforderlich ist und diesem nachgeschaltet ist. Für den Fall, dass der Trockner mit Hilfe der TNV beheizt wird, entfällt bei Entfernen der TNV diese Option und der Trockner muss individuell beheizt werden. Der Prozessschritt Trockner besitzt aber weiterhin seine Funktionalität. Die Abscheidung hingegen ist zwingend erforderlich, da das Overspray aus der Kabine abgeschieden werden muss und stellt somit einen abhängigen Prozessschritt dar. Eine unterscheidende Darstellung der Parallelprozesse soll mit Hilfe verschiedener Ebenen erfolgen, wie in nachfolgender Abbildung \ref{BasislackAufbau} exemplarisch für den Basislackauftrag dargestellt.
+
+\begin{figure}[htbp]%
+\begin{center}
+  \includegraphics[width=0.5\columnwidth]{BasislackAufbau.pdf}%
+\end{center}
+\caption{Darstellung der Prozessschritte des Moduls Basislack [eigener Entwurf]}%
+\label{BasislackAufbau}%
+\end{figure}
+
+Da es in keinem der zu bildenden Module andere als diese zwei Parallelprozesse gibt, können die im Abschnitt zuvor beschriebenen Prozessschritte übernommen werden, ohne diese mit Hilfe der Abstrahierung und Indealisierung weiter vereinfachen zu müssen.
+
+Aus den unterschiedlichen Verfahren sowohl der Abreinigung als auch der Abscheidung ergeben sich Prozessvarianten, welche den Maßnahmen übergeordnet in einem Auswahlmenü dargestellt werden sollen. Aus der ausgewählten Prozessvariante ergeben sich die dafür verfügbaren Maßnahmen. Sowohl für die Berechnung der prozentualen Änderungen der Kennzahlen als auch zur initialen Darstellung des Ressourceneffizienz-Quickcheck wird eine definierte Ausgangskonfiguration benötigt. Als Grundlage soll hier der \emph{Prozess 5a} mit Nassabscheidung sowie TNV mit Wärmerückgewinnung für den Trockner dienen, da diese Konfiguration die häufigste im Volkswagen Konzern ist. Bei der Implementierung soll darauf geachtet werden, dass diese Berechnungsgrundlage für eine spätere Anwendung in der Planung verändert werden kann, um Veränderungen im Verhältnis zu einem individuellen Prozess darstellen zu können.
+
+Ein Wechsel vom \emph{Prozess 5a} zum \emph{Prozess 2010} ist nur sehr schwer darzustellen, da das gesamte Modul Füller und alle darin befindlichen Prozessschritte entfallen und somit die Hauptprozessfolge verändert wird. Eine Auswahl als Prozessalternative kann nicht abgebildet werden, da der Prozessschritt, an dem die Auswahl erfolgen müsste, anschließend nicht mehr verfügbar wäre. Ebenso verhält es sich in der Modulfolge. Eine solche Auswahl muss somit übergeordnet stattfinden, mit Hilfe eines Dropdown-Menüs oder einer Auswahl-Tabe. Eine andere Möglichkeit wäre, alle Verbräuche und Kennzahlen der Prozessschritte und des Moduls auf Null zu setzen und somit zu signalisieren, dass der Prozessschritt nicht erfolgt. Bei der Implementierung soll die Auswahl mit Hilfe der Taben umgesetzt werden, da sie es später ermöglichen kann, zwei verschiedene Prozesse zu manipulieren und miteinander zu vergleichen, für den Fall, dass ein Prozess als Berechnungsgrundlage für den anderen dient.
+
+\subsection{Berechnung und Darstellung der Kennzahlen}
+Auf Grundlage der aus \emph{Umberto} gewonnenen Daten sind für die einzelnen Prozessschritte die Kennzahlen und Materialmengen darzustellen und zu berechnen. Die Berechnung der fünf KPI muss hierbei unterschiedlich erfolgen. Der KPI Energie generiert sich aus der Summe der Wärme- und der elektrischen Energie. Da jede der Energieformen einen anderen CO$_{2}$-Emissionsfaktor hat, aus dem sich der KPI der CO$_{2}$-Emissionen berechnet, muss jede Energieform separat erfasst werden. Während der KPI Abfall direkt übertragen werden kann, dürfen bei der Übertragung des Wasserverbrauchs nur die Frischwassermengen erfasst werden, da diese den KPI darstellen. Der KPI für die Lösemittelemissionen (VOC) kann aus dem Umberto-Modell nicht ermittelt werden, soll aber als wichtiger KPI dennoch implementiert werden um entsprechende Werte später nachpflegen zu können. 
+
+Neben den fünf KPI sind die im Prozess eingesetzten Materialien optisch abgegrenzt darzustellen. Die in \emph{Umberto} bilanzierten Materialströme werden hierfür einer Stoffstrombewertung unterzogen, so dass Materialien mit geringer ökonomischer oder ökologischer Relevanz nicht dargestellt werden. Relevante, aber nur in geringen Mengen vorkommende Materialströme eines Prozessschrittes werden zusammengefasst, wenn diese der gleichen Bestimmung dienen. So werden die in der Vorbehandlung eingesetzten Chemikalien zu VBH-Chemikalien und die der KTL zu KTL-Chemikalien zusammengefasst.
+
+Alle Kennzahlen müssen mit einem zusätzlichen Attribut versehen werden, welches die Menge/Zeit-Abhängigkeit beschreibt und angibt, ob eine Kennzahl entsprechend nur zeitlich, stofflich oder von beiden Faktoren abhängig ist, um so eine Skalierung der Kennzahlen zu ermöglichen.
+
+Die dargestellten Kennzahlen sind nun in ihre jeweiligen Beziehungen zueinander zu setzen, um die Auswirkungen einer Änderung auf die Prozesschritte und das Gesamtsystem darzustellen. Dabei kann sich die Änderung einer Kennzahl auf Kennzahlen des gleichen Prozessschrittes seiner Parallelprozesse sowie vor- und nachliegende Prozessschritte auswirken. Ändert sich eine Kennzahl auf Grund einer Kennzahländerung, kann von dieser wiederum eine Kennzahländerung ausgehen usw. und so zu einer Kettenreaktion führen. Rückkopplungen wie in Abschnitt \ref{SystemModell} dargestellt, können dabei nicht dargestellt werden, da dies eine ständige Änderung der abzubildenden Kennzahlen und Schieberegler zu Folge hätte.
+
+Die Beziehungen der Kennzahlen zueinander stellen eine n:m-Beziehung dar, die mit Hilfe einer Zuordnungstabelle abgebildet werden kann und um die Angabe eines Proportionalitätsfaktors erweitert wird. So kann ein negativer Faktor eine Antiproportionalität und somit Gegenläufigkeit darstellen und die Größe des Faktors die Auswirkung einer Manipulation verstärken oder mindern.
+
+Um sowohl die Manipulationsmöglichkeit, als auch deren Auswirkungen einzuschränken, soll die Angabe von Minimum- und Maximum-Werten erfolgen. So kann gewährleistet werden, dass der Anwender die Kennzahlen nicht über technische Grenzen hinaus verändert, sowie keine zu starke Potenzierung entlang einer Reaktionskette möglich ist.
+
+Um die KPI der Module zu berechnen werden die Ursprungswerte aller in einem Modul enthaltener Prozessschritte des gleichen KPI summiert und ins Verhältnis zu den entsprechend neuen Werten gesetzt. Die Berechnung der Gesamtauswirkung erfolgt analog durch die Berechnung aller entsprechenden Modul-KPI.
+
+\subsection{Genauigkeit und Wichtung}
+Ein Ressourceneffizienz-Quickcheck stellt keine all zu hohen Anforderungen an die Genauigkeit, um das Abschätzen der Auswirkung einer Manipulation zu ermöglichen. Eine exakte Darstellung der aus Umberto gewonnenen Werte weist eine Genauigkeit aus, die nicht notwendig ist. In Folge von Berechnungen ergeben sich Nachkommastellen, die eine Genauigkeit aufzeigen, die nicht vorhanden ist. Die Werte sollen daher in beiden Fällen gerundet werden.
+
+Eine sehr exakte Manipulation der Schieberegler würde trotz der Rundung Rückschlüsse auf die Genauigkeit der hinterlegten Daten zulassen, da die Manipulation ausgehend von einer Kennzahl auf eine andere die Rundungsschritte aufzeigen kann und so mathematische Rückschlüsse ermöglicht. Daher soll die Manipulation der Schieberegler nur in Sprüngen möglich sein.
+
+Die Schieberegler können ausgehend von Ihrem Ausgangszustand eine Verbesserung oder Verschlechterung des entsprechenden Wertes  aufzeigen. Wird der Schieberegler farblich hinterlegt erfolgt eine zusätzliche Wichtung. Aber auch für den Ausgangszustand können die Schieberegler aus ihrer neutralen Mitte heraus in den positiven oder negativen Bereich bewegt werden und so eine Gewichtung darstellen. Um eben keine solche Wertung vorzunehmen werden alle Schieberegler für die Ausgangswerte mittig platziert.
+
+\subsection{Auswahl der Maßnahmen}
+Die bisher nur den Produktionsprozessen innerhalb der Automobilfertigung (Gewerken) zugeordneten Maßnahmen sollen den einzelnen Prozessschritten zugeordnet werden. Dies muss auf Grundlage ihrer textuellen Beschreibung manuell erfolgen. Dabei gibt es Maßnahmen, die einem Modul aber nicht eindeutig einem einzelnen Prozessschritt zugeordnet werden können. Diese Maßnahmen sollen entsprechend am Modul aufgezeigt werden. Des weiteren kann es Maßnahmen geben, die mehreren Prozessschritten zugeordnet werden können. Z.B. kann die Optimierung einer TNV sowohl im Füller- als auch im Basis- und Klarlackauftrag Anwendung finden.
+Können Maßnahmen einem Prozessschritt aber nicht eindeutig einer Prozessschrittvariante zugeordnet werden, sind diese ebenso entsprechend dem Prozessschritt zuzuordnen.
+
+Stehen für einen Prozessschritt oder eine Prozessschrittvariante mehrere Maßnahmen zur Verfügung, muss eine Überprüfung erfolgen, ob diese sich technisch nicht ausschließen. Um diese Anforderung nicht berücksichtigen zu müssen, soll bei der Erstellung des Prototypen stets nur jeweils eine Maßnahme auf einen Prozessschritt angewendet werden können.
+
+Im Vergleich zu einer Prozessalternative kann eine Maßnahme nur die Kennzahlen selbst und die Beeinflussungsfaktoren verändern, nicht aber die Beziehungen selbst.
+
+\chapter{Implementierung des Ressourceneffizienz-Quickcheck}
+\section{Technische Voraussetzungen und Anforderungen}
+
+Eine Grundanforderung dieser Arbeit ist, dass die Realisierung des Ressourceneffizienz-Quickcheck webbasiert erfolgen soll. 
+Um die zuvor genannten Anforderungen zu erfüllen, muss die Web-Anwendung dynamisch sein. Serverseitig soll so abhängig von den in einer Datenbank hinterlegten Daten der Inhalt generiert werden. So können das hinterlegte Modell der Lackiererei, oder die hinterlegten Daten verändert werden und der neue Inhalt der Website generiert sich automatisch, ohne den Quellcode manipulieren zu müssen. Client-seitig muss von der Bedienung ausgehend der dargestellte Seiteninhalt manipuliert werden, so dass auch hier eine dynamische Darstellung benötigt wird.
+
+Der Volkswagen Konzern verfügt über ein konzernweites Intranet und diverse Internetpräsenzen, deren Inhalte mit Hilfe eines Content-Management-Systems erstellt werden. Die Grundlage hierfür stellen Webserver mit PHP-Unterstützung dar, die Datenhaltung und Abfrage erfolgt mit Hilfe von SQL-Datenbanken. Um eine Implementierung in diese Infrastruktur zu ermöglichen, soll der Ressourceneffizienz-Quickcheck auf gleicher Grundlage realisiert werden.
+
+Zur Entwicklung des Prototypen wird XAMPP verwendet. "`XAMPP ist eine Distribution von Apache, MySQL, PHP und Perl, die es ermöglicht diese Programme auf sehr einfache Weise zu installieren"' [\cite{Seidler2013}]. So ist es möglich, lokal einen Webserver zu simulieren um die Anwendung erstellen und testen zu können, ohne Gefahr zu laufen, durch eine fehlerhafte Implementierung die Infrastruktur des Unternehmens zu gefährden.
+
+Als Grundlage für die Anwendung "`Ressourceneffizienz-Quickcheck"' dienen die Daten aus Umberto und Maßnahmen@web und müssen der Anwendung zur Verfügung gestellt werden. Maßnahmen@web ist eine Java-Anwendung die zur Datenhaltung eine Datenbank nutzt, auf die , ggf.mit Hilfe einer Schnittstelle, zugegriffen werden könnte. Da auf die Datenbank kein Zugriff gewährt werden kann, muss auf die in Maßnahmen@web implementierte Excel-Export-Funktion zurückgegriffen werden, um die Maßnahmen zu extrahieren und dem Ressourceneffizienz-Quickcheck zur Verfügung zu stellen.
+
+Die aus Umberto benötigten Daten können aus Umberto direkt gewonnen werden, da die Software geeignete Schnittstellen anbietet. Die zur prototypischen Umsetzung benötigte Datenmenge ist allerdings so gering, dass der Aufwand zur Realisierung einer Schnittstelle nicht gerechtfertigt ist, so dass die benötigten Daten ebenfalls per Excel-Export extrahiert werden. Steigt zukünftig die Datenmenge, z.B. durch die Abbildung mehrerer Gewerke, kann eine Schnittstelle auch nachträglich realisiert werden.
+
+Die so aus Maßnahmen@web und Umberto gewonnenen Daten sind in eine SQL-Datenbank zu importieren, um diese dem Ressourceneffizienz-Quickcheck verfügbar zu machen und mit Hilfe von PHP darauf zugreifen zu können.
+
+Um eine Client-seitige Dynamik zu erreichen, wird JavaScript verwendet. So kann auf Grund von Anwenderinteraktionen eine Manipulation der Website erfolgen. Mit Hilfe von JavaScript können so die Schieberegler realisiert und die verfügbaren Maßnahmen als Popup eingeblendet werden.
+
+Um die Implementierung zu vereinfachen wird die jQuery-Bibliothek\footnote{Wikipedia: "`jQuery ist eine freie, umfangreiche JavaScript-Bibliothek, welche komfortable Funktionen zur DOM-Manipulation und -Navigation zur Verfügung stellt."'} verwendet.  Die Bibliothek beinhaltet bereits vorgefertigte Elemente, die leicht an die eigenen Anforderungen angepasst werden können. So stellt der so genannte "`Slider"' die geforderte Schieberegler-Funktionalität zur Verfügung. Darüber hinaus werden vorgefertigte Animations-Effekte zur Verfügung gestellt, mit deren Hilfe die Website interaktiver und somit Anwender-afin gestaltet werden kann. Zudem werden AJAX-Funktionalitäten\footnote{Asynchronous JavaScript and XML (AJAX): Ermöglicht die asynchrone Datenübertragung zwischen Browser und Server. So kann eine HTML-Seite auf Grundlage von Serverabfragen verändert werden, ohne diese neu laden zu müssen.} zur Verfügung gestellt, mit deren Hilfe Webinhalte dynamisch nachgeladen werden können. Da jQuery sowohl Browser-unabhängig ist als auch von iOS und Android unterstützt wird, kann der Ressourceneffizienz-Quickcheck entsprechend leicht adaptiert werden.
+
+Zur Entwicklung des Prototypen wird der Browser Firefox genutzt, da er zahlreiche Debugging-Möglichkeiten insbesondere für JavaScript beinhaltet. Als Entwicklerumgebung wird vom Enterprise Help Desk\footnote{IT-Service der Volkswagen AG} Eclipse zur Verfügung gestellt und die XAMPP-Distribution installiert. Aufgrund der konzernweiten Einschränkung der Benutzerrechte können die Anwendungen nur ohne Administratorrechte ausgeführt werden, weshalb die sonst üblichen Einschränkungen im Zugriff auf die SQL-Datenbank nur bedingt in XAMPP eingerichtet werden können.
+
+\section{Entwurf und Implementierung der Datenbank}
+In einem ersten Schritt, vor Implementierung der Anwendung, ist die SQL-Datenbank als Datengrundlage zu erstellen. Dazu müssen die Daten aus Maßnahmen@web und Umberto entsprechend überführt werden. Zugleich ist eine Datenstruktur zu schaffen, welche die Prozessschritte der Lackiererei oder auch anderer Gewerke abbilden kann.
+\begin{figure}[htbp]%
+\includegraphics[width=1.0\columnwidth]{Datenbasis.pdf}%
+\caption{schematische Darstellung der Datenbasis [eigener Entwurf]}%
+\label{Datenbasis}%
+\end{figure}
+\subsection{Übertragung der Maßnahmen}
+Die Maßnahmen können aus Maßnahmen@web mit Hilfe eines Excel-Exports extrahiert werden. Mit Hilfe der dort verfügbaren Filterkriterien können die zu exportierenden Maßnahmen eingegrenzt werden. So werden nur die Maßnahmen, die der Lackiererei zugeordnet sind und zugleich auf andere Standorte übertragen werden können, exportiert.
+
+Die so erhaltene Excel-Tabelle enthält sehr viele redundante Daten und ist vor einem Import in die SQL-Datenbank zu normalisieren. Zuvor wird die Tabelle noch einmal manuell gefiltert, da hier auch Maßnahmen enthalten sind, die nicht umsetzbar waren. Der Status der Umsetzung einer Maßnahme ist in so genannten Härtegraden definiert. Härtegrad 9 beschreibt hierbei eine gescheiterte Maßnahme. Der Grund des Scheiterns ist aber nicht weiter spezifiziert. So können diese aus technischen oder finanziellen Gründen nicht umgesetzt worden sein. Um nur die technisch nicht umsetzbaren Maßnahmen zu entfernen, werden die Maßnahmen entsprechend ihrer textlichen Beschreibung von Hand gefiltert.
+
+Nun wird die Tabelle in die dritte Normalform überführt. Hierzu werden die Daten nach ihren Abhängigkeiten strukturiert und in eigenständige Tabellen überführt. Über eine eindeutige ID sind diese weiterhin der jeweiligen Maßnahme zugeordnet. Die Maßnahmen selbst verfügen bereits über eine eindeutige Maßnahmennummer, die als Primärschlüssel genutzt wird. Dann werden die Tabellen in die SQL-Datenbank importiert. Die Tabelle tab\_massnahme wird nun um die Spalten ProzessZuordnung und ModulZuordnung erweitert, um mit Hilfe der jeweiligen Zuordnungstabellen die Zuordnung einer Maßnahme zu einem oder mehreren Prozessen oder Modulen zu ermöglichen.
+
+\subsection{Erstellung des Datenbankmodells}
+Anschließend wird die Datenstruktur erstellt, welche die Abbildung des Lackierprozesses und der jeweiligen Kennzahlen ermöglicht. Die Kennzahlen und Materialien stellen dabei Elemente dar, die eineindeutig einem Prozessschritt zuzuordnen sind. Dieser wiederum ist eineindeutig einem Modul zuzuordnen. Die Module sind wiederum eineindeutig einem Gewerk und einer Gewerkversion zugeordnet. Dies ergibt eine Hierarchie, nach der zuerst mehrere Gewerke und abhängig davon Gewerkversionen abgebildet werden können. Für das Gewerk Lackiererei können so die Lackierprozesse 5a und 2010 unterschieden werden.
+
+Die Module bekommen sowohl eine ID, als auch eine Position zugewiesen. Dies ermöglicht an einer Position Daten für mehrere Module zu hinterlegen, das Gleiche erfolgt für die Prozesse. Sind in einem Modul zwei oder mehr Prozesse mit der gleichen Prozessposition hinterlegt, bilden diese eine im Abschnitt \ref{Prototyp} beschriebene Prozessalternative ab. Ist diese wiederum einem anderen Modul an gleicher Position, also einer Modulalternative, zugeordnet, können so ausgehend von einer Prozessalternative alle im Modul enthaltenen Prozessschritte verändert werden.
+
+Über eine Zuordnungstabelle erfolgt die eindeutige Zuordnung von Elementen (Kennzahlen und Materialien) zu den Prozessen, wobei ein Element genau einem Prozess zugeordnet ist, ein Prozess aber mehrere Elemente beinhalten kann. Dem Element selber wird eine Kategorie zugewiesen. Hier erfolgt die Unterscheidung, ob die Kennzahl zeitlich, stofflich oder von beiden Faktoren abhängig ist. Gleichzeitig wird sie einer Kennzahlart zugeordnet, die differenziert, welche der fünf KPI (Energie, Wasser, Abfall, CO$_{2}$, oder VOC) die Kennzahl beschreibt, oder ob es sich um ein Material handelt. 
+Das Element selbst beinhaltet neben einer eindeutigen ID eine Bezeichnung, eine Wertangabe und Werteeinheit. Diese wird um die Angabe erlaubter Minimum- und Maximumwerte ergänzt um später die Manipulation der Kennzahl eingrenzen zu können.
+Das nachfolgend in Abbildung \ref{ERM-Modell} dargestellte ER-Modell verdeutlicht die beschriebenen Abhängigkeiten.
+
+\begin{figure}[htbp]%
+\includegraphics[width=1.0\columnwidth]{REQ-ERM-Tabellen.pdf}%
+\caption{Entity-Relationship-Modell der Datenbank [eigener Entwurf]}%
+\label{ERM-Modell}%
+\end{figure}
+
+Zu guter Letzt ermöglicht eine Faktortabelle genannte Zuordnungstabelle die eindeutige Zuordnung zweier Elemente zueinander unter Angabe eines Faktors. Hiermit werden die Beziehungen zwischen den Elementen definiert und der Faktor angegeben, mit dem die Veränderung einer Kennzahl die andere entsprechend beeinflusst. Die Angabe hat hier eindeutig zu erfolgen, so dass die ID1 immer die Beeinflussende und ID2 die Beeinflusste ist. So kann eine \emph{Kennzahl Eins} eine \emph{Kennzahl Zwei} mit einem anderen Faktor beeinflussen, als eine \emph{Kennzahl Zwei} entsprechend \emph{Kennzahl Eins}.
+
+\subsection{Kennzahlen und deren Beziehungen}
+In der zuvor erstellten Struktur sind nun die Lackierprozesse zu erstellen und die entsprechenden Kennzahlen zu hinterlegen. Dazu wird das Gewerk mit der ID=1 und die Gewerkversion ID=1 für den Lackierprozess 5a angelegt. Anschließend werden die hier verfügbaren Module generiert und entsprechend bezeichnet, so dass die den Modulen zugehörigen Prozessschritte erstellt werden können. Die Prozessschritte erhalten ebenfalls eine Bezeichnung und Position in der Prozessfolge zugewiesen. Durch Zuordnung zu einer Ebene können diese der Hauptprozessfolge, bzw. den optionalen oder bedingten Parallelprozessen zugeordnet werden.
+
+Jetzt können die den Prozessen zugehörigen Kennzahlen erstellt werden. Dazu werden die Daten aus Umberto exportiert und auf Grundlage der hinterlegten Formeln einer der drei Kategorien (stofflich, zeitlich oder stofflich und zeitlich) zugeordnet. Da der Datenexport auf den auf ein Fahrzeug pro Stunde skalierten Werten beruht, ist für die meisten Werte keine Anpassung notwendig. Einzig die nur  Zeit-abhängigen Werte müssen nachträglich umgerechnet werden. Die so erhaltenen Kennzahlen werden nun in die Datenbank eingegeben und mit Hilfe der Zuordnungstabelle einem Prozess zugeordnet.
+
+Schließlich sind die Beziehungen der Kennzahlen zueinander anzugeben. Die Angabe eines Faktors erfolgt hier vorläufig mit (1) für eine gleich gerichtete und mit (-1) für eine gegenläufige Beeinflussung. So kann bei der nachfolgenden Implementierung die Richtigkeit der Berechnungen besser geprüft werden. Ist die Implementierung beendet, können die Faktoren entsprechend angepasst werden.
+
+\section{Implementierung der Software}
+\subsection{Generierung der Module und Prozessschritte}
+Für die Implementierung müssen die in der Datenbank hinterlegten Daten aus der Datenbank ausgelesen werden, um die Darstellung der Website generieren zu können.
+
+Dazu werden in PHP mehrere SQL-Abfragen generiert, die alle dem Gewerk "`Lackiererei"' und dem Prozess 5a, als Standardprozess, zugeordneten Module, Prozesse und Elemente zurück geben (siehe Anhang A1, Zeile 200-235).
+
+Diese werden an PHP übergeben. Zusätzlich werden die ermittelten Kennzahlen an JavaScript übergeben, um später die dynamische Berechnung und Manipulation der Kennzahlen und Schieberegler zu ermöglichen.
+
+Eine weitere Abfrage ermittelt die IDs der Module und Prozessschritte, für die Maßnahmen verfügbar sind und speichert in ein Array die Modul-ID sowie die zugehörige Maßnahmen-ID.
+
+Die ausgelesenen Module werden anschließend der Reihe ihrer Position nach durchlaufen und mit jeweils mit der Modulbezeichnung, einem Schieberegler für jeden der 5 KPI und zugehöriger Wertangabe dargestellt. Für eine spätere Manipulation bekommen sowohl der Schieberegler (Slider) als auch der Textcontainer für die Wertangabe eine eindeutige ID zugewiesen, die sich aus der Modulposition und der Kennzahlart ergibt.
+Ist die Modul-ID in dem Array enthalten, das die für die Module verfügbaren Maßnahmen-IDs speichert, wird das Symbol, welches eine verfügbare Maßnahme indiziert angezeigt. Wenn keine Maßnahme verfügbar ist wird entsprechend die inaktive Version des Symbols geladen. Die so generierten Module sind in Abbildung \ref{Module} dargestellt.
+\begin{figure}[htbp]%
+\includegraphics[width=1.0\columnwidth]{ScreenModul.pdf}%
+\caption{Darstellung der Module [Screenshot der Anwendung]}%
+\label{Module}%
+\end{figure}
+Anschließend werden in einer weiteren Schleife alle Module nochmals durchlaufen. Für jedes Modul wird nun ein DIV-Container generiert, in welche anschließend die Prozessschritte integriert werden können, so dass bei Mausklick auf das Modul der entsprechende Container eingeblendet werden kann. 
+
+Innerhalb dieser Schleife durchläuft eine weitere Schleife die drei möglichen Prozessebenen Abreinigung, Prozess und Abscheidung (optionaler Prozessschritt, Hauptprozessschritt und bedingter Prozessschritt). Ist die jeweilige Ebene belegt, wird die entsprechende Beschriftung hinzugefügt. 
+
+Jetzt durchläuft eine Schleife alle Prozessschritte und stellt all diejenigen der Reihe nach dar, die sowohl zum Modul als auch zur entsprechenden Ebene gehören. Der Name des Prozessschrittes und ein verstecktes Popupfenster mit der ID des Prozessschrittes werden generiert. In dem Popupfenster werden die verfügbaren Prozessalternativen und Maßnahmen dargestellt.
+
+Jetzt werden alle Elemente durchlaufen und die zum Prozessschritt gehörenden in Reihenfolge ihrer zugewiesenen Kennzahlart dargestellt. So stellen 1-5 entsprechend Energie, Wasser, Abfall, CO$_{2}$ und VOC dar. Anschließend wird die Kennzahlart 6 optisch abgesetzt dargestellt, womit alle zum Prozess gehörenden Materialien abgebildet werden.
+Für jede Kennzahl wird nun ein Schieberegler und ein Container mit dem Kennzahlwert erstellt und mit der eindeutigen ID der Kennzahl gekennzeichnet, um eine Manipulation mit JavaScript zu erreichen.
+
+Sind alle Prozesse und Ebenen des Moduls durchlaufen, wird entsprechend das nächste Modul generiert, bis alle Module und abgebildet sind.
+
+\subsection{grafische Elemente und Funktionalitäten}
+\paragraph{Schieberegler:}
+Das wesentliche Element zur Manipulation der Kennzahlen stellen die Schieberegler dar. Diese werden mit Hilfe der in der jQuery-Bibliothek zur Verfügung gestellten Slider-Funktion realisiert. Hier wird mit Hilfe eines Hintergrundbildes die Wertung verstärkt. Die Eigenschaften des Sliders selbst können mit zahlreichen Optionen angepasst werden. So werden die Ausgangsposition bei Initialisierung des Sliders sowie deren mögliche Minimum- und Maximum-Werte angegeben, wenn diese für die Kennzahl hinterlegt sind. Ist dies nicht der Fall, wird der Slider mittig, bei 100\%, positioniert und kann entsprechend von 0-200\% bewegt werden. Die angegebenen Mininmum- und Maximumwerte grenzen hier nicht die Positionierung ein, sondern nur die tatsächlich erreichbaren Werte. Mit Angabe des Parameters "`step"' kann die mögliche Schrittweite des Sliders angegeben werden, so dass die Positionierung nur in fünf Schritten erfolgen kann. 
+
+Mit Hilfe eines Event-Handlers kann die vom Nutzer ausgehende Veränderung eines Sliders erfasst werden. Der Wert der Veränderung wird erfasst und der Slider entsprechend positioniert. Durch eine gleichzeitige Manipulation des DOM (Document Object Modell) kann die über die Kennzahl-ID identifizierte Wertabgabe neu berechnet und verändert werden. 
+Anschließend werden aus der Tabelle, welche die Beziehungen definiert (Faktor-Tabelle), die direkt abhängigen Slider ermittelt. Diese werden nach dem selben Schema der Reihe nach verändert, wobei die wiederum von Ihnen abhängigen Slider ebenfalls ermittelt werden. Eine Überprüfung stellt sicher, dass die so ermittelten zusätzlichen Abhängigkeiten nicht bereits auf Grund der gleichen Anwenderinteraktion verändert wurden und fügt diese anschließend in das Array mit den noch abzuarbeitenden Slidern ein. So werden alle Abhängigkeiten eines Sliders aufgelöst und eine Endlosschleife verhindert, die ein Zirkelbezug auf eine bereits veränderte Kennzahl zur Folge hätte. Die nachfolgende Abbildung \ref{SliderFaktortabelle} veranschaulicht die so aufgelösten Abhängigkeiten.
+
+\begin{figure}[htbp]%
+\includegraphics[width=1.0\columnwidth]{SliderFaktortabelle.pdf}%
+\caption{Abhängigkeit der Slider aus Faktortabelle [eigener Entwurf]}%
+\label{SliderFaktortabelle}%
+\end{figure}
+Sind alle abhängigen Slider verändert werden alle Kennzahlen in einer weiteren Schleife durchlaufen. Hier werden die neuen Werte und Sliderpositionen der Module ermittelt. Die Kennzahlen werden hierfür nach ihrer Kennzahlart und Modulzugehörigkeit differenziert und die Werte summiert. Für die Darstellung der Gesamtauswirkung wird analog ohne Differenzierung nach Modulen verfahren.
+
+In allen Fällen wird die neue Sliderposition berechnet, in dem eine prozentuale Verhältnisrechnung zwischen den in einem Array hinterlegten Ausganswerten einer Kennzahl und deren neuen Werten erfolgt.
+
+\paragraph{Spinner:} In der jQuery-Bibliothek stellt ein Spinner ein kombiniertes Textfeld mit klickbaren hoch-/runter-Pfeilen dar. Mit Hilfe Spinners wird die Skalierung der Werte ermöglicht. Es werden drei Spinner erzeugt, einer welcher die Laufzeit eines Produktionstages erfasst, einer weiterer gibt an, wie viele Fahrzeuge in dieser Zeit produziert werden und der Letzte erfasst die Produktionstage pro Jahr. So kann die jährlich produzierte Fahrzeugmenge ermittelt und die jährliche Laufzeit der Lackieranlage berechnet werden. Sowohl bei Initialisierung der Spinner als auch bei Veränderung durch den Anwender werden alle Kennzahlen entsprechend der ihnen zugewiesenen Kennzahlart skaliert. So werden alle stofflich, zeitlich und von beiden Faktoren abhängigen Kennzahlen entsprechend berechnet.
+
+Die Spinner sind mit Minimum- und Maximum-Werten entsprechend so definiert, dass sie keine ungültigen Werte annehmen können. So können die täglichen Produktionsstunden nur von 1 bis 24 verändert werden und die Tage zwischen 1 und 365. Die produzierte Fahrzeugmenge ist zwischen 1 und 100 begrenzt.
+
+\paragraph{Rundung der Werte:} Sowohl bei Initialisierung der Seite, als auch bei einer Veränderung durch den Anwender werden die dargestellten Werte mit Hilfe einer Rundungsfunktion gerundet. Der Grad der Rundung wird mit zunehmender Größe der zu rundenden Zahl gesteigert. So werden Werte zwischen 1 und 100 auf 5er-Schritte und Werte zwischen 1.000 und 10.000 auf 50er-Schritte.
+
+\paragraph{Popup-Fenster:} Für jeden Prozessschritt und Module mit verfügbaren Maßnahmen kann ein Popup-Fenster geöffnet werden. Mit Hilfe eines Accordions werden die verfügbaren Maßnahmen separiert dargestellt. Über eine in die jeweilige Titelleiste integrierte Checkbox kann die jeweilige Maßnahme ausgewählt werden.
+\begin{figure}[htbp]%
+\includegraphics[width=1.0\columnwidth]{massnahmen.pdf}%
+\caption{Darstellung der Maßnahmen und Prozessalternativen [eigener Entwurf]}%
+\label{Massnahmen}%
+\end{figure}
+Ist ein Prozessschritt ausgewählt, werden zusätzlich die verfügbaren Alternativprozesse angezeigt und können ausgewählt werden. Aus Zeitmangel sind in der Maßnahmen-Tabelle nur einige ausgewählte Maßnahmen zu Testzwecken einem Modul oder Prozessschritt zugeordnet. Eine Differenzierung nach Prozessalternativen erfolgt noch nicht, da bisher nur der Ausgangsprozess abgebildet ist.
+
+\paragraph{Coorporate Identity und CSS:} Mit Hilfe eines in der Datei style.css definierten Cascading Style Sheet (CSS) erfolgt die Positionierung und Größendefinition aller Elemente des Ressourceneffizienz-Quickcheck. Die Festlegung der Farbgebung erfolgt mit Hilfe eines für jQuery verfügbaren Editors (Theme-Editor).  Dieser ermöglicht die einfache und einheitliche Farbveränderung aller dargestellten Elemente und Schriften. Zur Zeit ist die Farbgebung an die Coorporate Identity des Volkswagen Konzerns angepasst. Mit Hilfe des Editors kann aber eine schnelle Anpassung an die Coorporate Identity der Volkswagen AG oder anderer Konzernmarken erfolgen. Einzig das dargestellte Firmen-Logo ist manuell im Quellcode zu ersetzten. 
+
+Die nachfolgende Abbildung \ref{ScreenshotGesamt} zeigt einen Screenshot der Anwendung mit allen zuvor beschriebenen grafischen Elementen und den Aufbau des Ressourceneffizienz-Quickcheck am Beispielhaft ausgewählten Modul UBS/NAD (Unterbodenschutz/Nahtabdichtung).
+
+\begin{figure}[htbp]%
+\includegraphics[width=1.0\columnwidth]{ScreenGesamt.pdf}%
+\caption{Screenshot des Ressourceneffizienz-Quickcheck}%
+\label{ScreenshotGesamt}%
+\end{figure}
+
+\section{Darstellung nicht implementierter Funktionen}
+Mit Beendigung der Bachelorarbeit konnten nicht alle für die Zielgruppe "`Mitarbeiter und Stakeholder"' definierten Anforderungen umgesetzt werden. Auch war die Beseitigung einiger Fehler der Implementierung nicht mehr möglich. Die Schilderung der Mängel soll sowohl den aktuellen Stand der Anwendung widerspiegeln, als auch eine gezielte Weiterbearbeitung ermöglichen.
+
+\subsection{zu beseitigende Fehler}
+\begin{itemize}
+\item \emph{Berechnung der Modul- und Gesamtwerte:} Die Berechnung der Modul- und Gesamt-KPI funktioniert zur Zeit nur für den KPI Energie. Bei Betätigung eines beliebigen Sliders bewegt sich der Slider des KPI Abfall im ersten Modul. Die Ursache dafür konnte noch nicht gefunden werden.
+\item \emph{Skalierung der Kennzahlen:} Bei der Skalierung der Kennzahlen, mit Hilfe der Spinner, tritt ein sporadischer Fehler auf, der eine ebenfalls willkürlich erscheinende Auswahl an Kennzahlen auf Null setzt, woraufhin diese nicht mehr berechnet werden.
+\item \emph{Sliderposition außerhalb des möglichen Bereichs:} In einem Fall und nur auf einem Rechner wurde ein abhängiger Slider in Folge einer Manipulation über die Grenzen seines Bereiches bewegt. Der Fehler trat nie wieder auf, sollte aber beobachtet werden.
+\end{itemize}
+
+\subsection{fehlende Funtionalitäten}
+\begin{itemize}
+\item \emph{Berechnung der CO$_{2}$-Kennzahlen:} Zur Zeit können die CO$_{2}$-Kennzahlen noch nicht berechnet werden. Dies begründet sich darin, dass in der Anwendung noch keine Standortauswahl möglich ist, welche die jeweiligen Emissionsfaktoren liefern würde. Da die abgebildete "`idealisierte Lackiererei"' keinem realen Standort entspricht, sollen durchschnittliche Emissionsfaktoren ermittelt und zur Berechnung hinterlegt werden, ohne eine Standortauswahl abzubilden.
+\item \emph{Darstellung der VOC-Kennzahlen:} In den aus Umberto generierten Daten sind keine Werte für die VOC-Emissionen enthalten. Sind die erforderlichen Werte ermittelt, müssen diese und die jeweiligen Beziehungen zu anderen Kennzahlen in die Datenbank eingegeben werden. Die Funktion selbst ist bereits implementiert.
+\item \emph{Minimum/Maximum und Faktoren:} Bei der Implementierung wurde eine Möglichkeit implementiert, die Maxima und Minima anzugeben, um so den Wertebereich eines Schiebereglers zu definieren. Da diese Angabe nur mit fundierter Fachkenntnis möglich ist, wurde bei der Implementierung darauf verzichtet. Ebenso wurden die Faktoren der Elementbeziehungen auf den Faktor (1) für eine gleichgerichtete und den Faktor (-1) für eine gegenläufige Beziehung gesetzt. Zur Überprüfung der Richtigkeit der Berechnungen in der Implementierungsphase war dies sehr hilfreich. Mit entsprechender Fachkenntnis sollen hier Faktoren hinterlegt werden, die die Prozessbeziehungen am geeignetsten beschreiben. 
+\item \emph{Auswirkungen von Prozessalternativen und Maßnahmen:} Die Auswirkungen einer Maßnahme oder Prozessalternative können noch nicht berechnet werden. Hierfür müssen ebenfalls die Emissionsfaktoren für die "`idealisierte Lackiererei"' hinterlegt werden. So können die absoluten Emissionen einer Maßnahme durch die Emissionsfaktoren des Standortes, aus dem die Maßnahme stammt geteilt und anschließend mit denen der "`idealisierten Lackiererei"' multipliziert werden.
+\end{itemize}
+\chapter{Fazit und Ausblick}
+Bei der prototypischen Implementierung des Ressourceneffizienz-Quickcheck galt es einige Hindernisse zu überwinden. Die Veränderung der abhängigen Schieberegler, insbesondere das Verhindern endloser Schleifendurchläufe bei mehrfachen Verweisen auf eine Kennzahl, war sehr zeitaufwendig, so dass nicht alle während der Konzeption aufgestellten Anforderungen umgesetzt werden konnten.
+
+Die Implementierung hat aber gezeigt, dass das textuell entworfene Konzept realisierbar ist. Es ist also möglich, die Lackierprozesse so abzubilden, dass die Kennzahlen zur Bewertung der Ressourceneffizienz, ausgehend von den stofflichen Beziehungen der Prozessschritte zueinander, visualisiert werden können. 
+
+Der aktuelle Entwicklungsstand des Prototypen vermag dabei, den Anteil einer Kennzahl an einer Modulkennzahl, sowie dem Gesamtprozess aufzuzeigen. Dies ermöglicht die Identifikation der größtmöglichen Stellschrauben zu einer Steigerung der Ressourceneffizienz, kann aber zugleich auch zeigen, das eine Optimierung in machen Prozessschritten kaum Einfluss auf die Ressourceneffizienz einer Automobillackiererei hat.
+
+Die Beziehungen zwischen den einzelnen Prozesselementen zeigen die wechselseitigen Einflüsse, die von einer Kennzahl ausgehen auf. Insbesondere die Darstellung von Gegenläufig\-keiten zeigt so die Herausforderungen die mit einer Steigerung der Ressourceneffizienz einhergehen.
+
+Bereits der aktuelle Prototyp kann so das Prozessverständnis und die Transparenz des Lackierprozesses erhöhen und somit einen Lerneffekt erzielen, die Beseitigung der Fehler vorausgesetzt. Die Implementierung der weiteren Anforderungen insbesondere die Darstellung der Auswirkungen einer Maßnahme kann dies weiter befördern.  
+
+Die Grundanforderungen an den Ressourceneffizienz-Quickcheck wurden so umgesetzt, dass eine Implementierung der für die anderen Zielgruppen angestrebten Funktionen zusätz\-lich möglich ist. Bereits die Möglichkeit unterschiedliche Prozesse und somit auch Prozessvarianten miteinander zu vergleichen bietet hier einen Mehrwert und kann recht leicht implementiert werden.
+
+Die Erstellung eines Editors, der die Manipulation sowohl der Kennzahlen als auch deren Beziehungen zueinander ermöglicht, ist aufwendig, bedeutet aber gleichzeitig den größten Zugewinn. Da so die Erstellung und der Vergleich individueller Prozesse und die Auswirkung einer Maßnahme auf diese dargestellt werden kann.
+
+Eine Vorstufe dazu stellt die Möglichkeit dar, die Verbräuche des eigenen Prozesses anzugeben und so den eigenen Lackierprozess abbilden und manipulieren zu können. Wird diese Funktion um eine Speichermöglichkeit ergänzt wird der Vergleich von Erfassungszeiträumen und deren Bewertung möglich. Die so gewonnenen Daten bilden auch eine gute Grundlage für eine Stoffstromanalyse.
+Zuletzt ist bereits jetzt die Möglichkeit gegeben, weitere Prozesse abzubilden, so dass wenn die Daten verfügbar sind der gesamte Produktionsprozess eines Fahrzeugs abgebildet werden kann.
+
+Das entwickelte Konzept und der erstellte Prototyp eines Ressourceneffizienz-Quickcheck bilden somit eine gute Grundlage für eine weitere Entwicklung.
+\nocite{*} %Zeigt alle Literaturangaben, unabhÃ¤ngig ob zitiert, oder nicht
+%\bibliographystyle{alphadin}
+%\bibliography{literatur} %Aufruf des Literaturverzeichnis
+\printbibliography
+\appendix
+\chapter{Anhang}
+%\section{Installationsanleitung}
+\section{Quellcode}
+
+\includepdf[pages={1-18}, scale = 0.8]{Ausgabe.pdf}
+
+\include{Eid}
+\end{document}

@@ -1,0 +1,151 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {ngerman}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abbildungsverzeichnis}{viii}{chapter*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Zielstellung dieser Arbeit}{1}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Vorgehen und Struktur dieser Arbeit}{2}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Lineare Vorgehensmodelle}{3}{section*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Iterative Vorgehensmodelle}{3}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Das inkrementelle Vorgehensmodell}{3}{section*.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Vorstellung des Unternehmens}{4}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.1}Der Volkswagen Konzern}{4}{subsection.1.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.2}Die Abteilung Umwelt-Produktion}{6}{subsection.1.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Ressourceneffizienz und Ressourceneffizienz-Quickcheck}{8}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Ressourceneffizienz und Nachhaltigkeit}{8}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Ressouceneffizienz}{9}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}branchenspezifische Ressourceneffizienz-Schnelltests (Ressourceneffizienz-Quickchecks)}{11}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Ressourceneffizienz-Quickcheck}{12}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Ressourceneffizienz bei Volkswagen}{13}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Think Blue.Factory}{13}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Stoffstrommanagement}{15}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Im Volkswagen Konzern eingesetzte Software und deren Anwendungsziele}{16}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Umwelt-Informations-System (UIS):}{16}{section*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Digitale Fabrik:}{17}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Prozess-Wissens-Management (PWMS):}{18}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Umberto:}{18}{section*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ma\IeC {\ss }nahmen@web:}{19}{section*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Fachliche Konzeption des Ressourceneffizienz-Quickcheck}{23}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Zielgruppen und deren Anforderungen an einen Ressourceneffizienz-Quickcheck}{23}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Betreiber in der Produktion:}{23}{section*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Planer in der Produktion:}{24}{section*.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Mitarbeiter allgemein:}{24}{section*.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Kunden / Stakeholder:}{25}{section*.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Skizzierung m\"oglicher Konzepte und deren Grundlagen}{25}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Grundlagen:}{25}{section*.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Konzeptskizzen zur Differenzierung:}{26}{section*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{Betreiber und Planer:}{26}{section*.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{Mitarbeiter und Stakeholder:}{27}{section*.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Auswahl eines Konzeptes nach Umsetzbarkeit und Verf\"ugbarkeit der Daten}{27}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Funktionsanalyse und Visualisierungsm\"oglichkeiten}{28}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Modellbildung und Simulation}{32}{section.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.1}System und Modell}{32}{subsection.4.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.2}Darstellung einer idealisierten Lackiererei}{34}{subsection.4.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Vorbehandlung:}{34}{section*.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Kathodische Tauchlackierung:}{35}{section*.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Nahtabdichtung und Unterbodenschutz:}{35}{section*.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{F\"uller:}{35}{section*.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Basislack:}{35}{section*.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Klarlack:}{35}{section*.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Hohlraumkonservierung / Dachverst\"arkung:}{36}{section*.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Abscheideverfahren:}{36}{section*.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Abluftreinigung:}{37}{section*.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Entwicklung eines fachlichen Prototypen}{38}{section.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.1}\"Ubertragung des Modells einer Lackiererei in das Konzept des Prototypen}{38}{subsection.4.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.2}Berechnung und Darstellung der Kennzahlen}{40}{subsection.4.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.3}Genauigkeit und Wichtung}{42}{subsection.4.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.4}Auswahl der Ma\IeC {\ss }nahmen}{42}{subsection.4.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Implementierung des Ressourceneffizienz-Quickcheck}{44}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Technische Voraussetzungen und Anforderungen}{44}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Entwurf und Implementierung der Datenbank}{45}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}\"Ubertragung der Ma\IeC {\ss }nahmen}{47}{subsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Erstellung des Datenbankmodells}{47}{subsection.5.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.3}Kennzahlen und deren Beziehungen}{49}{subsection.5.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Implementierung der Software}{49}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.1}Generierung der Module und Prozessschritte}{49}{subsection.5.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.2}grafische Elemente und Funktionalit\"aten}{52}{subsection.5.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Schieberegler:}{52}{section*.40}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Spinner:}{52}{section*.42}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Rundung der Werte:}{54}{section*.43}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Popup-Fenster:}{54}{section*.44}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Coorporate Identity und CSS:}{54}{section*.46}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Darstellung nicht implementierter Funktionen}{57}{section.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.1}zu beseitigende Fehler}{57}{subsection.5.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.2}fehlende Funtionalit\"aten}{57}{subsection.5.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{59}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Anhang}{61}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Quellcode}{61}{section.A.1}
