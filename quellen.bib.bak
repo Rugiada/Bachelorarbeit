@@ -1,0 +1,527 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: UTF8
+
+@BOOK{aldrich2003simulations,
+  title = {Simulations and the future of learning: An innovative (and perhaps
+	revolutionary) approach to e-learning},
+  publisher = {John Wiley \& Sons},
+  year = {2003},
+  author = {Aldrich, Clark}
+}
+
+@BOOK{arnold2013handbuch,
+  title = {Handbuch E-Learning: lehren und lernen mit digitalen Medien},
+  publisher = {W. Bertelsmann Verlag},
+  year = {2013},
+  author = {Arnold, Patricia}
+}
+
+@BOOK{balzert2009lehrbuch,
+  title = {Lehrbuch Der Softwaretechnik},
+  publisher = {Spektrum Akademischer Verlag},
+  year = {2009},
+  author = {Balzert, H. and Balzert, H. and Koschke, R. and L{\"a}mmel, U. and
+	Liggesmeyer, P. and Quante, J.},
+  series = {Lehrbuch der Software-Technik},
+  isbn = {9783827422477},
+  url = {http://books.google.de/books?id=vmfIb9R2QikC}
+}
+
+@ARTICLE{baumgart1998entwicklungs,
+  author = {Baumgart, Franzj{\"o}rg},
+  title = {Entwicklungs-und Lerntheorien},
+  journal = {Erl{\"a}uterungen-Texte-Arbeitsaufgaben, Bad Heilbrunn},
+  year = {1998}
+}
+
+@BOOK{baumgartner2002learning,
+  title = {E-Learning: Didaktische und technische Grundlagen},
+  year = {2004},
+  author = {Baumgartner, Peter and H{\"a}fele, Hartmut and Maier-H{\"a}fele,
+	Kornelia},
+  journal = {E-Learning. CD Austria. S}
+}
+
+@ARTICLE{beck2000eigenstandiges,
+  author = {Beck, Erwin and Guldimann, Titus and Zutavern, Michael},
+  title = {Eigenständiges Lernen fördern. Metakognition im Unterricht},
+  journal = {Beiträge zur gymnasialen Bildung},
+  year = {2000},
+  volume = {1},
+  pages = {51--93}
+}
+
+@BOOK{bellmann2005selektion,
+  title = {Selektion und Anpassung. Lerntheorien im Umfeld von Evolutionstheorie
+	und Pragmatismus},
+  year = {2005},
+  author = {Bellmann, Johannes and others},
+  pages = {62--76},
+  booktitle = {Erziehung-Bildung-Negativit{\"a}t.}
+}
+
+@ARTICLE{bernhardt2009konnektivitat,
+  author = {Bernhardt, Thomas and Kirchner, Marcel and Klosa, Oliver},
+  title = {Konnektivit{\"a}t von Online-Anwendungen},
+  journal = {Online-Lernen. Handbuch f{\"u}r Wissenschaft und Praxis},
+  year = {2009},
+  pages = {167--178}
+}
+
+@WEB{CMS_LMS,
+  lastvisited = {13.07.2014},
+  title = {The differences between CMS, LMS and LCMS},
+  url = {http://www.educatorly.com/Best-Practice/the-differences-between-cms-lms-and-lcms.html},
+  author = {EDDIE BRAND},
+  abstract = {he differences between CMS, LMS and LCMS WRITTEN BY EDDIE BRAND. POSTED
+	IN BEST PRACTICE Because the Internet can literally integrate every
+	media, the creative possibilities of online learning are almost infinite.
+	The expression can apply to an instant messaging conversation between
+	two learners as well as a complex learning system that keeps the
+	knowledge of a global corporation's whole staff using every media.
+	From this perspective it is not surprising that not only hundreds
+	of companies have specialized on online learning solutions, but also
+	functional fields of work have differentiated. In the following we
+	will make clear the basic differences between these software categories.
+	Content Management System (CMS) – A framework for creating, publishing
+	and tracking content CMS-ENGIdeally, a CMS is a system to collaboratively
+	create, catalog, publish, edit and track content (also called learning
+	objects). Content can be text, audio, picture and video files, but
+	also lessons and complete courses. The content creation is very user-friendly
+	and similar to popular software such as Microsoft Word or PowerPoint.
+	Even for multimedia creation no programming skills are required.
+	Furthermore, often various templates are provided. Content can easily
+	be cataloged by using metadata (such as keywords). In the thereby
+	emerging content database, these learning objects can easily be found
+	and reused even in very diverse contexts. The efficiency of a CMS
+	increases with the number of content producers and the complexity
+	of the content combination. So, it's most usable for online platforms
+	where a multitude of teachers create a comprehensive learning repertoire
+	that is as complementary as possible. Popular CMS are Joomla, Drupal
+	and WordPress. Learning Management Systems (LMS) – A framework for
+	content distribution and managing users as well as tracking their
+	behavior LMS-ENGIn comparison to a CMS a LMS is less about the management
+	of a content database than about the management of a user database.
+	Its usefulness consists of three fields: content delivery, user administration
+	and behavioral tracking. Although content delivery also covers content
+	management, it's primarily about an automated and individual delivery
+	of occasionally complex modular learning content to users. Because
+	usually the users have to register, their behavior can be tracked
+	in a very sophisticated way, as well. On the one side, this allows
+	simple track of progress and rating of performance, regardless of
+	the number of learners. On the other side, this enables individual
+	reminders for example for unfinished subtasks. While the usefulness
+	of a CMS increased with the number of content producers, the usefulness
+	of a LMS increases with the number of users and the complexity of
+	their individual memberships. They might be in exclusive groups,
+	for example. Beispiele für LMS sind Bluevolt, Litmos und BizLibrary.
+	Learning Content Management System (LCMS) – An integrated solution
+	LCMS-ENG.bmpLCMS (sometimes called ELMS for Educational Learning
+	Management System) simply combine the features of a LMS and CMS.
+	It's a system with which content can be created and stored, combined
+	to lessons and courses as well as be managed – just as with a CMS.
+	But similar to a LMS, it also allows managing users and tracking
+	their behavior as well as rating their performance. Examples of LCMS
+	are Xyleme, Blackboard and Kenexa. Conclusion As it is often the
+	case with expressions, the transition between CMS, LMS and LCMS is
+	smooth. That's why we limited this clarification on the fundamental
+	differences. Furthermore, there are no generally binding guidelines
+	for their use. Sometimes, a solution provider intentionally doesn't
+	use the expression LCMS in order to advertize with the LMS with the
+	most features. Additionally, it should be pointed out that a LCMS
+	isn't the ultimate solution for every educational institution. Because
+	not all popular formats are equally simple to integrate, the prizes
+	vary also for these tailor-made solutions. And often it's the prize
+	that makes the difference between luxury and opportunity.},
+  owner = {rugiada},
+  timestamp = {2014.07.14},
+  year = {2013}
+}
+
+@BOOK{dewey1995erfahrung,
+  title = {Erfahrung und Natur},
+  publisher = {Suhrkamp Verlag},
+  year = {1995},
+  author = {Dewey, John and Suhr, Martin}
+}
+
+@ARTICLE{ISO9241,
+  author = {DIS, ISO},
+  title = {9241-210: 2010. Ergonomics of human system interaction-Part 210:
+	Human-centred design for interactive systems},
+  journal = {International Standardization Organization (ISO). Switzerland},
+  year = {2009}
+}
+
+@BOOK{dittler2011learning,
+  title = {e-Learning: Einsatzkonzepte und Erfolgsfaktoren des Lernens mit interaktiven
+	Medien},
+  publisher = {Oldenbourg Verlag},
+  year = {2011},
+  author = {Dittler, Ullrich}
+}
+
+@WEB{LMS_LCMS,
+  lastvisited = {13.07.2014},
+  title = {LMS vs. LCMS},
+  url = {https://www.opensesame.com/blog/lms-vs-lcms-vs-cmschanging-one-letter-makes-big-difference},
+  author = {Max Dubowy},
+  organization = {OpenSesame eLearning Blog},
+  howpublished = {Blog},
+  month = {02},
+  owner = {rugiada},
+  timestamp = {2014.07.14},
+  year = {2013}
+}
+
+@ARTICLE{dunlosky2013improving,
+  author = {Dunlosky, John and Rawson, Katherine A and Marsh, Elizabeth J and
+	Nathan, Mitchell J and Willingham, Daniel T},
+  title = {Improving students’ learning with effective learning techniques promising
+	directions from cognitive and educational psychology},
+  journal = {Psychological Science in the Public Interest},
+  year = {2013},
+  volume = {14},
+  pages = {4--58},
+  number = {1},
+  publisher = {SAGE Publications}
+}
+
+@ARTICLE{edelmann2000lernpsychologie,
+  author = {Edelmann, Walter},
+  title = {Lernpsychologie. 6., vollst{\"a}ndig {\"u}berarbeitete Auflage},
+  journal = {Kempten: K{\"o}sel-Verlag},
+  year = {2000}
+}
+
+@ARTICLE{ehlers2009qualitat,
+  author = {Ehlers, Ulf-Daniel},
+  title = {Qualit{\"a}t f{\"u}r neue Lernkulturen des „Next Generation E-Learning
+	“},
+  journal = {Online-Lernen. Handbuch f{\"u}r Wissenschaft und Praxis. M{\"u}nchen:
+	Oldenbourg},
+  year = {2009},
+  pages = {339--347}
+}
+
+@BOOK{gerstenmaier1999konstruktivistische,
+  title = {Konstruktivistische Ans{\"a}tze in der Erwachsenenbildung und Weiterbildung},
+  publisher = {Springer},
+  year = {1999},
+  author = {Gerstenmaier, Jochen and Mandl, Heinz}
+}
+
+@WEB{umberto,
+  lastvisited = {13.07.2014},
+  title = {Umberto - Produktseite},
+  url = {http://www.umberto.de/},
+  author = {Jan Hedemann},
+  organization = {ifu Institut für Umweltinformatik Hamburg GmbH},
+  owner = {rugiada},
+  timestamp = {2014.07.13}
+}
+
+@BOOK{issing2009online,
+  title = {Online-Lernen: Handbuch f{\"u}r Wissenschaft und Praxis},
+  publisher = {Oldenbourg},
+  year = {2009},
+  author = {Issing, Ludwig J}
+}
+
+@ARTICLE{junker2010betriebliche,
+  author = {Junker, Horst and G{\'o}mez, Jorge Marx and Lang, Corinna V},
+  title = {Betriebliche Umweltinformationssysteme (BUIS)},
+  journal = {Multikonferenz Wirtschaftsinformatik 2010},
+  year = {2010},
+  pages = {209},
+  url = {http://webdoc.sub.gwdg.de/univerlag/2010/mkwi/03_anwendungen/betriebliches_umwelt-_und_nachhaltigkeitsmanagement/04_betriebliche_umweltinformationssysteme.pdf}
+}
+
+@BOOK{kapp2012gamification,
+  title = {The gamification of learning and instruction: game-based methods
+	and strategies for training and education},
+  publisher = {John Wiley \& Sons},
+  year = {2012},
+  author = {Kapp, Karl M},
+  review = {Preface: xxii "Gamification is for the sense of engagement, immidiate
+	feedback, feeling of accomplishment, and success of striving against
+	a challenge and overcoming it" Game: Ralph Koster A Thepry of Fun:
+	"A game is a system in which players engage in an abstract challenge,
+	defined by rules, interactivity, and feedback, that results in a
+	quantifiable outcome often eliciting an emotional reaction." Elements
+	of the Definition: System, Player, Challenge, Rules, imidiate feedback,
+	outcome emotional reaction}
+}
+
+@ARTICLE{kerkau2009usability,
+  author = {Kerkau, Florian},
+  title = {Usability-Testing zur Qualit{\"a}tssicherung von Online-Lernangeboten},
+  journal = {Online-Lernen. Handbuch f{\"u}r Wissenschaft und Praxis},
+  year = {2009},
+  volume = {2},
+  pages = {329--337}
+}
+
+@ARTICLE{kerres2005learning,
+  author = {Kerres, Michael and de Witt, Claudia and Stratmann, J{\"o}rg},
+  title = {E-Learning},
+  journal = {Didaktische Konzepte f{\"u}r erfolgreiches Lernen, Online im Internet:
+	http://online-campus. net/edumedia/publications/jahrb-pe-wb-b. pdf},
+  year = {2005},
+  volume = {25}
+}
+
+@INCOLLECTION{konrad2014kooperatives,
+  author = {Konrad, Klaus},
+  title = {Kooperatives Lernen},
+  booktitle = {Lernen lernen--allein und mit anderen},
+  publisher = {Springer},
+  year = {2014},
+  pages = {79--87}
+}
+
+@BOOK{metz2011digitale,
+  title = {Digitale Lernwelt--Serious Games},
+  year = {2011},
+  author = {Metz, Maren and Theis, Fabienne},
+  journal = {Einsatz in der beruflichen Weiterbildung. Bielefeld: Bertelsmann
+	Verlag. Online verf{\"u}gbar unter: http://www. e-cademic. de/data/ebooks/extracts/9783763948079.
+	pdf (aufgerufen am 26.06. 2013)},
+  owner = {Rugiada},
+  timestamp = {2014.05.15}
+}
+
+@WEB{cpux-f,
+  lastvisited = {13.07.2014},
+  title = {CPUX-F – Curriculum und Glossar Herausgeber: UXQB},
+  url = {http://www.uxperten.de/resources/cpux-f_curriculum_und_glossar.pdf},
+  author = {Molich, Rolf (DialogDesign), Geis, Thomas (ProContext Consulting
+	GmbH) Kluge, Oliver (Versicherungskammer Bayern) Polkehn, Knut (artop
+	- Institut an der Humboldt-Universität zu Berlin) Heimgärtner, Rüdiger
+	(IUIC, Intercultural User Interface Consulting) Fischer, Holger (Universität
+	Paderborn, s-lab – Software Quality Lab) Hunkirchen, Peter (Fraunhofer-Institut
+	FIT)},
+  organization = {UXQB – International Usability and User Experience Qualification
+	Board e.V.},
+  file = {:/home/rugiada/Dropbox/Uni/BA/Literatur/CPUX-F_Glossar.pdf:PDF},
+  owner = {rugiada},
+  timestamp = {2014.07.14}
+}
+
+@BOOK{niegemann2005,
+  title = {Kompendium E-Learning},
+  year = {2005},
+  author = {Niegemann, H.M.and Hessel, S.and Hochscheid-Mauel, D.and Aslanski,
+	K.and Deimann, M.and Kreuzberger, G.},
+  volume = {2005},
+  number = {1},
+  issn = {1860-7470},
+  journal = {eleed},
+  keywords = {e-learning},
+  url = {http://nbn-resolving.de/urn:nbn:de:0009-5-2102}
+}
+
+@ARTICLE{overwien2005stichwort,
+  author = {Overwien, PD Dr Bernd},
+  title = {Stichwort: Informelles Lernen},
+  journal = {Zeitschrift f{\"u}r Erziehungswissenschaft},
+  year = {2005},
+  volume = {8},
+  pages = {339--355},
+  number = {3},
+  publisher = {Springer}
+}
+
+@WEB{BrainFact,
+  lastvisited = {13.07.2014},
+  title = {6 Scientifically Proven Brain Facts That eLearning Professionals
+	Should Know},
+  url = {http://elearningindustry.com/6-scientifically-proven-brain-facts-that-elearning-professionals-should-know},
+  author = {Christopher Pappas},
+  organization = {eLearning Industry},
+  abstract = {Scientifically Proven Brain Facts That You Should Consider Before
+	you Develop Your Next eLearning Course While the content, layout,
+	and navigability of your eLearning course are important; determining
+	how a learner's brain actually acquires and retains information is
+	an essential aspect of eLearning design and development. Without
+	a firm grasp of how the brain works and the processes involved in
+	learning new concepts, ideas, and skill sets, even the most experienced
+	Instructional Designer will be unable to develop an effective eLearning
+	course. Our brains do not have the capacity to multitask. For years,
+	multitasking has been considered an all-important skill. However,
+	research has found that our brains don't actually have the power
+	to multitask. According to a 2009 study that was conducted in Paris,
+	the participants’ brains actually worked at half capacity when they
+	were asked to multitask [1]. In essence, one hemisphere concentrated
+	on one task, while the other focused on completing the secondary
+	task.As such, it typically takes the brain twice as long to complete
+	an assignment or task, and your error rate goes up by about 50%.
+	This is because we aren't “multitasking” at all, but “context switching”.
+	As such, when designing eLearning courses, it's essential to avoid
+	eLearning modules, which ask the user to perform multiple tasks at
+	once, as this hinders the overall learning process. Learning that
+	is spread out over time drastically increases knowledge retention.
+	A review of research studies related to learning techniques by John
+	Dunlosky of Kent State University and a group of colleagues found
+	that spaced learning, or distributed learning, was far more effective
+	than studying or learning concepts in a shorter span of time [2].
+	The report also found that assessing one's own knowledge before an
+	exam, through self quizzes and summaries of the core content, can
+	improve a student's overall performance.Multiple studies have also
+	found that microlearning can deter cognitive overload, which occurs
+	when the brain is forced to accept an abundance of data at any given
+	time. Therefore, designing eLearning courses, which are geared toward
+	delivering bite size chunks of knowledge at once, such as in shorter
+	eLearning modules, can lead to more effective online learning (Chunking
+	Strategies). Multimedia tools improve our brain's memory power. It's
+	been proven through multiple research studies and surveys that multimedia
+	in eLearning, such as images and video, not only engage the learners
+	but also help them to actually remember what they've learned. Research
+	cited in a report by Michelle Chau cites a number of examples of
+	how interactive learning tools, such as ebooks, lead to improved
+	knowledge retention [3].According to research, students who used
+	ebooks that contained sound effects, music, audio narration, and
+	images were able to retain and recite more information than those
+	who were simply given traditional textbooks. Utilizing these ebooks
+	also led to group collaboration and peer interaction, as the students
+	did not have to sit quietly on their own and privately read the text.
+	This is yet another example of how using multimedia elements can
+	enhance an eLearning course and provide the end user with an improved
+	educational experience. Our brains work best at certain times of
+	the day. Giving learners the ability to learn anytime, anywhere with
+	eLearning courses has its own unique set of advantages (What BYOD
+	Means for e-Learning). One of the most significant advantages is
+	the opportunity to tap into the power of our brains at times of peak
+	efficiency, such as just after taking a nap or when first waking
+	up in the morning (The Impact of Tiredness and Fatigue on Learning).A
+	study conducted by German researchers found that quick naps could
+	allow a learner's brain to acquire and retain information more effectively
+	[4]. During the study two groups of participants memorized cards
+	that contained illustrations. Then, they asked the first group to
+	take a nap, and the second to remain awake during a 40 minute break.After
+	the 40 minutes had passed, they had the participants memorize another
+	set of illustrated cards. Those who took a nap during the break remembered
+	roughly 85% of the images and patterns, while those who stayed awake
+	only recalled 60%. It is believed that napping allows information
+	to be moved to the brain's long-term memory storage centers, leading
+	to improved data retention. Therefore, when creating your eLearning
+	course, keep in mind that flexible class or module schedules will
+	allow your students to learn more efficiently and actually retain
+	the information you are providing. Game play helps to exercise (and
+	motivate) our mental muscles. Believe it or not, playing games is
+	actually good for your brain. Not only does it help to engage learners
+	in the eLearning process itself, but it also serves to remedy the
+	boredom that so often leads to unsuccessful learning experiences
+	(Free eBook - How Gamification Reshapes Learning). A report that
+	was released by Leicha Bragg of Deakin University details a study
+	that was conducted in three different schools, which involved 240
+	students [5].According to the research, students were more motivated
+	to learn mathematics when the information was presented in a gaming
+	format. Even their attitude toward the subject changed, as did their
+	confidence regarding the various concepts involved. The students
+	were also more motivated to learn the information, which improved
+	their overall success and alleviated the boredom that is often associated
+	with repetition (especially relating to problem solving). Our brain
+	prefers images over text. Adding visual elements to eLearning courses
+	enhances knowledge retention. According to neuroscience research
+	that is referenced in John Medina's book “Brain Rules”, participants
+	in studies only remember about 10% of information presented orally
+	when they are tested 72 hours after instruction [6]. However, that
+	number jumps by about 65% when an image is added to the learning
+	process. The basis of this idea lies in the “Pictorial Superiority
+	Effect”, which suggests that visual input is more likely to be recognized
+	and remembered. As such, including images and pictures in the design
+	of courses can help to boost retention and knowledge acquisition
+	rates. If you are familiar with other Scientifically Proven Brain
+	Facts that you would like to share with eLearning professionals,
+	I highly encourage you to leave a comment along with references!},
+  month = {Mai},
+  owner = {rugiada},
+  timestamp = {2014.07.14},
+  year = {2014}
+}
+
+@BOOK{puscher2009leitfaden,
+  title = {Leitfaden Web-Usability},
+  year = {2009},
+  author = {Puscher, Frank},
+  volume = {1},
+  journal = {Strategien, Werkzeuge und Tipps f{\"u}r mehr Benutzerfreundlichkeit}
+}
+
+@ARTICLE{rey2009learning,
+  author = {Rey, G{\"u}nter Daniel},
+  title = {E-Learning},
+  journal = {Theorien, Gestaltungsempfehlungen und Forschung. Huber, Bern},
+  year = {2009},
+  volume = {1},
+  url = {http://www.elearning-psychologie.de/index.html}
+}
+
+@INCOLLECTION{rippien2012einleitung,
+  author = {Rippien, Horst},
+  title = {eLearning und eLearning-Dienstleister:Gegenstand und Forschung},
+  booktitle = {Bildungsdienstleistung eLearning},
+  publisher = {Springer},
+  year = {2012},
+  pages = {55--156}
+}
+
+@WEB{talus,
+  lastvisited = {13.07.2014},
+  title = {Talus Projekt},
+  url = {http://talus.f2.htw-berlin.de/talus/mbox},
+  author = {Alexander Schoedon},
+  organization = {Talus Projekt, Betriebliche Umweltinformatik, HTW Berlin},
+  owner = {rugiada},
+  timestamp = {2014.07.13}
+}
+
+@BOOK{wohlgemuth2008konzepte,
+  title = {Konzepte, Anwendungen, Realisierungen und Entwicklungstendenzen betrieblicher
+	Umweltinformationssysteme (BUIS):[Workshop 1. Berliner BUIS-Tage]},
+  publisher = {Shaker},
+  year = {2008},
+  author = {Wohlgemuth, Volker and Berliner, BUIS}
+}
+
+@WEB{KOMET,
+  lastvisited = {13.07.2014},
+  title = {KOMET Projekt Seite},
+  url = {http://komet.f2.htw-berlin.de/aggregator/categories/1},
+  organization = {HTW-Berlin FB2 - Betriebliche Umweltinformatik},
+  owner = {rugiada},
+  timestamp = {2014.07.14}
+}
+
+@WEB{Wiki_BUIS,
+  lastvisited = {13.07.2014},
+  title = {Betriebliche_Umweltinformationssystem},
+  url = {http://de.wikipedia.org/wiki/Betriebliches_Umweltinformationssystem},
+  organization = {Wikipedia - Die freie Enzyklopädie},
+  owner = {rugiada},
+  timestamp = {2014.07.15}
+}
+
+@WEB{BLK,
+  lastvisited = {13.07.2014},
+  title = {Strategie f{\"u}r Lebenslanges Lernen in der Bundesrepublik Deutschland},
+  url = {http://www.pedocs.de/volltexte/2008/325/pdf/heft115.pdf},
+  organization = {Bund-Länder-Kommission für Bildungsplanung und Forschungsförderung
+	(BLK)},
+  file = {:/home/rugiada/Dropbox/Uni/BA/Literatur/heft115.pdf:PDF},
+  publisher = {Bonn: Die Bund-Länder-Kommission für Bildungsplanung und Forschungsförderung
+	(BLK)},
+  year = {2004}
+}
+
+@comment{jabref-meta: keypatterndefault:[numeric];}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_keywords:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-entrytype: Web: req[lastvisited;title;url] opt[author;organization]}
+

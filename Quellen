@@ -1,0 +1,62 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: UTF8
+
+@BOOK{dittler2011learning,
+  title = {e-Learning: Einsatzkonzepte und Erfolgsfaktoren des Lernens mit interaktiven
+	Medien},
+  publisher = {Oldenbourg Verlag},
+  year = {2011},
+  author = {Dittler, Ullrich}
+}
+
+@BOOK{kapp2012gamification,
+  title = {The gamification of learning and instruction: game-based methods
+	and strategies for training and education},
+  publisher = {John Wiley \& Sons},
+  year = {2012},
+  author = {Kapp, Karl M},
+  review = {Preface: xxii
+	
+	"Gamification is for the sense of engagement, immidiate feedback,
+	feeling of accomplishment, and success of striving against a challenge
+	and overcoming it"
+	
+	
+	Game: Ralph Koster A Thepry of Fun:
+	
+	"A game is a system in which players engage in an abstract challenge,
+	defined by rules, interactivity, and feedback, that results in a
+	quantifiable outcome often eliciting an emotional reaction."
+	
+	
+	Elements of the Definition: System, Player, Challenge, Rules, imidiate
+	feedback, outcome emotional reaction}
+}
+
+@BOOK{metz2011digitale,
+  title = {Digitale Lernwelt--Serious Games},
+  year = {2011},
+  author = {Metz, Maren and Theis, Fabienne},
+  journal = {Einsatz in der beruflichen Weiterbildung. Bielefeld: Bertelsmann
+	Verlag. Online verf{\"u}gbar unter: http://www. e-cademic. de/data/ebooks/extracts/9783763948079.
+	pdf (aufgerufen am 26.06. 2013)},
+  owner = {Rugiada},
+  timestamp = {2014.05.15}
+}
+
+@BOOK{puscher2009leitfaden,
+  title = {Leitfaden Web-Usability},
+  year = {2009},
+  author = {Puscher, Frank},
+  volume = {1},
+  journal = {Strategien, Werkzeuge und Tipps f{\"u}r mehr Benutzerfreundlichkeit}
+}
+
+@comment{jabref-meta: keypatterndefault:[numeric];}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_keywords:}
+
+@comment{jabref-meta: selector_journal:}
+

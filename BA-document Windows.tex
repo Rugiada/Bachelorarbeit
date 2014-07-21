@@ -1,0 +1,544 @@
+\documentclass[a4paper, 12pt, twoside, BCOR=20mm, DIV=calc, abstracton, parskip=half*, toc=bibliography, toc=listof, headsepline, footsepline, headings=small, numbers=enddot]{scrreprt} 
+\pagestyle{headings}					%FuÃÂnotenformatierung ÃÅbernehmen
+
+%\usepackage{fancyhdr}
+%\fancyhf{}
+%\fancyheadoffset[RO,LE]{20pt}
+%\fancyhead{}
+%\fancyhead[RO,LO]{\thepage}
+%\fancyhead[LO]{\rightmark}
+%\fancyhead[RE]{\leftmark}
+%\fancyfoot{\title}
+%\renewcommand\headrulewidth{0.4pt}
+%\renewcommand\footrulewidth{0.4pt}
+
+\usepackage[sorting=none,language=ngerman,style=numeric,backend=bibtex8, bibencoding=utf8] {biblatex} %[sorting=nty,language=ngerman,style=numeric,backend=bibtex8, bibencoding=utf8]
+\addbibresource{quellen}
+
+\usepackage[printonlyused, withpage]{acronym}
+\renewcommand{\bflabel}[1]{\normalfont{\normalsize{#1}}\hfill}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{selinput}
+\usepackage[babel, german=quotes]{csquotes}
+\usepackage[ngerman]{babel}
+
+\usepackage[automark]{scrpage2}	%FuÃÂnoten formatieren
+
+\usepackage{graphicx}						%Einbinden von Grafiken
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{array}							%Tabellenextra
+\usepackage{setspace}
+\usepackage{url}
+
+\usepackage[colorlinks=false, allcolors=black, urlbordercolor={1 1 1}, linkbordercolor={1 1 1}, pdftitle = {Konzeption und Entwicklung einer E-Learning Plattform für Usability},pdfauthor = {Juale Mercan}, linktocpage=true]{hyperref}
+
+\typearea[current]{calc}
+%\addtolength{\skip\footins}{8mm}
+%\addtolength{\footnotesep}{2mm}
+\onehalfspacing
+%\setlength{\parskip}{6pt}
+
+%\usepackage[tocgraduated]{tocstyle}
+%\usetocstyle{allwithdot} 
+
+%\setlength{\bibhang}{1em} %LÃ¤nge ggf. anpassen
+%\setlength{\bibitemsep}{0.25\baselineskip} %LÃ¤nge ggf. anpassen
+
+%\renewcommand*\chapterheadstartvskip{\vspace*{-1cm}}
+%\renewcommand*{\sectfont}{\bfseries}
+
+\usepackage{geometry}
+\geometry{includehead, includefoot, left=3.5cm,right=2.5cm,top=2.5cm,bottom=2cm}
+%\usepackage[headings]{fullpage}
+\usepackage[format=default,font=footnotesize,labelfont=bf]{caption}
+
+\begin{document}
+\pagenumbering{roman}
+\include{title}
+%\include{Angaben}
+
+\tableofcontents
+%\renewcommand{\contentsname}{Inhaltsverzeichnis}
+\include{Acronym}
+
+\chapter{Einleitung} %\label{Einleitung}
+\pagenumbering{arabic}
+„Willst du ein Jahr wirken, so säe Korn. Willst du zehn Jahre wirken, so pflege einen Baum. Willst du hundert Jahre wirken, so erziehe einen Menschen."
+(chinesisches Sprichwort, Guanzi, um 645 v.Chr.)
+
+\section{Motivation, Problemstellung}
+Lebenslanges Lernen ist auf der Agenda der Bundesregierung angekommen und somit auch bei jedem Einzelnen. Selbstverständlich vollzieht sich Lernen implizit im Berufsalltag. Dennoch ist Selbstverantwortliches Lernen gefordert und soll gefördert werden\cite{BLK}. Im Bereich der \ac{IT} ist eine kontinuierliche Weiterbildung unablässig um mit den brisanten Neuerungen Schritt halten zu können. Ob im Schul- /Hochschulkontext, in der Weiterbildung oder in der innerbetrieblichen Fortbildung kommen immer häufiger neue Medien unter dem Begriff E-Learning %zur Stoffvermittlung
+zum Einsatz. Was sich hinter dem Begriff E-Learning verbirgt, warum dies für die Betriebliche Umweltinformatik wichtig ist und ob bestehende Angebote für die Vermittlung von Usability Wissen ein geeignetes Mittel darstellen soll im Laufe der Arbeit ermittelt werden. 
+ 
+Die Benutzbarkeit der meisten \ac{BUIS} ist gegenüber gängigen betrieblichen Anwendungen eingeschränkt. Programminhalte und Funktionsumfang sind meist nur Langweilig als Handbuch dokumentiert und werden bei Präsenzschulungen an Interessierte und Zahlungswillige vermittelt. Die Aufgaben und das Einsatzgebiet stehen im Vordergrund, so dass Benutzbarkeit bzw. ein motivierende Gestaltung des Programms bei der Entwicklung erst spät berücksichtigt werden.  
+Darüber hinaus finden die Inhalte der Software-Ergonomie sowie der Usability nur kurze Auftritte in den Lehrveranstaltungen und innerhalb der Ausbildung vieler Entwickler. Dies führt dazu, dass sich im besonderen Entwickler Betrieblicher Umweltinformationsysteme meist im Berufsalltag mit der Thematik auseinandersetzten. Ein Bewusstsein für die Notwenigkeit dieser Auseinandersetzung wurde unter anderem bereits durch Comics wie in Abbildung 1 etabliert.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{Bild/Usability_Comic.jpg}
+\caption{Apple, Google, You by Eric Barcks}
+\end{figure}
+Nach dem die Notwendigkeit geklärt ist, sollte noch in Erfahrung gebracht was Entwicklern das Lernen erleichtert und welche Medien, wie eingesetzt werden können. 
+Interaktivität und flexible Nutzbarkeit des Lernstoffes fördern die Bereitschaft von Schülern sich in  Eigeninitiative mit Lehrinhalten zu beschäftigen \cite[S.32 ff.]{beck2000eigenstandiges}. Was in jungen Jahren funktioniert sollte im laufe der Zeit nicht völlig versagen. Davon ausgehend ist das Web als Medium die erste Wahl sowohl für die formale wie auch informelle Vermittlung von Usability und Softwareergonomie Inhalten. 
+%Nach dem E-Learning Hype der vergangenen Jahre wird nun klarer, dass Technik allein nicht gleich einen pedagigischen Mehrwert schafft. Die Kombination aus didaktischer Aufbereitung und interaktiver Medien versprechen mehr Erfolg. 
+
+Im folgenden wird davon ausgegangen, dass Interessierte sich für die Auseinandersetzung mit der Thematik Usability die Basiszertifizierung \ac{CPUX}-F des \ac{UXQB} auswählen um als \"Usability Professional \" zertifiziert zu werden. Hierfür gibt es zahlreiche Anbieter, die im folgenden auch Erwähnung finden solange diese neben Präsenzseminaren auch E-learning Anwendungen und Plattformen bieten. 
+Die Grundlegenden Konzepte, Begriffe und Definitionen werden vom \ac{UXQB} als Pdf veröffentlicht\cite{cpux-f}. Um das Selbststudium für die Basiszertifizierung zu erleichtern, soll im Rahmen des KOMET Projektes an der \ac{HTW Berlin} %Hochschule für Technik und Wirtschaft Berlin
+in Kooperation mit der artop GmbH - Institut an der Humboldt-Universität zu Berlin eine webbasierte Anwendung entwickelt werden\cite{KOMET}. 
+
+
+%Auch unternehmen suchen nach Möglichkeiten Ihre Mitarbeiter zu schulen und die dank spielerisch gestalteten E-learning tools. 
+%Usability Wissen soll so interessant aufbereitet werden, dass es spielerisch aufgenommen werden kann. Das Lernen und verinnerlichen von Usability bei der Entwicklung von Software soll innerbetrieblich gepflegt werden können. 
+%Der Content sollte leicht und intuitiv aufbereitet sein. Für die vielseitige Verwendbarkeit. Spielerisch und Sozial vermitteln was relevant ist für die Entwicklung von Benutzerfreundlichen Anwendungen und Seiten.
+
+%%
+%% Hochschule für Technik und Wirtschaft Berlin, Deutschland; 2artop - Institut an der Humboldt-Universität zu Berlin, Deutschland
+% Mit dem Glossar zur Basiszertifizierung CPUX-F des UXQB steht eine Sammlung von Definitionen zu grundlegenden Begriffen und Konzepten aus dem Fachgebiet Usability und User Experience zur  Verfügung. Zur Erleichterung der Auseinandersetzung mit dieser Begriffswelt wurde ein webbasiertes Hypertextsystem erzeugt, das wahlweise über Smartphone, Tablet oder PC benutzt werden kann. Um den Lernanreiz zu erhöhen wurde zusätzlich ein Frage-und-Antwort-Spiel mit einer Highscore-Liste entwickelt. Dieses so genannte „Usability-Quiz“ wird im Rahmen des Vortrags erstmals öffentlich vorgestellt. Geplant ist anschließend eine „Birds of a Feather“-Session, um die Herausforderungen der Weiterentwicklung zu einer sozialen Anwendung analog zur mobilen App „Quizduell“ zu diskutieren.
+%
+
+\section{Zielsetzung}
+Die nachfolgende Arbeit beschreibt die Konzeption für die bereits als Prototyp existierende Anwendung mit Methoden der Lernpsychologie, den gängigen E-learning Anwendungen und der "Gamification" von Lerninhalten. Unter der Fragestellung wie können die Begriffe und Definitionen des \ac{UXQB} Glossars am einfachsten vermittelt werden wird ein prototypisches Beispiel entwickelt welches eine alternative Aufbereitung des Glossars zum bestehenden Quiz bietet. "Lernen und Spielen sind keine Gegensätze" \cite{dewey1995erfahrung}
+ist der Leitspruch dem mit ausgewählten Aufbereitungsmethoden nachgegangen werden soll. Der Lernerfolg soll hierbei durch die Förderung der intrinsischen Motivation erzielt werden. 
+Primär soll in der nachfolgenden Arbeit das bereits als Prototyp entwickelte "Usability-Quiz" nach E-learning Methoden und Usability Richtlinien konzeptuell erfasst werden. Sekundär wird die weiter Entwicklung des Prototypen dokumentiert. Zum einen durch Zuordnung von Bildern zu den Begriffen zum anderen durch Kategorisierung der Begriffe um den Schwierigkeitsgrad zu steigern. Die didaktische Aufbereitung der Lehrinhalte sowie die Stärkung von Lernanreizen stehen im Mittelpunkt. Um einen Ausblick zu geben werden bestehende E-learning Angebote und Lernumgebungen erwähnt und zugeordnet. 
+%Primäres Ziel ist die zur Basis Zertifizierung bereit gestellten Begriffe und Definitionen so aufzubereiten, dass Interessierten der Stoff einfach zugänglich gemacht ein Lernanreiz geschaffen wird. Einen Lernerfolg erzielen, abhängig von der Definition eines Lernerfolges. Blickbewegungsanalysen
+%Wiedergeben können der Begriffe und Definitionen oder diese im Context von Usabilitytests anwenden können?
+
+%Kategorisierung der Usabilitybegriffe, streichen der Synonyme bzw. neue Fragestellung mit englischen Begriff bzw. den Synonymen, z.B. Unter welchem Begriff ist ... noch bekannt. 
+\section{Aufbau der Arbeit}
+Am Beispiel ausgewählter \ac{BUIS} wird unter Kapitel 2 die Umsetzung des Usability Glossar des \ac{UXQB} aufgezeigt. Diese basieren auf den Dialogprinzipien der Mensch-Computer-Interaktion nach der DIN EN ISO 9241\cite{cpux-f}.  
+% zum anderen der Einsatz von E-learning und Tutorials aufgezeigt.  
+
+Unter Kapitel 3 werden die gängigen Lerntheorien und Ihre Umsetzung beim lernen mit E-learning Anwendungen beschrieben. Hauptaugenmerk bei der Entwicklung der E-learning Anwendung soll die spielerische Umsetzung (Gamification) und Didaktische Aufbereitung von Lehrinhalten sein. 
+Mit diesem Grundlagenwissen sowie den technischen Details wird unter Punkt 4 das Konzept beschrieben und die Umsetzung dokumentiert. Zum Abschluss wird noch einmal zusammengefasst was umgesetzt wurde und welche Potentiale noch in der Entwicklung des Usability Quiz stecken. 
+
+\chapter{Theoretische Grundlagen BUIS}
+\section{Definition}
+„Ein \ac{BUIS} %Betriebliches Umweltinformationssystem (BUIS)
+ ist eine Softwareanwendung, die für die Erfassung, Dokumentation und Bewertung betrieblicher Umweltwirkungen sowie  zur Generierung, Planung und Steuerung von Umweltschutzmaßnahmen genutzt wird und damit das betriebliche Umweltschutzmanagement in seinen Aufgaben unterstützt.“ \cite{wohlgemuth2008konzepte}
+ "Ein BUIS erfasst, verarbeitet und gibt umweltrelevante Daten aus und dient damit der Quantifizierung und Bewertung der Einflüsse unternehmerischen Handelns auf die natürliche Umwelt."'\cite{Wiki_BUIS} `
+Dies sind zwei populäre Definitionen aus einer Vielzahl. Im Unternehmenskontext lassen sich \ac{BUIS} als Umwelmanagementsystemen  oder unter den \acs{ERP} wiederfinden und zuordnen.  
+
+\section{Kategorisierung}
+ Um der Komplexität der Aufgabe gerecht zu werden sind die meisten Programme selbst vielschichtig und komplex. \ac{BUIS} verfolgen einen ganzheitlichen Ansatz werden dennoch meist punktuell und für die konkreten Bedürfnisse in \ac{KMU} entwickelt. Dies führt dazu, dass nicht der Nutzer zentrierte Ansatz bei der Entwicklung verfolgt wird sonder meist der Nutzen zentrierte.  
+Eine Übersicht nach welchen Merkmalen \ac{BUIS} klassifiziert werden können und welchen Funktionsumfang Sie abdecken gibt der Morphologische Kasten.
+
+\begin{figure}[h!]
+	\includegraphics[width=\textwidth]{Bild/Morphologischer_Kasten_BUIS_Talus.png}
+	\caption{Morphologischer Kasten}
+\end{figure}
+
+Ausgehend von den markierten Aufgabenbereichen sollen 4 \ac{BUIS} als Repräsentanten für Ihren Nutzungskontext näher beleuchtet werden. Das Augenmerk liegt dabei auf der Umsetzung der DIN ISO EN 9124 (Teil 210 Ergomomics of human-centred design processes for interactive systems/ Ergonomie der Mensch-System-Interaktion) \cite{ISO9241} sowie der Erfüllung der ISO 9126 Qualitätskriterien für Software siehe Abbildung 2.2.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{Bild/ISO_9126_Grafik.png}
+	\caption[ISO 9126 Grafik]{ISO 9126 Grafik laut Wikipedia} %{\url{http://de.wikipedia.org/wiki/ISO/IEC_9126}}}
+\end{figure} 
+Weiterhin sollen die Schulungs- und Weiterbildungsangebote Erwähnung finden, um potenzielle Einsatzmöglichkeiten von E-Learning Angeboten aufzuzeigen.  
+%Teil 210: Prozess zur Gestaltung gebrauchstauglicher interaktiver Systeme (Ersatz für die EN ISO 13407)
+
+\section{Nutzungskontext und Softwareergonomie Konformität ausgewählter BUIS}
+Aus einer Vielzahl von \ac{BUIS} ist im folgenden die Ecowebdesk Browserbasierte Software der Ecointense GmbH der Repräsentant für Rechtssicherheit Software(Legal Comliance). \\
+Umberto der ifu Hambug GmbH dient als Beispiel für ein umfangreiches Umweltmanagementsystem.\\
+Auch wenn Umberto auch die Ökobilanzierung abdeckt, ist die webbasierte SimaPro Software der GreenDelta GmbH Vertreter für Ökobilanzierungssoftware. \\
+Als Visualisierungssoftware im Nutzungskontext des Stoffstrommanagement ist eSankey ebenfall aus dem Hause ifu Hamburg GmbH der Repräsentant. 
+\subsection{Ecowebdesk Modul Legal Complience}
+
+EcoWebDesk ist eine modular aufgebaute und webbasierte Software, mit der alle Anforderungen des Umweltmanagements und der betrieblichen Arbeitssicherheit dokumentiert werden können.
+Das Grundsystem mit dem integrierten Dokumentenmanagement bildet die Basis für die Fachmodule wie unter anderem Legal Compliance. Die Benutzeroberfläche ist personalisiert und liefert von Terminen zu Aufgaben alles interessante und relevante auf der Startseite. Dies kann je nach Nutzer und Nutzungsverhalten nach einer überladenen Seite aussehen. 
+
+Die Auditvorbereitung für interne oder extern wird untersttzt und sieht folgendermaßen aus:
+
+%Gut vorbereitet für interne und externe Audits
+%Gefährdungsbeurteilungen und Betriebsanweisungen per Mausklick
+%Einschlägige Normen im Rechtskataster pflegen
+Für den Nutzer relevante Rechtskataster sind über folgende schritte zu pflegen. 
+%Verbräuche und Ressourcenströme immer im Blick
+%Zahlreiche Funktionen zum Dokumentieren, Organisieren, Auswerten
+%Übersicht der EcoWebDesk-Fachmodule
+
+%Mehr Rechtssicherheit 
+%Zertifizierung leicht gemacht
+%Vereinfachte Kommunikation  
+
+%Software für umfassende Rechtssicherheit
+%
+%EcoWebDesk Legal Compliance
+%
+%Die Software für Legal Compliance erleichtert Ihnen die Beurteilung des rechtlichen Handlungsbedarfs gegenüber den umfangreichen Bestimmungen aus dem Arbeitsschutz- und Umweltrecht. Erfüllen Sie Ihre Sorgfaltspflichten vorschriftsmäßig, minimieren Sie Ihr Haftungsrisiko und weisen Sie rechtskonformes Handeln in allen Bereichen nach.  
+%Unternehmensweites Rechtskataster
+%In EcoWebDesk Legal Compliance verzeichnen Sie alle einschlägigen Rechtsnormen auf einfache Weise im Rechtskataster. Normen und Geltungsbereiche, resultierende Rechtspflichten und Verantwortlichkeiten sind zentral zugänglich und komfortabel zu pflegen.
+%Schnittstelle zu Online-Rechtsdatenbank
+%Dank der integrierten Schnittstelle zu einer Online-Rechtsdatenbank sparen Sie wertvolle Zeit: Automatische E-Mail-Benachrichtigungen informieren Sie regelmäßig über relevante Änderungen von Rechtsnormen und zeigen gezielt den Handlungsbedarf auf.
+%Genehmigungen und Anlagenkataster
+%Erfassen Sie genehmigungspflichtige Anlagen und Maschinen vorschriftsmäßig im Anlagenkataster von EcoWebDesk. Vom Antrag bis zum abschließenden Bescheid werden alle Handlungsschritte und Dokumente im System hinterlegt. So werden Fristen, Auflagen und Gültigkeiten transparent.
+%Technische Prüfungen
+%Stellen Sie den einwandfreien Betrieb Ihrer Anlagen sicher und planen Sie Ihre technischen Prüfungen effizient mit EcoWebDesk. Anforderungen, Intervalle und Ergebnisse sind einheitlich dokumentiert, Prüfer und Teilnehmer direkt per E-Mail informiert. 
+\subsection{umberto (ifu)}
+Umberto ist eine besonders komplexe Anwendung, die eine Bandbreite an Anwendungsmöglichkeiten bietet. Von der Ökobilanzierung zur Visualisierung deckt es alle Anforderungen an ein Stoffstrommanagement Tool, vorausgesetzt man kann es bedienen. 
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Bild/Umberto NXT LCA.png}
+\caption{Umberto LCA Beispielbild} 
+ \end{figure}
+
+Im der Abbildung Umberto LCA sind Beispielhaft einige Positionen markiert, die den Usability Richtlinen nicht gerecht werden. 
+Trotz der Komplexität des Programmes, gäbe es an den Markierten punkten Verbesserungspotentiale zur Benutzbarkeit der Software. 
+
+
+\subsection{Umsys (Inplus GmbH)}
+- Anlagenkataster
+- anlagenbezogen
+%
+UMsys ist ein integriertes Programmsystem für Umwelt-Management und Datenvernetzung. Es ist gleichermaßen für die Anforderungen von Überwachungs-Behörden wie von Industrie-Betrieben geeignet. Es umfasst u.a. die Bereiche:
+	Abfallwirtschaft, gewerbliche und Sonderabfälle
+	Bodenschutz, Altlasten-Management
+	Gewässerschutz, Wasser-gefährdende Stoffe und Indirekteinleitung
+	Immissionsschutz, Genehmigungs-Verfahren und Auflagen, Anlagen-Überwachung
+	beliebige weitere Bereiche durch freie Konfigurierbarkeit
+Der Anwender kann mit UMsys:
+\begin{itemize}
+\item	ein hierarchisches Anlagen-Kataster aufbauen
+\item		Stoffdaten, Messwerte und Vorschriften mit dem Anlagen-Kataster verbinden
+\item	den ordnungsgemäßen Betrieb von Anlagen überwachen und dokumentieren
+\item		Anlagen und Dokumente verbinden (Dokumenten-Management)
+\item	Geografische Informationssysteme (GIS) einbinden
+\item		alle Vorgänge durch eine Vorgangsbearbeitung unterstützen
+\item		in einer Wissensbasis recherchieren
+\item		neue Umweltobjekte mit ihren Merkmalen definieren (Konfiguration/Customizing)
+\item		Daten mit Word und Excel austauschen, Serienschreiben erzeugen
+\item		IT-Lösungen über UMsys integrieren
+\end{itemize}
+
+\subsection{ehsm (technidata/sap)}
+
+\subsection{e!sankey (ifu)}
+e!sankey als einfaches Stoffstrommanagement Tool, dient zur Visualisierung von Prozessen und Stoffströmen. Unter dem Motto "show the flow" 
+
+\subsection{Fazit}
+%Die Notwendigkeit liegt nicht im Einsatz von E-learning Tools für die Vermittlung von Usability Inhalten als mehr für als eher in der Vermittlung von 
+%Warum ist es sinnvoll E-Learning Tools für BUIS entwickler anzubieten?
+% Ursprung der Probleme bei der Nutzung ist oft die geringe Beachtung von Usability Richtlinien und Werten bei der Entwicklung der BUIS. 
+%
+%Am Beispiel von Umsys bzw. Umberto ist erkennbar wie wenig Beachtung dem Nutzer und der Zielgruppe bei der Entwicklung der Anwendung geschenkt wurde. Um den Nutzer auch bei Anwendungen ins Zenrtum zu setzen ist ein solides Usability Know-How gefragt. 
+
+%Probleme bei den Kategorien und alles kann sich auf die Konzeption und Entwicklung zurück führen lassen.
+%Buis können gestärkt werden durch erleichtere und bessere Anwendbarkeit
+%Das sind die Probleme
+
+\chapter{Grundlagen E-Learning}
+\section{Lerntheorien}
+{Lernmodelle}\newline
+Für das Lernen und Lehren im 21. Jahrhundert geht das Angebot an Medien weit über reine Texte und Bücher hinaus. Entsprechend haben sich die Erkenntnisse über das menschliche Lernverhalten entwickelt. Der rein behavioristische Ansatz \cite[John Watson/ B.F.Skinner]{baumgart1998entwicklungs} wurde von den kognitionspsychologischen Lernmodellen \cite[S.102]{arnold2013handbuch}abgelöst. Beim ersten Model wird Lernen als Veränderung von Verhaltensweisen durch Verstärkung von erwünschtem Verhalten verstanden. Durch Versuch und Irrtum oder durch Beobachtung eines Vorbildes(sog. Modellpersonen) und regelmäßiges Wiederholen können neue und komplexe Verhaltensweisen angeeignet werden\cite[S.101 Skinner]{arnold2013handbuch}. Wissen sind externe Fakten und der Prozess des Denkens- und Verstehens wird als "Blackbox" hingenommen. 
+Durch 4 Arten von Verstärken kann auf den Erfolg Einfluss genommen werden: 
+\begin{itemize}
+\item materielle Verstärker z.B. Geld, Eis
+\item soziale Verstärker z.B. Lob, Anerkennung
+\item Aktivitätsverstärker z.B. etwas machen dürfen wie Pause oder Urlaub
+\item informativer Verstärker z.B. Rückmeldung über die Richtigkeit einer Antwort, über die Lerngeschwindigkeit
+\end{itemize}\cite[S.21]{issing2009online}
+Ein typischer Programmablauf eines auf dem behavioristischen Modell basierenden System sind Frage-Antwort-Sequenzen mit sofortiger Rückmeldung. Der Schwierigkeitsgrad steigt Linear und es können keine Teile des Programms übersprungen werden. Diese Variante von Lernprogrammen werden als Drill-and-Practice-Programme bezeichnet. Hauptkritik an den meist aus Tierexperimenten und Laborversuchen gewonnenen Erkenntnisse ist, dass diese nicht zwingend auf aktuelle E-Learning Umgebungen übertragbar sind.
+Auch wenn die behavioristische Lerntheorie nicht das aktuellste Modell darstellt, finden die aufgeführten Verstärker, strikt lineare Abfolgen und ständige Wiederholungen im Bereich der webbasierten Lernangebote Anwendung zum Beispiel bei Vokabellernprogrammen. Ein großer Vorteil dieser Programme ist, dass Sie meist nach eigenem Tempo durch laufen werden können\cite[65 ff.]{niegemann2005}. 
+
+Die Kognitionspsychologischen Ansätze gehen auf den Menschen und seine Fähigkeit Informationen aufzunehmen und zu verarbeiten ein. Der Prozess des Lernens von der Wahrnehmung über die Bildung kognitiver Schemata und mentaler Modelle sind die Grundpfeiler kognitiver Lernmodelle. Lernen ist somit ein Informationsverarbeitungsprozess. Diesem Lernmodell liegen einige Annahmen zugrunde: Der Mensch als Informationsverarbeitungssystem hat 2 Kanäle, die visuelle/bildhafte und die auditive/verbale Informationsaufnahme. Die zweite Annahme ist, dass das Gedächtnis eine begrenzte Kapazität für die Verarbeitung von Informationen hat.   Ziel bei der Gestaltung von Lernmaterialien ist es, nach Möglichkeit beide Kanäle bei der Verarbeitung von Informationen zu aktivieren den Lernenden jedoch nicht mit zu vielen Informationseinheiten kognitiv überreizen. \cite{baumgart1998entwicklungs}
+Bezogen auf multimediales Lernen, ist die Erkenntnis die hervorgehoben werden soll, dass die bildhafte Darbietung von Informationen mentale Modelle fördert und somit das lernen erleichtert.
+
+
+Um zu einem mentalen Modell zu gelangen, bedarf es des Aufbaus diverser Strategien, Wissen zu strukturieren. Diese haben verschiedene Strukturen zum Inhalt:
+
+Verarbeitungsstrukturen: Diese Strukturen können beispielsweise Kausalketten mit entsprechenden Erläuterungen der einzelnen Ursache-Wirkungs-Elemente umfassen.
+Vergleichsstrukturen: Sie lassen sich als Matrizen darstellen, die den Vergleich zweier oder mehrerer Elemente anhand mehrerer Dimensionen ermöglichen.
+Generalisierungsstrukturen: Diese repräsentieren als eine Art Baumstruktur den Kerngedanken mit seinen untergeordneten ergänzenden Details.
+Aufzählungsstrukturen: Sie betreffen eine Liste, die aus einer Zusammenstellung von Einzelelementen besteht.
+Klassifikationsstrukturen: Diese Strukturen sind hierarchisch angeordnet und umfassen Gruppen und Untergruppen.
+
+Aktuell dominieren das konstruktivistische Problem basierte Lernmodell welches das kooperative lernen als Verstärker nutzt. Bei ersterem geht es um den Aufbau von Wissen durch Verknüpfung von neuen Informationen mit bereits vorhandenem Basiswissen.\cite[S.30-32]{issing2009online}. Diesem Ansatz nach, muss immer auf den Einzelnen eingegangen werden, da das Vorwissen von Person zu Person variiert. 
+Webbasierte, interaktive E-learning Angebote %wie das Glossar zur Basiszertifizierung CPUX-F des UXQBU 
+werden diesem Lernmodel sehr gut gerecht: Die Lernenden können dort einsteigen wo Sie wollen und der Zugang ist wahlweise über Smartphone, Tablet oder PC möglich. 
+
+Lernen im Konstruktivismus wird verstanden als die Konstruktion von Wissen auf der Basis individuellen Vorwissens; -> daher muss immer auf den einzelnen Lernenden Eingegangen werden. \cite[S.8]{Ludwig}
+
+Der Begriff Konstruktivismus wird im E-Learning Kontext von verschiedenen Forschern unterschiedlich definiert. Im Folgenden soll darunter ein Lernansatz verstanden werden, der Lernende als selbstverantwortliche, aktive Personen im Hinblick auf ihren Wissenserwerbsprozess begreift (Loyens und Gijbels, 2008). Konstruktivistische Lernumgebungen beinhalten mehrere Merkmale, die den Lernprozess unterstützen sollen (Loyens und Gijbels, 2008):
+
+Merkmale konstruktivistischer Lernumgebungen
+
+Wissenskonstruktion: Konstruktivistische Lerntheorien betonen die aktive Konstruktion von Wissen. Konkret bedeutet dies: Lernende interpretieren und transformieren neue Informationen auf Basis bereits erworbenen Wissens, welches von den Lernenden aktiv abgerufen wird.
+Kooperatives Lernen: Eine weitere wichtige Grundannahme bezieht sich auf das gemeinschaftliche (kollaborative) Lernen mit anderen Lernern, Lehrern und weiteren Personen, durch welches die Wissenskonstruktion unterstützt werden soll (vgl. Schaumburg und Issing, 2004). Besonders beim Lernen mit anderen Lernenden nimmt man die Lernförderlichkeit aufgrund ähnlicher Verständnisniveaus an.
+Selbstregulation: Unter Selbstregulation werden eine Reihe von Teilaspekten subsumiert. Beispielsweise fallen hierunter die metakognitiven Fähigkeiten wie das Setzen von (Lern-)Zielen, aber auch Selbstbeobachtung, Selbstbewertung und Selbstverstärkung während des Wissenserwerbs (vgl. auch Narciss, Proske und Koerndle, 2007).
+Authentische Lernsituation: Im Kontext konstruktivistischer Lerntheorien sollten Lernsituationen vorzugsweise praxisbezogen bzw. authentisch sein. Hierzu können Lernende mit komplexen, schlecht strukturierten Problemen konfrontiert werden – ähnlich den Problemsituationen, die sie auf ihrer zukünftigen Arbeitsstelle antreffen. Vielschichtige Probleme zeichnen sich durch zahlreiche interagierende Elemente und der Möglichkeit multipler Lösungsansätze aus. Im Zusammenhang solcher Problemsituationen wird auch häufig vom entdeckenden Lernen (discovery learning) gesprochen.
+Konstruktivistische Lerntheorien werden vor allem in der populärwissenschaftlichen Literatur vehement vertreten (vgl. z.B. Kirschner, P. A., Sweller und Clark, 2006), wenngleich dort in aller Regel nur sehr vage Definitionen existieren. Auch in wissenschaftlichen Fachartikeln ist eine klare Begriffsbestimmung nur selten aufzufinden (Loyens und Gijbels, 2008).
+%Gefördert werden soll ein problemlösendes Denken,
+
+Konnektionismus
+Definition: Konnektionismus
+
+Konnektionistische Modelle bestehen aus vielen einfachen Einheiten, die miteinander vernetzt sind. Eine häufig verwendete Realisierung konnektionistischer Modelle sind künstliche neuronale Netze. Häufig werden die Begriffe Konnektionismus und (künstliche) neuronale Netze auch gleichgesetzt. Neuronale Netze stellen einen Oberbegriff dar, der zahlreiche, zum Teil sehr unterschiedliche Modelle umfasst (Rey und Wender, 2008; siehe auch www.neuronalesnetz.de). Diese Modelle können unter anderem dazu eingesetzt werden, menschliches Verhalten und Erleben bzw. die diesen zugrunde liegenden Gehirnprozesse (am Computer) zu simulieren und dadurch besser zu verstehen. Sie lassen sich aber ebenso als statistische Verfahren bei der Datenauswertung einsetzen. Aufgrund der Fülle der Anwendungsbereiche ist verständlich, warum keine allgemein anerkannte Definition zu neuronalen Netzen existiert. Gemeinsam ist den verschiedenen Modellen aber, dass bei diesen – wie bei anderen statistischen Verfahren auch – Matrizenberechnungen durchgeführt werden und dabei Informationen aufgenommen, verarbeitet und ausgegeben werden (Rey und Wender, 2008):
+
+Schematische Darstellung eines neuronalen Netzes
+Abbildung 7: Schematische Darstellung eines neuronalen Netzes
+Informationsaufnahme: Zunächst werden dem Netz (wiederholt) Informationen in Form von Zahlen als Eingabe zur Verfügung gestellt.
+Informationsverarbeitung und Netzmodifikation: Mit Hilfe dieser "Zahlenbündel" und bestimmter Umformungsregeln wird das Netz verändert. Die Veränderung des Netzes, d.h. der Lernprozess, findet typischerweise in einer Vielzahl von Schritten statt. Die dazu notwendigen – oftmals sehr umfangreichen – (Matrizen-)Berechnungen werden an Computern vorgenommen. Während und nach den Berechnungen zur Umformung des Netzes durchlaufen Informationen das neuronale Netz. Diese Zahlen werden durch das Netz modifiziert und verlassen dieses anschließend wieder – ebenfalls in Form eines Zahlenbündels.
+Informationsausgabe: Die Informationsausgabe stellt die "Antwort" des Netzes auf die vorangegangene Eingabe dar.
+Gemeinsamkeiten und Unterschiede zum Kognitivismus
+
+Neuronale Netze besitzen somit Gemeinsamkeiten zu kognitiven Modellen, da auch dort Informationen aufgenommen, verarbeitet und wieder ausgegeben werden. Während kognitive Modelle traditionell eher die Gemeinsamkeiten mit dem Computer hervorheben, betonen neuronale Netze vornehmlich die Unterschiede zwischen Menschen und (heutigen) Computern bei der Informationsverarbeitung und wurden zudem durch das menschliche Gehirn als "Vorbild" inspiriert (Rey und Wender, 2008). Konnektionistische Modelle kamen im Gegensatz zu kognitiven Modellen in der E-Learning Forschung meines Wissens nach bisher nicht zum Einsatz, obwohl sich der Rückgriff auf diese Ansätze unmittelbar anbieten würde.
+
+Kritik und Würdigung
+
+Die Simulation menschlichen Lernens mittels neuronaler Netze wird unter anderem hinsichtlich ihrer fragwürdigen biologischen Plausibilität kritisiert. Viele neuronale Netze widersprechen biologischen Grundannahmen und sind daher als Modelle zur Erklärung menschlichen Lernens nur bedingt geeignet (Rey und Wender, 2008). Allerdings trifft dieser Kritikpunkt meist in noch stärkerem Maße auf behavioristische, kognitive und konstruktivistische Modelle zu. Neben der fragwürdigen biologischen Plausibilität besitzen einige neuronale Netze aufgrund ihrer zahlreich enthaltenen Parameter und Variablen die Gefahr, jede denkbare menschliche Verhaltensweise beim Lernen abbilden zu können. Dadurch wäre das Modell nicht mehr falsifizierbar, d.h. nicht mehr durch empirisch gewonnene Daten widerlegbar, sondern könnte durch die Wahl geeigneter Parameter immer vor der Falsifikation geschützt werden (vgl. Popper, 1996; Rey und Wender, 2008). Trotz dieser und weiterer Kritikpunkte wurden neuronale Netze bereits in vielen Bereichen inner- und außerhalb der Psychologie erfolgreich eingesetzt (Rey und Wender, 2008). Der Einsatz neuronaler Netze als Erklärungsansatz zum menschlichen Lehren und Lernen mittels elektronischer Medien erscheint schon deshalb äußerst ergiebig, weil Begriffe wie Lernen und Wissenserwerb bei beiden eine zentrale Bedeutung einnehmen. Insofern plädiere ich für eine Verknüpfung dieser beiden Forschungsgebiete.
+
+\section{E-learning}
+\textbf{Der Begriff E-Learning}
+Auf der deutschen Wikipedia Seite wird die Definition von Michael Kerres aufgegriffen:
+"Unter E-Learning (englisch electronic learning = „elektronisch unterstütztes Lernen“, wörtlich: „elektronisches Lernen“), auch als E-Lernen (E-Didaktik) bezeichnet, werden alle Formen von Lernen verstanden, bei denen elektronische oder digitale Medien für die Präsentation und Distribution von Lernmaterialien und/oder zur Unterstützung zwischenmenschlicher Kommunikation zum Einsatz kommen.
+Für E-Learning finden sich als Synonyme auch Begriffe wie: Online-Lernen (Onlinelernen), Telelernen, multimediales Lernen, computergestütztes Lernen, Computer-based Training, Open and Distance-Learning u. a."\cite{kerres2005learning}
+
+Auf der amerikanischen Webseite elearners.com  ist E-learning mit dem Kriterium der Netzbasiertheit definiert:
+„Any learning that utilizes a network (LAN, WAN or Internet) for delivery, interaction,
+or facilitation. This would include distributed learning, distance learning (other
+than pure correspondence), CBT delivered over a network, and WBT. Can be synchronous,
+asynchronous, instructor-led or computer-based or a combination.“\cite{aldrich2003simulations}
+
+Die Bedeutung des Begriffs elektronisches Lernen hat sich vom lernen mit Fernsehen, Videoband und CD-ROM am Computer zum Netz gebundenen bzw. webbasiertem Lernen entwickelt. 
+Daraus wird deutlich, dass der Gebrauch des Begriffes von der Zeitabhängig ist. Der aktuelle Gebrauch ist als Überbegriff für alle Arten medienunterstützten Lernens.\cite[S.22 ff.]{baumgartner2002learning} Im Rahmen dieser Arbeit wird E-learning mit dem Lernen über Internet bzw. webbasierte Anwendung verstanden. 
+
+ 
+Eine Vorlesung ohne Power Point und PDF-Handouts ist undenkbar geworden. Mit dem Angebot an neuen Medien hat sich auch eine neue interaktivere Lernkultur entwickelt, die neue Anforderungen an die didaktische Aufbereitung der Lehrinhalte stellt. 
+
+\subsection{Gestaltungsprinzipien für E-learning Angebote}
+
+Interaktivität ist 
+
+\textbf{Design Prinzipien}
+
+Prinzipien des systematischen Instruktionsdesigns = Gestaltungsorientiertes Mediendidaktik
+folgen der kognitive und kostruktivistischen Auffassung des Lernens. 
+
+\subsection{Ausgewählte Methoden des E-learning}
+
+
+
+\subsection{\ac{LCMS} und \ac{LMS}}
+
+\textbf{Autorensoftware} auch: Autorentool, Autoren- oder Authoring-System; engl.: authoring software) soll die Erstellung multimedialer Anwendungen insbesondere im E-Learning-Bereich für die Autoren dieser Anwendungen erleichtern.
+Mit der Software werden die Autoren in ihrer Arbeit unterstützt. Von den Autoren werden keine umfassenden Programmierkenntnisse verlangt, um Trainingskurse für Web Based Training, Computer Based Training oder entsprechende E-Learning-Module zu erstellen.
+Die Autorensoftware erleichtert die Erstellung interaktiver Präsentationen und Animationen, auch von komplexen Multimedia-Anwendungen. Interaktionen (z. B. Reaktionen auf Benutzereingaben oder Mausklicks) und Animationen (z. B. Bewegung von Elementen) können im Idealfall intuitiv erstellt werden. Die Integration von multimedialen Elementen ist ebenfalls möglich.
+Beispiele für Autorensoftware sind Adobe Authorware, Lectora, IMC Content Studio, IDA oder das Opensource-Produkt eXe-Learning. %Wiki
+
+%What are the differences between LMS, LCMS, and CMS? This question often elicits confusion among those shopping for the right software tools for their organization. Not to worry—we know the difference and we are going to share our knowledge.
+%First, let’s define our abbreviations. “LMS” is an acronym for “Learning Management System”, a software platform used to deliver and track training courses. “LCMS” stands for “Learning Content Management System”, or software used to author and manage learning content. Finally, a “CMS” is a “Content Management System”, or software used to organize content comprising a website.
+%Whether you are an elearning novice or an experienced training director, you should understand these systems to know which tools you need in your learning and development program. Let’s clarify the differences:
+%What is a Learning Management System?
+%Commonly used in corporate training and higher education settings, learning management systems are software platforms that store and deliver training content and then track participation in training. Most LMS enable learning managers to upload online training content created by a variety of authoring tools, as long as the content is compliant with SCORM, the industry standard file format. An LMS then allows companies to assign training to their employees, track their participation, and produce documentation of employee training activity and results. In sectors where companies are legally required to provide certain types of safety or compliance training, an LMS is an essential tool to keep track of the company’s compliance.
+%Finally, using an LMS enables companies to create different tracks of training courses to deliver to different groups of employees in order to fulfill their specific training objectives—creating a customized learning program for each employee, as needed. In addition to delivering and tracking online training courses, many LMS enable training managers to keep track of employees’ participation in other types of training programs, such as in-person classes.
+%Bluevolt, Litmos, and Topyx are examples of a few learning management systems.
+%What is a Learning Content Management System?
+%In contrast to an LMS, learning content management systems are primarily used to create, store and organize elearning content. Instructional designers use this software to develop, manage and publish training content. Rather than creating course catalogs for wide audiences, LCMS platforms allow single courses to be modified for individual learners.
+%An LCMS system usually allows multiple collaborators to work together to create content that can then be published in a variety of formats. The key difference between an LMS and an LCMS is the target user. The LMS user is the learner, while the LCMS user is the learning content creator.
+%
+%Many LCMS also have the ability to store and deliver older versions of courses. Companies that want customized courses delivered to their employees generally use an LCMS. When designing training materials to deliver through an LCMS, learning and development personnel should research quality authors and publishers. Xyleme and Kenexa are two examples of learning content management systems.  
+%
+%What is a Content Management System?
+%
+%Content management systems create the framework in which content is stored and displayed on a website. These systems manage various content forms, including files, images, electronic documents, audio files, and many more.
+%
+%CMS functions allow distributors to decide which content is displayed privately or publicly. Content can be easily tagged using metadata, which is best for searching and using content quickly and efficiently. Drupal and WordPress are popular content management systems used to create all kinds of websites. As opposed to a CMS, a learning CMS is specialized for the creation and management of learning content.
+%
+%Management Systems in Summary
+%
+%You have the ability to manage and deliver content on all three management systems. While these management systems have several similarities, they ultimately have different functions.
+%
+%Take some time to study these similarities and differences to avoid using the wrong acronym in professional discussions. As soon as you start using these acronyms in discussions...you're going to sound like an elearning pro.
+%
+%Which management system do you use for your team? Share with us in the comments.\cite{LMS_LCMS}
+\section{M-Learning}
+
+\section{Gamification als Instrument des E-Learning}
+
+
+\chapter{Usabiliy-Engineering}
+Das Web als Werkzeug bietet dem Benutzer nicht nur eine Vielzahl von Webseiten zum Finden von Informationen, sondern immer mehr Verwaltungsaufgaben können online erledigt werden. Überzeugen kann eine solche Anwendung, wenn der Nutzer sich schnell zurechtfindet und einfach seine Ziele erreichen kann. Usability (Gebrauchstauglichkeit) ist im Web so wie bei Mobilen Anwendungen ein entscheidendes Merkmal, um sich in der Vielfalt behaupten zu können. Auch E-learning Anwendungen müssen dem Nutzer hohe Usability bieten, um als brauchbares Werkzeug bestehen zu können.\newline
+
+\textbf{Begriffsklärung}
+Usability ist ein aus dem englischen übernommener Begriff der ins deutsche sowohl als Benutzbarkeit (ISO 9126) wie auch als Gebrauchstauglichkeit (ISO 9241) übersetzt wurde. 
+
+ISO 9126 Informationstechnik, beurteilen der Qualität von Softwareprodukten anhand von 6 Merkmalen: Funktionalität, Zuverlässigkeit, Effizients, Benutzbarkeit (Usability), Änderbarkeit, 
+
+Softwareergonomie Standards ISO 9241 Teil 10-17 Ergonomische Anforderungen für Tätigkeiten mit Bildschirmgeräten
+Anpassung der Arbeitsbedingungen bei der Mensch Computer Interaktion an die Sensumotorischen und koktiviven Fähigkeiten und Prozesse auf den Menschen.
+
+Weg von Mensch-Computer Interaktion hin zur Softwareergonomie seit den 1980er Jahren bis hin zum Didaktischen Design im Rahmen der Usability-Engineering. 
+
+\section{Software-Ergonomie}
+„Ergonomie ist ein wissenschaftlicher Ansatz, damit wir aus diesem Leben die besten Früchte bei der geringsten Anstrengung und mit der höchsten Befriedigung für das eigene und das allgemeine Wohl ernten.“ [Jastrzebowski 1857]
+
+Diese älteste bekannte Definition für Ergonomie war bis Ende der sechziger Jahre in Vergessenheit geraten. Deshalb schlug Murrell 1949 in England ergonomics als Begriff für eine neue wissenschaftliche Disziplin vor. Für dieses Kunstwort führte er die beiden altgriechischen Wörter ergon – Arbeit, Werk, Tat und nomos – Gesetz, Brauch, Übereinkunft zusammen. Human Factors wird häufig als Synonym für Ergonomie verwendet.
+
+Die IEA (International Ergonomics Association) gab 2000 die offizielle Definition von Ergonomie heraus:
+
+„Ergonomics (or human factors) is the scientific discipline concerned with the understanding of interactions among humans and other elements of a system, and the profession that applies theory, principles, data and methods to design in order to optimize human well-being and overall system performance.“ [IEA 2006]
+
+So allgemeingültig diese Definition auch ist, sie berücksichtigt die Tatsache, dass die Ergonomie nicht mehr nur in der Arbeitswelt beachtet werden muss. Auch in der Freizeit gilt es Interaktionen zwischen Menschen und anderen Elementen eines Systems (hierzu zählen nicht nur technische Geräte, sondern auch Alltagsgegenstände) so zu gestalten, dass sie an die physischen Eigenschaften und psychischen Fähigkeiten des Menschen angepasst sind.
+
+„Software-Ergonomie befasst sich disziplinübergreifend mit der benutzergerechten Gestaltung der Mensch-Maschine-Interaktion sowie der Berücksichtigung der Aufgaben- und Organisationserfordernisse und der Benutzerbelange.“ [GI-Fachgruppe Software Ergonomie 2005, S 7]
+
+Die Mensch-Maschine-Interaktion kann für die Software-Ergonomie auf die Mensch- Computer-Interaktion (MCI) oder Human-Computer-Interaction (HCI) eingegrenzt werden. Im englischsprachigen Raum wird letztgenannter Begriff synonym zum deutschen Begriff Software-Ergonomie verwendet, obwohl die HCI der Gegenstand der Software-Ergonomie als auch der Hardware-Ergonomie ist.
+
+Die Software-Ergonomie beschäftigt sich mit der Anpassung an die kognitiven Fähigkeiten (Möglichkeiten zur Verarbeitung von Informationen) des Menschen. Benutzungsschnittstelle (User Interface), welche nach Herczeg die Bedienoberfläche mit den Eingabemöglichkeiten des Benutzers und den Ausgabemöglichkeiten des Computersystems, die Regeln der Ein- und Ausgabevorgänge an der Bedienoberfläche sowie  Systeme zur Unterstützung der Mensch-Computer-Kommunikation enthält. [vgl. Herczeg 2005]
+
+Mit Ein- und Ausgabemöglichkeiten sind nicht nur die technischen Geräte wie Maus oder Monitor gemeint (Hardware-Ergonomie), sondern auch die softwareseitigen Konstrukte der Dialoggestaltung wie Kommandodialoge, Menüs oder die direkte Manipulation (Software- Ergonomie). Dadurch findet eine wechselseitige Beeinflussung zwischen Mensch und Computer statt, die Interaktion.
+
+Computerbasierte Werkzeuge haben gegenüber traditionellen Werkzeugen eine enorme Vielseitigkeit zu bieten. In ihrer Bedienbarkeit erleiden sie dadurch aber meist einen Rückschritt. Ursache dafür ist neben der Komplexität selbst das Fehlen langjähriger und evolutionärer Entwicklungsprozesse und die damit verbundene Anpassung an den Menschen aufgrund ihrer vergleichsweise kurzen Geschichte.
+
+Die Software-Ergonomie hat die Motivation, den Mangel an Bedienbarkeit für die programmtechnische Benutzungsoberfläche interaktiver Computersysteme zu beseitigen. Denn versteht ein Benutzer die Art und Weise der Bedienung der Software nicht, wird er auch nicht fähig sein, ihre Vielseitigkeit zu nutzen.
+
+Es sind vier Faktoren zu berücksichtigen, wenn es darum geht, die Benutzungsschnittstelle benutzergerecht zu gestalten:
+
+Menschengerechte Gestaltung
+
+Im Gegensatz zu rein technischen Schnittstellen (zwischen zwei Maschinen) hat die Benutzungsschnittstelle dem Menschen Rechnung zu tragen. Der Benutzer kann mit seinen Stärken, Schwächen, Bedürfnissen und Unterschieden in der Entwicklung nur schwer formal beschrieben werden. Dennoch muss eine Anpassung der Software an den Menschen (nicht umgekehrt) erfolgen, um benutzergerecht zu sein. Dazu werden „Kenntnisse über menschliche Wahrnehmung, Denken und Problemlösen sowie über Lernen, Kommunikation und Kooperation benötigt“ [Eberleh, Oberquelle \& Oppermann 1994, S 4]. Im Abschnitt 1.3 werden einige dieser psychologischen Grundlagen vorgestellt.
+
+Aufgabenangemessene Gestaltung
+
+Software wird vom Benutzer für einen bestimmten Zweck verwendet. Meist möchte der Benutzer eine konkrete Aufgabe, insbesondere im Arbeitsleben, damit lösen. Aufgabenangemessen kann nur gestaltet werden, wenn Kenntnisse über die Aufgaben der Benutzer und ihre Vorgehensweise beim Erledigen der Aufgaben bekannt sind. Doch diese Aufgaben müssen zuerst menschengerecht formuliert werden bevor eine aufgabenangemessene Funktionalität der Software bei der Erledigung Unterstützung bieten kann. Hierzu werden Kenntnisse der Arbeitswissenschaften in der Software-Ergonomie angewandt.
+
+Technikbewusste Gestaltung
+
+Bei der Vielfalt an technischen Optionen, die heutzutage angeboten werden, fällt es nicht leicht, diese auch benutzergerecht einzusetzen. Häufig werden neue Technologien nur zum Selbstzweck eingesetzt. Für die benutzergerechte Gestaltung ist es notwendig, die verfügbaren technischen Möglichkeiten zum Wohle des Benutzers einzusetzen. Das kann bedeuten, dass der Schritt zu einer innovativen Technologie gewagt wird, oder aber etablierte, traditionelle Techniken verwendet werden. Letztlich müssen hier ökonomische und im Einzelfall auch ökologische Rahmenbedingungen bei der Entscheidung berücksichtigt werden.
+
+Organisationsgerechte Gestaltung
+
+Benutzer handeln sowohl im Arbeitsleben als auch im Privatleben meist in einem Netzwerk zusammen. Daneben findet durch die Verbreitung des Internets und der Computer auch eine technische Vernetzung statt. Diese beiden Aspekte der sozialen und technischen Vernetzung müssen durch eine organisationsgerechte Gestaltung berücksichtigt werden. Dabei muss die jeweils vorhandene organisatorische Einbindung des Softwarebenutzers beachtet werden, wenn Kenntnisse über den Menschen und seine Aufgaben gewonnen werden.
+
+Über menschengerechte und aufgabenangemessene Gestaltung existiert ein weites Spektrum fundierten Wissens durch die Forschungsarbeit der Software-Ergonomie. Die letzteren Aspekte, technikbewusste und organisationsgerechte Gestaltung, haben erst Mitte der neunziger Jahre an Bedeutung gewonnen. Als Grund dafür können die Verbreitung des Internets sowie
+
+Software-Ergonomie – theoretische Grundlagen und praktischer Einsatz Gegenstand und Ziele der Software-Ergonomie 5
+
+die Entwicklung von „haushaltstauglichen“ PCs angesehen werden. Heutzutage haben alle vier Aspekte eine große Bedeutung, wenn es um die Gestaltung neuer Software geht.
+
+Beispielsweise ermöglichen neue Technologien den Einsatz von bekannter Software in neuen Formaten. PocketPCs und die Multifunktionalität von Mobiltelefonen seien als Beispiele für Geräte genannt, die eine Anpassung der Benutzerschnittstelle an ein vergleichsweise kleines Ausgabegerät (im Gegensatz zum Desktop-Monitor) und das damit verbundene Benutzerverhalten erfordern. Technikbewusst muss auch der Einsatz von Computern als eingebettete Systeme (Embedded Systems) in modernen technischen Geräten betrachtet werden. Hinzu kommt, dass Software damit nicht mehr als grafische Oberfläche in Erscheinung tritt. Bei der Entwicklung ergonomischer Richtlinien für eingebettete Systeme verwischt die Grenze zwischen Software- und Hardware-Ergonomie zunehmend.
+
+Es sollte auch nicht vergessen werden, dass Computersysteme nicht mehr nur zur Arbeit genutzt werden, sondern auch im Freizeitbereich. Gerade hier kann die Nutzungsdauer sogar länger als am Arbeitsplatz sein, da die Software meist zum Vergnügen genutzt wird. In diesem Zusammenhang ist auch wieder die Hardware-Ergonomie gefragt, welche die körperlichen Belastungen durch lange Nutzung des Computersystems minimieren soll.
+
+Auch die veränderte Alterstruktur der Benutzer muss in der Software-Ergonomie berücksichtigt werden. Sowohl Kinder und Jugendliche als auch Senioren nutzen Computer in einem höheren Maße als noch vor einigen Jahren und stellen spezielle Anforderungen an die Hardware und Software durch ihre körperlichen und geistigen Fähigkeiten.
+
+\textbf{Richtlinien }
+
+\section{Benchmark Analyse E-learning und M-Learning Tools mit Usability Inhalen}
+Auf dem deutschsprachigen Markt beschränkt gibt es neben der Schulungsangeboten der vom \ac{UXQB} Anerkannten zahlreiche weitere. Es werden im folgenden nur jene aufgeführt und für den Vergleich herangezogen die ein E-learning Tool bzw. M-Learning Tool anbieten. 
+\begin{enumerate}
+	\item Frauenhofer FIT (http://www.usability-ux.fit.fraunhofer.de/de/weiterbildungen-usability-und-user-experience-design/engineer-praxis.html)
+	\item Usability-Academy  auch als Mobile App für Android (http://usability-academy.com/cms/unternehmen.html)
+	\item http://en.tt-s.com/software/tt-knowledge-force/
+\end{enumerate}
+
+
+\chapter{Konzeption} //Skizzierung dessen was kommt 
+\section{Rahmenbedingungen}
+Innerhalb des KOMET Projektes soll ein E-Learning Tool entwickelt werden, welches das Selbstlernen erleichtert und als begleitendes Material/Medium dient. Lehrinhalt sollen die 138 Usability Begriffe und Definitionen sein, die vom UXQB öffentliches Glossar auf der Webseite verfügbar sind. 
+
+Ein Quiz nach dem Modell von Quizduell, bei dem die Zeit und die Folge von richtigen Antworten aufgezeichnet werden und in den Highscore einfließen.
+E-learning tool was Entwicklern das beachten von Usebility bei der Entwicklung von BUIS erleichtern soll.  
+
+3 Ideen, 
+1. Glossar, konkrete Beschreibung zum lernen langweilig, Kategorisierung der Begriffe und Definitionen, 
+2. Quiz, gegen Maschine bzw. einfache Lern, zum lernen für die Zertifizierung,
+3. Quizduell, gegen andere direktes Duell, 
+
+Glossar beinhaltet Worte der Zertifizierung Seminar: Zielgruppe? 
+Glossar zum lernen in Bereiche aufgeteilt, Usability Quiz zum testen seiner bereits gelernten Erfolge, 
+Branding soll noch gemacht werden mit dem Augenmerk der Informationsgestaltung Aufbereitung
+\begin{itemize}
+	\item{Webbasiertes Tool}
+	\item{HLMT/ HTML 5}
+	\item{Jason/ Java Skript/ Python}
+	\item{Vokabeln plus Definitionen}
+	\item und einige mehr  
+	\end{itemize}
+	
+	Anforderungen an die Software = Lernerfolge testen, Schwierigkeitsgrad, 
+	
+	\subsection{Glossar sequentiell}
+	\subsection{Glossar shuffle}
+	\subsection{Begriff + Definition + Bild}
+	\subsection{Quiz gegen einen Gegner direkt?}
+	\subsection{Fragen}
+	Welches Spiel/Welche Methode
+	\begin{enumerate}
+		\item  ist am einprägsamsten?
+		\item  ist für zwischendurch?
+		\item  hat Ihnen am meisten Spaß gemacht?
+		\item  ist am Zeitaufwendigsten?
+		\item  ist der Fortschritt/Lernerfolg am besten erfasst?
+		\item Inhalt...
+		\end{enumerate}
+		
+\section{Zielgruppe}
+Entwickler und andere Personen die sich seriös für Usability und der User Experience interessieren und hierfür weiterbilden möchten. 
+
+\section{Seminarplanung}
+Zielgruppen
+Die Zielgruppe sind Usability Professionals und die die es noch werden möchten. 
+\subsection{Inhalt und Ziel des Seminars}
+Vermittlung des
+\subsection{Funktionale Anforderungen}
+Darbietung der Begriffe, Verlinkung zu Synonymen, 
+Dazu wurde das Glossar zu einer Art Wiki aufbereitet und zum Prüfen des bereits erworbenen Wissens ein Lern-Quiz in der Art einer Vokabeltrainings entwickelt. Zu der gegebenen Definition gilt es zwischen 4 Antwortmöglichkeiten den richtigen Begriff zu wählen. Die besten Ergebnisse finden zugang in die Top 10 der Highscore Liste die mit implementiert wurde um einen weiterer Anreiz für das so genannte Usability-Quiz zu schaffen. 
+Evaluieren des Quiz nach Usability Richtlinien?
+
+Open Source
+CourseBuilder (Webbasiert) 
+
+\subsection{Quiz}
+\subsection{Lückentext}
+\subsection{Memory}
+
+%\begin{itemize}
+%	
+%	\item Wie können Inhalte (Usability Glossar) vermittelt werden?
+%	\item Was soll vermittelt werden? Aufbereitung des Content als Lückentext, Bildaufgabe, T
+%	\item Wer sind die Zielpersonen Benutzer?
+%	\item BUIS sind nicht intuitiv und selten eingebungen, folgen, werden ungern genutzt
+%	\item Ein E-learning Tool welches spielerisch in Leerlaufphasen genutzt werden kann
+%	\item E-learning Plattform als Autorenprogramm um Inhalte auf BUIS anpassen zu können
+%	\item Es gibt kein Know How bei den KMU entwicklern
+%	\item keine Ansprechend aufbereiteten Inhalte um sich Usability anzueignen
+%	\item Was gibt es auf dem Markt und warum ist das Thema noch nicht angenommen
+%	\item Angebote die verfügbar sind noch nicht angenommen und wie müsste das Spiel aufgebaut sein damit sich KMU Entwickler damit beschäftigen
+%	\item Innerhalb des KOMET Projektes gibt es bereits folgenden Prototypen und 
+%\end{itemize}
+
+
+\section{\ac{LCMS} Wahl}
+Framework als Entwicklungsumgebung oder doch nur Mokups? 
+Autorenprogramm
+
+Powertrainer / Lecturnity 
+Adobe Captivate (bzw. die gesamte eLearning Suite 2) 
+Lectora Publisher 
+Outstart Trainer 
+SumTotal Toolbook 
+digital spirit elearning studio  
+
+
+
+\section{Auswertung}
+\section{Zusammenfassung} 
+Autorenprogramm = Quatsch, nur für den Prototypen zur Visualisierung der angestrebten funktionalitäten
+
+Aussicht für die Umgebung auch als Autorentool anwendbar? Wie ist die Software zu strukturieren um den Content erweiterbar bzw. einfach veränderbar zu machen. 
+
+
+\chapter{Praxisteil}
+\section{Erweiterung des KOMET Code durch Kategorisierung}
+\section{Erweiterung des KOMET Code durch Bilder für 98 Begriffe}
+\section{Prototyp Kombinations/ Zuordnungspiel}
+
+\addchap{Quellen}
+\printbibliography[heading=subbibliography,title=Literatur,nottype={Web}]
+\printbibliography[heading=subbibliography,title=Internet,type=web]
+
+\end{document}

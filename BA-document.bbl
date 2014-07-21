@@ -1,0 +1,339 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{aldrich2003simulations}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Aldrich}{A.}%
+     {Clark}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {John Wiley \& Sons}%
+  }
+  \strng{namehash}{AC1}
+  \strng{fullhash}{AC1}
+  \field{sortinit}{A}
+  \field{title}{Simulations and the future of learning: An innovative (and
+  perhaps revolutionary) approach to e-learning}
+  \field{year}{2003}
+\endentry
+
+\entry{arnold2013handbuch}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Arnold}{A.}%
+     {Patricia}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {W. Bertelsmann Verlag}%
+  }
+  \strng{namehash}{AP1}
+  \strng{fullhash}{AP1}
+  \field{sortinit}{A}
+  \field{title}{Handbuch E-Learning: lehren und lernen mit digitalen Medien}
+  \field{year}{2013}
+\endentry
+
+\entry{baumgart1998entwicklungs}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Baumgart}{B.}%
+     {Franzj{\"o}rg}{F.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BF1}
+  \strng{fullhash}{BF1}
+  \field{sortinit}{B}
+  \field{title}{Entwicklungs-und Lerntheorien}
+  \field{journaltitle}{Erl{\"a}uterungen-Texte-Arbeitsaufgaben, Bad Heilbrunn}
+  \field{year}{1998}
+\endentry
+
+\entry{baumgartner2002learning}{book}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Baumgartner}{B.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {H{\"a}fele}{H.}%
+     {Hartmut}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Maier-H{\"a}fele}{M.-H.}%
+     {Kornelia}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BPHHMHK1}
+  \strng{fullhash}{BPHHMHK1}
+  \field{sortinit}{B}
+  \field{title}{E-Learning: Didaktische und technische Grundlagen}
+  \field{journaltitle}{E-Learning. CD Austria. S}
+  \field{year}{2004}
+\endentry
+
+\entry{beck2000eigenstandiges}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Beck}{B.}%
+     {Erwin}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Guldimann}{G.}%
+     {Titus}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zutavern}{Z.}%
+     {Michael}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BEGTZM1}
+  \strng{fullhash}{BEGTZM1}
+  \field{sortinit}{B}
+  \field{pages}{51\bibrangedash 93}
+  \field{title}{Eigenständiges Lernen fördern. Metakognition im Unterricht}
+  \field{volume}{1}
+  \field{journaltitle}{Beiträge zur gymnasialen Bildung}
+  \field{year}{2000}
+\endentry
+
+\entry{Wiki_BUIS}{misc}{}
+  \list{organization}{1}{%
+    {Wikipedia - Die freie Enzyklopädie}%
+  }
+  \field{sortinit}{B}
+  \field{title}{Betriebliche_Umweltinformationssystem}
+  \verb{url}
+  \verb http://de.wikipedia.org/wiki/Betriebliches_Umweltinformationssystem
+  \endverb
+\endentry
+
+\entry{ISO9241}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {DIS}{D.}%
+     {ISO}{I.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DI1}
+  \strng{fullhash}{DI1}
+  \field{sortinit}{D}
+  \field{title}{9241-210: 2010. Ergonomics of human system interaction-Part
+  210: Human-centred design for interactive systems}
+  \field{journaltitle}{International Standardization Organization (ISO).
+  Switzerland}
+  \field{year}{2009}
+\endentry
+
+\entry{dewey1995erfahrung}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Dewey}{D.}%
+     {John}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Suhr}{S.}%
+     {Martin}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Suhrkamp Verlag}%
+  }
+  \strng{namehash}{DJSM1}
+  \strng{fullhash}{DJSM1}
+  \field{sortinit}{D}
+  \field{title}{Erfahrung und Natur}
+  \field{year}{1995}
+\endentry
+
+\entry{issing2009online}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Issing}{I.}%
+     {Ludwig~J}{L.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Oldenbourg}%
+  }
+  \strng{namehash}{ILJ1}
+  \strng{fullhash}{ILJ1}
+  \field{sortinit}{I}
+  \field{title}{Online-Lernen: Handbuch f{\"u}r Wissenschaft und Praxis}
+  \field{year}{2009}
+\endentry
+
+\entry{KOMET}{misc}{}
+  \list{organization}{1}{%
+    {HTW-Berlin FB2 - Betriebliche Umweltinformatik}%
+  }
+  \field{sortinit}{K}
+  \field{title}{KOMET Projekt Seite}
+  \verb{url}
+  \verb http://komet.f2.htw-berlin.de/aggregator/categories/1
+  \endverb
+\endentry
+
+\entry{kerres2005learning}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Kerres}{K.}%
+     {Michael}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Witt}{W.}%
+     {Claudia}{C.}%
+     {de}{d.}%
+     {}{}}%
+    {{}%
+     {Stratmann}{S.}%
+     {J{\"o}rg}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KMWCdSJ1}
+  \strng{fullhash}{KMWCdSJ1}
+  \field{sortinit}{K}
+  \field{title}{E-Learning}
+  \field{volume}{25}
+  \field{journaltitle}{Didaktische Konzepte f{\"u}r erfolgreiches Lernen,
+  Online im Internet: http://online-campus.
+  net/edumedia/publications/jahrb-pe-wb-b. pdf}
+  \field{year}{2005}
+\endentry
+
+\entry{cpux-f}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Molich}{M.}%
+     {Geis Thomas (ProContext Consulting GmbH) Kluge Oliver
+  (Versicherungskammer Bayern) Polkehn Knut (artop Institut an der
+  Humboldt-Universität zu Berlin) Heimgärtner Rüdiger (IUIC Intercultural
+  User Interface Consulting) Fischer Holger (Universität Paderborn s-lab –
+  Software Quality Lab) Hunkirchen Peter (Fraunhofer-Institut~FIT)}{G.~T. P. C.
+  G. K. O. V. B. P. K. a. I. a. d. H.-U. z. B. H. R. I. I. U. I. C. F. H. U. P.
+  s.-l. �. S. Q. L. H. P. F.-I.~F.}%
+     {}{}%
+     {Rolf~(DialogDesign)}{R.~D.}}%
+  }
+  \list{organization}{2}{%
+    {UXQB – International Usability}%
+    {User Experience Qualification Board e.V.}%
+  }
+  \strng{namehash}{MRDGTPCGKOVBPKaIadHUzBHRIIUICFHUPsl�SQLHPFIF1}
+  \strng{fullhash}{MRDGTPCGKOVBPKaIadHUzBHRIIUICFHUPsl�SQLHPFIF1}
+  \field{sortinit}{M}
+  \field{title}{CPUX-F – Curriculum und Glossar Herausgeber: UXQB}
+  \verb{url}
+  \verb http://www.uxperten.de/resources/cpux-f_curriculum_und_glossar.pdf
+  \endverb
+  \verb{file}
+  \verb :/home/rugiada/Dropbox/Uni/BA/Literatur/CPUX-F_Glossar.pdf:PDF
+  \endverb
+\endentry
+
+\entry{niegemann2005}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Niegemann}{N.}%
+     {S.and Hochscheid-Mauel D.and Aslanski K.and Deimann M.and
+  Kreuzberger~G.}{S.~H.-M. D. A. K. D. M. K.~G.}%
+     {}{}%
+     {H.M.and~Hessel}{H.~H.}}%
+  }
+  \keyw{e-learning}
+  \strng{namehash}{NHHSHMDAKDMKG1}
+  \strng{fullhash}{NHHSHMDAKDMKG1}
+  \field{sortinit}{N}
+  \field{issn}{1860-7470}
+  \field{number}{1}
+  \field{title}{Kompendium E-Learning}
+  \verb{url}
+  \verb http://nbn-resolving.de/urn:nbn:de:0009-5-2102
+  \endverb
+  \field{volume}{2005}
+  \field{journaltitle}{eleed}
+  \field{year}{2005}
+\endentry
+
+\entry{BLK}{misc}{}
+  \list{organization}{1}{%
+    {Bund-Länder-Kommission für Bildungsplanung und Forschungsförderung
+  (BLK)}%
+  }
+  \list{publisher}{1}{%
+    {Bonn: Die Bund-Länder-Kommission für Bildungsplanung und
+  Forschungsförderung (BLK)}%
+  }
+  \field{sortinit}{S}
+  \field{title}{Strategie f{\"u}r Lebenslanges Lernen in der Bundesrepublik
+  Deutschland}
+  \verb{url}
+  \verb http://www.pedocs.de/volltexte/2008/325/pdf/heft115.pdf
+  \endverb
+  \verb{file}
+  \verb :/home/rugiada/Dropbox/Uni/BA/Literatur/heft115.pdf:PDF
+  \endverb
+  \field{year}{2004}
+\endentry
+
+\entry{wohlgemuth2008konzepte}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Wohlgemuth}{W.}%
+     {Volker}{V.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Berliner}{B.}%
+     {BUIS}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Shaker}%
+  }
+  \strng{namehash}{WVBB1}
+  \strng{fullhash}{WVBB1}
+  \field{sortinit}{W}
+  \field{title}{Konzepte, Anwendungen, Realisierungen und Entwicklungstendenzen
+  betrieblicher Umweltinformationssysteme (BUIS):[Workshop 1. Berliner
+  BUIS-Tage]}
+  \field{year}{2008}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
