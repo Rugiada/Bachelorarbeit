@@ -17,14 +17,16 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: BA-document-blx.bib
 Database file #2: quellen.bib
+Warning--entry type for "SimaPro_Homepage" isn't style-file defined
+--line 281 of file quellen.bib
 Warning--entry type for "cpux-f" isn't style-file defined
---line 587 of file quellen.bib
+--line 659 of file quellen.bib
 Warning--entry type for "KOMET" isn't style-file defined
---line 975 of file quellen.bib
+--line 1077 of file quellen.bib
 Warning--entry type for "Wiki_BUIS" isn't style-file defined
---line 993 of file quellen.bib
+--line 1095 of file quellen.bib
 Warning--entry type for "BLK" isn't style-file defined
---line 1011 of file quellen.bib
+--line 1113 of file quellen.bib
 Warning--I didn't find a database entry for "Ludwig"
 Biblatex version: 2.8
 Too many commas in name 1 of "Molich, Rolf (DialogDesign), Geis, Thomas (ProContext Consulting GmbH) Kluge, Oliver (Versicherungskammer Bayern) Polkehn, Knut (artop - Institut an der Humboldt-Universität zu Berlin) Heimgärtner, Rüdiger (IUIC, Intercultural User Interface Consulting) Fischer, Holger (Universität Paderborn, s-lab – Software Quality Lab) Hunkirchen, Peter (Fraunhofer-Institut FIT)" for entry cpux-f
@@ -1181,45 +1183,45 @@ Too many commas in name 1 of "Niegemann, H.M.and Hessel, S.and Hochscheid-Mauel,
 while executing---line 2659 of file biblatex.bst
 Too many commas in name 1 of "Niegemann, H.M.and Hessel, S.and Hochscheid-Mauel, D.and Aslanski, K.and Deimann, M.and Kreuzberger, G." for entry niegemann2005
 while executing---line 2659 of file biblatex.bst
-You've used 16 entries,
+You've used 22 entries,
             6047 wiz_defined-function locations,
-            1215 strings with 11190 characters,
-and the built_in function-call counts, 52395 in all, are:
-= -- 2740
-> -- 1626
-< -- 747
-+ -- 710
-- -- 479
-* -- 2767
-:= -- 2737
+            1246 strings with 12326 characters,
+and the built_in function-call counts, 74053 in all, are:
+= -- 3790
+> -- 2348
+< -- 1024
++ -- 991
+- -- 705
+* -- 4172
+:= -- 3901
 add.period$ -- 0
-call.type$ -- 16
-change.case$ -- 15
+call.type$ -- 22
+change.case$ -- 21
 chr.to.int$ -- 34
-cite$ -- 30
-duplicate$ -- 5726
-empty$ -- 5297
-format.name$ -- 754
-if$ -- 12475
+cite$ -- 42
+duplicate$ -- 8190
+empty$ -- 7452
+format.name$ -- 1185
+if$ -- 17495
 int.to.chr$ -- 0
-int.to.str$ -- 37
+int.to.str$ -- 54
 missing$ -- 0
-newline$ -- 322
-num.names$ -- 896
-pop$ -- 4859
+newline$ -- 485
+num.names$ -- 1280
+pop$ -- 6824
 preamble$ -- 1
-purify$ -- 532
+purify$ -- 731
 quote$ -- 0
-skip$ -- 3979
+skip$ -- 5545
 stack$ -- 0
-substring$ -- 2240
-swap$ -- 1803
-text.length$ -- 393
-text.prefix$ -- 15
+substring$ -- 2961
+swap$ -- 2570
+text.length$ -- 557
+text.prefix$ -- 21
 top$ -- 1
-type$ -- 592
+type$ -- 819
 warning$ -- 0
-while$ -- 267
+while$ -- 370
 width$ -- 0
-write$ -- 305
+write$ -- 462
 (There were 576 error messages)

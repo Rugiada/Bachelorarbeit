@@ -1,33 +1,40 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.7.10)  21 JUL 2014 14:38
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.22)  24 JUL 2014 01:24
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
 **BA-document.tex
-(./BA-document.tex
+(E:\Dropbox\Uni\Bachelorarbeit\BA-document.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrreprt.cls
-Document Class: scrreprt 2013/12/19 v3.12 KOMA-Script document class (report)
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
-
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-independent 
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrreprt.cls"
+Document Class: scrreprt 2012/07/29 v3.11b KOMA-Script document class (report)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrkbase.sty"
+Package: scrkbase 2012/07/29 v3.11b KOMA-Script package (KOMA-Script-dependent 
 basics and keyval usage)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrbase.sty"
+Package: scrbase 2012/07/29 v3.11b KOMA-Script package (KOMA-Script-independent
+ basics and keyval usage)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2013/12/19 v3.12 KOMA-Script package (loading files)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrlfile.sty"
+Package: scrlfile 2012/06/15 v3.12 KOMA-Script package (loading files)
 
-Package scrlfile, 2013/12/19 v3.12 KOMA-Script package (loading files)
+Package scrlfile, 2012/06/15 v3.12 KOMA-Script package (loading files)
                   Copyright (C) Markus Kohm
 
-))) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
-Package: tocbasic 2013/12/19 v3.12 KOMA-Script package (handling toc-files)
+))) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\tocbasic.sty"
+Package: tocbasic 2012/04/04 v3.10b KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
@@ -38,20 +45,11 @@ Package tocbasic Info: omitting babel extension for `lof'
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
 (tocbasic)             for `lot' on input line 119.
-Package tocbasic Info: defining new hook before heading of `' on input line 112
-3.
-Package scrreprt Info: You've used standard option `12pt'.
-(scrreprt)             This is correct!
-(scrreprt)             Internally I'm using `fontsize=12pt'.
-(scrreprt)             If you'd like to set the option with \KOMAoptions,
-(scrreprt)             you'd have to use `fontsize=12pt' there
-(scrreprt)             instead of `12pt', too.
-Package scrbase Info: Unknown processing state.
-(scrbase)             Processing option `twoside'
-(scrbase)             of member `.scrreprt.cls' of family
-(scrbase)             `KOMA' doesn't set
-(scrbase)             a valid state. This will be interpreted
-(scrbase)             as \FamilyKeyStateProcessed on input line 1274.
+Package scrreprt Info: You've used obsolete option `12pt'.
+(scrreprt)             \KOMAExecuteOptions{fontsize=12pt} will be
+(scrreprt)             used instead.
+(scrreprt)             You may simply replace `12pt'
+(scrreprt)             by `fontsize=12pt'.
 Class scrreprt Info: You've used standard option `abstracton'.
 (scrreprt)           This is correct!
 (scrreprt)           Internally I'm using `abstract=true'.
@@ -59,16 +57,16 @@ Class scrreprt Info: You've used standard option `abstracton'.
 (scrreprt)           you'd have to use `abstract=true' there
 (scrreprt)           instead of `abstracton', too.
 Class scrreprt Info: File `scrsize12pt.clo' used to setup font sizes on input l
-ine 1655.
+ine 1367.
 
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
-File: scrsize12pt.clo 2013/12/19 v3.12 KOMA-Script font size class option (12pt
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrsize12pt.clo"
+File: scrsize12pt.clo 2012/07/29 v3.11b KOMA-Script font size class option (12p
+t)
 )
-)
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
-Package: typearea 2013/12/19 v3.12 KOMA-Script package (type area)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\typearea.sty"
+Package: typearea 2012/07/29 v3.11b KOMA-Script package (type area)
 
-Package typearea, 2013/12/19 v3.12 KOMA-Script package (type area)
+Package typearea, 2012/07/29 v3.11b KOMA-Script package (type area)
                   Copyright (C) Frank Neukam, 1992-1994
                   Copyright (C) Markus Kohm, 1994-
 
@@ -83,7 +81,6 @@ Package typearea Info: You've used standard option `a4paper'.
 \ta@hblk=\skip42
 \ta@vblk=\skip43
 \ta@temp=\skip44
-\footheight=\skip45
 DIV calculation for typearea with good linewidth.
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 9
@@ -101,7 +98,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 12.0pt
 (typearea)              \footskip       = 50.75pt
 (typearea)              \baselineskip   = 14.5pt
-(typearea)              on input line 1330.
+(typearea)              on input line 1213.
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -110,41 +107,41 @@ Package typearea Info: These are the values describing the layout:
 \c@subsubsection=\count84
 \c@paragraph=\count85
 \c@subparagraph=\count86
-\abovecaptionskip=\skip46
-\belowcaptionskip=\skip47
+\abovecaptionskip=\skip45
+\belowcaptionskip=\skip46
 \c@pti@nb@sid@b@x=\box26
 \c@figure=\count87
 \c@table=\count88
 \bibindent=\dimen102
-) (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2013/11/25 v2.8a programmable bibliographies (PK/JW/AB)
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty"
+Package: biblatex 2013/05/01 v2.6 programmable bibliographies (PK/JW/AB)
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex1.sty
-Package: biblatex1 2013/11/25 v2.8a programmable bibliographies (bibtex) (PK/JW
-/AB)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\biblatex1.sty"
+Package: biblatex1 2013/05/01 v2.6 programmable bibliographies (bibtex) (PK/JW/
+AB)
 
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
 Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
 
-(/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\misc\etex.sty"
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 \et@xins=\count89
 )
 \etb@tempcnta=\count90
 )
-(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count91
 
-(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip10
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 \c@tabx@nest=\count92
 \c@listtotal=\count93
@@ -181,15 +178,15 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@notetype=\count124
 \blx@parenlevel@text=\count125
 \blx@parenlevel@foot=\count126
-\labelnumberwidth=\skip48
-\labelalphawidth=\skip49
-\shorthandwidth=\skip50
-\biblabelsep=\skip51
-\bibitemsep=\skip52
-\bibnamesep=\skip53
-\bibinitsep=\skip54
-\bibparsep=\skip55
-\bibhang=\skip56
+\labelnumberwidth=\skip47
+\labelalphawidth=\skip48
+\shorthandwidth=\skip49
+\biblabelsep=\skip50
+\bibitemsep=\skip51
+\bibnamesep=\skip52
+\bibinitsep=\skip53
+\bibparsep=\skip54
+\bibhang=\skip55
 \blx@auxin=\read1
 \blx@auxout=\write3
 \c@mincomprange=\count127
@@ -264,48 +261,44 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2013/11/25 v2.8a biblatex compatibility (PK/JW/AB)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\blx-compat.def"
+File: blx-compat.def 2013/05/01 v2.6 biblatex compatibility (PK/JW/AB)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\biblatex.def"
 File: biblatex.def 
-\c@textcitecount=\count196
-\c@textcitetotal=\count197
-\c@textcitemaxnames=\count198
-\c@biburlnumpenalty=\count199
-\c@biburlucpenalty=\count200
-\c@biburllcpenalty=\count201
-\c@smartand=\count202
+\c@biburlnumpenalty=\count196
+\c@biburlucpenalty=\count197
+\c@biburllcpenalty=\count198
+\c@smartand=\count199
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
-File: numeric.bbx 2013/11/25 v2.8a biblatex bibliography style (PK/JW/AB)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\bbx\numeric.bbx"
+File: numeric.bbx 2013/05/01 v2.6 biblatex bibliography style (PK/JW/AB)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2013/11/25 v2.8a biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count203
-\c@bbx:relatedtotal=\count204
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\bbx\standard.bbx"
+File: standard.bbx 2013/05/01 v2.6 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count200
+\c@bbx:relatedtotal=\count201
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2013/11/25 v2.8a biblatex citation style (PK/JW/AB)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\cbx\numeric.cbx"
+File: numeric.cbx 2013/05/01 v2.6 biblatex citation style (PK/JW/AB)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
 Package biblatex Info: Redefining '\footcitetext'.
 Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\supercite'.
 Package biblatex Info: Redefining '\textcite'.
-Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\supercite'.
 Package biblatex Info: Redefining '\cites'.
 Package biblatex Info: Redefining '\parencites'.
 Package biblatex Info: Redefining '\smartcites'.
@@ -313,38 +306,38 @@ Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\biblatex.cfg"
 File: biblatex.cfg 
 )))
-(/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\acronym\acronym.sty"
 Package: acronym 2012/10/29 v1.38 Support for acronyms (Tobias Oetiker)
 
-(/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
 Package: suffix 2006/07/15 1.5 Variant command support
 )
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
 \@xs@message=\write4
-\integerpart=\count205
-\decimalpart=\count206
+\integerpart=\count202
+\decimalpart=\count203
 )
-Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+Package: xstring 2013/2/28  v1.7a  String manipulations (C Tellechea)
 )
 \AC@clearlist=\toks15
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -494,7 +487,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -525,7 +518,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -549,26 +542,26 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/selinput.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\selinput.sty"
 Package: selinput 2007/09/09 v1.2 Semi-automatic input encoding detection (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -577,21 +570,21 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/stringenc.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\stringenc.sty"
 Package: stringenc 2011/12/02 v1.10 Convert strings between diff. encodings (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdfescape.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdfescape.sty"
 Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -600,26 +593,26 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\csquotes\csquotes.sty"
 Package: csquotes 2011/10/22 v5.1d context-sensitive quotations
-\csq@reset=\count207
-\csq@gtype=\count208
-\csq@glevel=\count209
-\csq@qlevel=\count210
-\csq@maxlvl=\count211
-\csq@tshold=\count212
+\csq@reset=\count204
+\csq@gtype=\count205
+\csq@glevel=\count206
+\csq@qlevel=\count207
+\csq@maxlvl=\count208
+\csq@tshold=\count209
 \csq@ltx@everypar=\toks18
 
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\csquotes\csquotes.def"
 File: csquotes.def 2011/10/22 v5.1d csquotes generic definitions
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
 
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\csquotes\csquotes.cfg"
 File: csquotes.cfg 
 )
 Package csquotes Info: Option 'babel' depreciated.
@@ -627,72 +620,77 @@ Package csquotes Info: Option 'babel' depreciated.
 Package csquotes Info: Enabling multilingual quotes.
 Package csquotes Info: Redefining alias 'german' -> 'german/quotes'.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2013/12/03 3.9h The Babel package
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngermanb.ldf
-Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\ngermanb.ldf"
+Language: ngermanb 2008/07/06 v2.6n new German support from the babel system
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2013/12/03 3.9h Babel common definitions
-\babel@savecnt=\count213
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count210
 \U@D=\dimen103
 )
 \l@naustrian = a dialect from \language\l@ngerman 
-\l@nswissgerman = a dialect from \language\l@ngerman 
-Package babel Info: Making " an active character on input line 88.
+Package babel Info: Making " an active character on input line 92.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrpage2.sty
-Package: scrpage2 2013/12/19 v3.12 KOMA-Script package (page head and foot)
-LaTeX Info: Redefining \pagemark on input line 174.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrpage2.sty"
+Package: scrpage2 2010/04/22 v2.5 LaTeX2e KOMA-Script package
+LaTeX Info: Redefining \pagemark on input line 176.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count214
+\Gread@gobject=\count211
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
+Package: pdfpages 2012/08/31 v0.4t Insert pages of external PDF documents (AM)
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count215
-\calc@Bcount=\count216
+\calc@Acount=\count212
+\calc@Bcount=\count213
 \calc@Adimen=\dimen106
 \calc@Bdimen=\dimen107
-\calc@Askip=\skip57
-\calc@Bskip=\skip58
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count217
-\calc@Cskip=\skip59
+\calc@Ccount=\count214
+\calc@Cskip=\skip58
 )
-(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 )
-(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -706,51 +704,51 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
+File: pppdftex.def 2012/08/31 v0.4t Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box27
 \AM@toc@title=\toks19
-\c@AM@survey=\count218
+\c@AM@survey=\count215
 \AM@templatesizebox=\box28
 )
-(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
 \wrapoverhang=\dimen108
 \WF@size=\dimen109
-\c@WF@wrappedlines=\count219
+\c@WF@wrappedlines=\count216
 \WF@box=\box29
 \WF@everypar=\toks20
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count220
+\c@float@type=\count217
 \float@exts=\toks21
 \float@box=\box30
 \@float@everytoks=\toks22
 \@floatcapt=\box31
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen110
 \extrarowheight=\dimen111
 \NC@list=\toks23
-\extratabsurround=\skip60
-\backup@length=\skip61
+\extratabsurround=\skip59
+\backup@length=\skip60
 )
-(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package hobsub Info: Skipping package `ifluatex' (already loaded).
@@ -770,31 +768,31 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package hobsub Info: Skipping package `atbegshi' (already loaded).
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen112
-\Hy@linkcounter=\count221
-\Hy@pagecounter=\count222
+\Hy@linkcounter=\count218
+\Hy@pagecounter=\count219
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count223
+\Hy@SavedSpaceFactor=\count220
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `colorlinks' set `false' on input line 4319.
@@ -806,10 +804,10 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count224
+\c@Hy@tempcnt=\count221
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen113
-\Fld@menulength=\count225
+\Fld@menulength=\count222
 \Field@Width=\dimen114
 \Fld@charsize=\dimen115
 Package hyperref Info: Hyper figures OFF on input line 6295.
@@ -821,24 +819,24 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count226
-\c@Item=\count227
-\c@Hfootnote=\count228
+\Hy@abspage=\count223
+\c@Item=\count224
+\c@Hfootnote=\count225
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count229
-\c@bookmark@seq@number=\count230
+\Fld@listcount=\count226
+\c@bookmark@seq@number=\count227
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip62
+\Hy@SectionHShift=\skip61
 )
 DIV calculation for typearea with good linewidth.
 Package typearea Info: These are the values describing the layout:
@@ -858,11 +856,11 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \footskip       = 50.75pt
 (typearea)              \baselineskip   = 14.5pt
 (typearea)              on input line 39.
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count231
-\Gm@cntv=\count232
-\c@Gm@tempcnt=\count233
+\Gm@cnth=\count228
+\Gm@cntv=\count229
+\c@Gm@tempcnt=\count230
 \Gm@bindingoffset=\dimen116
 \Gm@wd@mp=\dimen117
 \Gm@odd@mp=\dimen118
@@ -872,11 +870,12 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layouthoffset=\dimen122
 \Gm@layoutvoffset=\dimen123
 \Gm@dimlist=\toks24
-)
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen124
@@ -888,33 +887,712 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@hangindent=\dimen130
 )
 Package caption Info: KOMA-Script document class.
-Normal \count register pool exhausted, switching to extended pool.
-\c@ContinuedFloat=\count277
+\c@ContinuedFloat=\count231
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
 
-! LaTeX Error: File `trackchanges.sty' not found.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\lbx\ngerman.lbx"
+File: ngerman.lbx 2013/05/01 v2.6 biblatex localization (PK/JW/AB)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\lbx\german.lbx"
+File: german.lbx 2013/05/01 v2.6 biblatex localization (PK/JW/AB)
+))
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
 
-Enter file name: 
-! Emergency stop.
-<read *> 
-         
-l.67 ^^M
-        
-*** (cannot \read from terminal in nonstop modes)
+(E:\Dropbox\Uni\Bachelorarbeit\BA-document.aux
+(E:\Dropbox\Uni\Bachelorarbeit\title.aux)
+(E:\Dropbox\Uni\Bachelorarbeit\Acronym.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
 
- 
+
+Package biblatex Warning: Data encoding is 'utf8'.
+(biblatex)                Use backend=biber.
+
+Package biblatex Info: Trying to load bibliographic data...
+
+Package biblatex Warning: File 'BA-document.bbl' created by wrong version.
+
+Package biblatex Info: ... file 'BA-document.bbl' found.
+(E:\Dropbox\Uni\Bachelorarbeit\BA-document.bbl)
+Package biblatex Info: Reference section=0 on input line 72.
+Package biblatex Info: Reference segment=0 on input line 72.
+
+
+Package scrpage2 Warning: seems you are using a very small headheight.
+(scrpage2)                If you get overfull \vbox warnings at almost every
+(scrpage2)                page, you should increase headheight e.g. writing
+(scrpage2)                 \setlength{\headheight}{1.1\baselineskip}
+(scrpage2)                into the preamble of your document.
+(scrpage2)                A better solution would be to use typearea package.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count232
+\scratchdimen=\dimen131
+\scratchbox=\box32
+\nofMPsegments=\count233
+Normal \count register pool exhausted, switching to extended pool.
+\nofMParguments=\count277
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count278
+\MPscratchDim=\dimen132
+\MPnumerator=\count279
+\makeMPintoPDFobject=\count280
+\everyMPtoPDFconversion=\toks26
+)
+\AtBeginShipoutBox=\box33
+Package hyperref Info: Link coloring OFF on input line 72.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count281
+)
+LaTeX Info: Redefining \ref on input line 72.
+LaTeX Info: Redefining \pageref on input line 72.
+LaTeX Info: Redefining \nameref on input line 72.
+
+(E:\Dropbox\Uni\Bachelorarbeit\BA-document.out)
+(E:\Dropbox\Uni\Bachelorarbeit\BA-document.out)
+\@outlinefile=\write5
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot twoside 
+* h-part:(L,W,R)=(99.58464pt, 426.79135pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 717.00946pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=626.38446pt
+* \oddsidemargin=27.31465pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-1.1381pt
+* \headheight=18.125pt
+* \headsep=21.75pt
+* \topskip=12.0pt
+* \footskip=50.75pt
+* \marginparwidth=90.10039pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+(E:\Dropbox\Uni\Bachelorarbeit\title.tex
+<HTW_Logo_4c.pdf, id=207, 114.4275pt x 66.2475pt>
+File: HTW_Logo_4c.pdf Graphic file (type pdf)
+ <use HTW_Logo_4c.pdf>
+Package pdftex.def Info: HTW_Logo_4c.pdf used on input line 14.
+(pdftex.def)             Requested size: 60.22499pt x 60.22499pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 37.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 37.
+
+[1
+
+
+
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <E:/Dropbox/Uni/Bachelorar
+beit/HTW_Logo_4c.pdf>])
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 77.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
+File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+(E:\Dropbox\Uni\Bachelorarbeit\BA-document.toc
+Package acronym Info: Label `acro:BUIS' newly defined as it shall be overridden
+
+although it is yet undefined on input line 23.
+ [2
+
+
+]
+Package acronym Info: Label `acro:LCMS' newly defined as it shall be overridden
+
+although it is yet undefined on input line 69.
+Package acronym Info: Label `acro:LMS' newly defined as it shall be overridden
+although it is yet undefined on input line 69.
+)
+\tf@toc=\write6
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[3] (E:\Dropbox\Uni\Bachelorarbeit\Acronym.tex
+(E:\Dropbox\Uni\Bachelorarbeit\BA-document.lof)
+\tf@lof=\write7
+ [4
+
+
+]
+
+Class scrreprt Warning: \float@addtolists detected!
+(scrreprt)              You should use the features of package `tocbasic'
+(scrreprt)              instead of \float@addtolists.
+(scrreprt)              Support for \float@addtolists may be removed from
+(scrreprt)              `scrreprt' soon .
+
+) [5
+
+]
+Kapitel 1.
+Package acronym Info: Label `acro:IT' newly defined as it shall be overridden
+although it is yet undefined on input line 87.
+[1
+
+
+] <Bild/Usability_Comic.jpg, id=364, 182.135pt x 351.86pt>
+File: Bild/Usability_Comic.jpg Graphic file (type jpg)
+
+<use Bild/Usability_Comic.jpg>
+Package pdftex.def Info: Bild/Usability_Comic.jpg used on input line 95.
+(pdftex.def)             Requested size: 127.4936pt x 246.30031pt.
+Package acronym Info: Label `acro:CPUX' newly defined as it shall be overridden
+
+although it is yet undefined on input line 102.
+Package acronym Info: Label `acro:UXQB' newly defined as it shall be overridden
+
+although it is yet undefined on input line 102.
+Package acronym Info: Label `acro:HTW Berlin' newly defined as it shall be over
+ridden
+although it is yet undefined on input line 103.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[2 <E:/Dropbox/Uni/Bachelorarbeit/Bild/Usability_Comic.jpg (PNG copy)>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[3]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[4]
+Kapitel 2.
+Package acronym Info: Label `acro:ERP' newly defined as it shall be overridden
+although it is yet undefined on input line 129.
+Package acronym Info: Label `acro:KMU' newly defined as it shall be overridden
+although it is yet undefined on input line 134.
+
+Underfull \vbox (badness 3333) has occurred while \output is active []
+
+ [5
+
+]
+<Bild/Morphologischer_Kasten_BUIS_Talus.png, id=418, 1007.765pt x 749.80125pt>
+File: Bild/Morphologischer_Kasten_BUIS_Talus.png Graphic file (type png)
+
+<use Bild/Morphologischer_Kasten_BUIS_Talus.png>
+Package pdftex.def Info: Bild/Morphologischer_Kasten_BUIS_Talus.png used on inp
+ut line 138.
+(pdftex.def)             Requested size: 426.79135pt x 317.5458pt.
+
+
+LaTeX Warning: File `Bild/ISO 9126 WI Balzert S463ff.png' not found on input li
+ne 146.
+
+<Bild/ISO 9126 WI Balzert S463ff.png, id=423, 642.4pt x 317.185pt>
+File: Bild/ISO 9126 WI Balzert S463ff.png Graphic file (type png)
+
+<use Bild/ISO 9126 WI Balzert S463ff.png>
+Package pdftex.def Info: Bild/ISO 9126 WI Balzert S463ff.png used on input line
+ 146.
+(pdftex.def)             Requested size: 426.79135pt x 210.73177pt.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[6 <E:/Dropbox/Uni/Bachelorarbeit/Bild/Morphologischer_Kasten_BUIS_Talus.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[7 <E:/Dropbox/Uni/Bachelorarbeit/Bild/ISO 9126 WI Balzert S463ff.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 166.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 166.
+
+<Bild/Umberto_NXT_LCA.png, id=443, 827.09pt x 681.54625pt>
+File: Bild/Umberto_NXT_LCA.png Graphic file (type png)
+
+<use Bild/Umberto_NXT_LCA.png>
+Package pdftex.def Info: Bild/Umberto_NXT_LCA.png used on input line 177.
+(pdftex.def)             Requested size: 426.79135pt x 351.6918pt.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[8]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[9 <E:/Dropbox/Uni/Bachelorarbeit/Bild/Umberto_NXT_LCA.png>]
+Package acronym Info: Label `acro:LCA' newly defined as it shall be overridden
+although it is yet undefined on input line 187.
+
+
+LaTeX Warning: File `Bild/ISO 14040 Oekobilanz1.pdf' not found on input line 19
+1.
+
+<Bild/ISO 14040 Oekobilanz1.pdf, id=462, 445.665pt x 307.1475pt>
+File: Bild/ISO 14040 Oekobilanz1.pdf Graphic file (type pdf)
+
+<use Bild/ISO 14040 Oekobilanz1.pdf>
+Package pdftex.def Info: Bild/ISO 14040 Oekobilanz1.pdf used on input line 191.
+
+(pdftex.def)             Requested size: 426.79135pt x 294.14117pt.
+
+
+LaTeX Warning: File `Bild/SimaPro LCA Demo Material Process.JPG' not found on i
+nput line 202.
+
+
+<Bild/SimaPro LCA Demo Material Process.JPG, id=468, 1323.44438pt x 685.05937pt
+>
+File: Bild/SimaPro LCA Demo Material Process.JPG Graphic file (type jpg)
+ <use Bild/SimaPro LCA Demo Material Process.JPG>
+Package pdftex.def Info: Bild/SimaPro LCA Demo Material Process.JPG used on inp
+ut line 202.
+(pdftex.def)             Requested size: 426.79135pt x 220.91689pt.
+
+
+LaTeX Warning: File `Bild/Sima Pro Coffee Prozesse.JPG' not found on input line
+ 210.
+
+<Bild/Sima Pro Coffee Prozesse.JPG, id=471, 904.88063pt x 764.8575pt>
+File: Bild/Sima Pro Coffee Prozesse.JPG Graphic file (type jpg)
+
+<use Bild/Sima Pro Coffee Prozesse.JPG>
+Package pdftex.def Info: Bild/Sima Pro Coffee Prozesse.JPG used on input line 2
+10.
+(pdftex.def)             Requested size: 426.79135pt x 360.74352pt.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[10]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[11 <E:/Dropbox/Uni/Bachelorarbeit/Bild/ISO 14040 Oekobilanz1.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[12 <E:/Dropbox/Uni/Bachelorarbeit/Bild/SimaPro LCA Demo Material Process.JPG>]
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[13 <E:/Dropbox/Uni/Bachelorarbeit/Bild/Sima Pro Coffee Prozesse.JPG>]
+
+LaTeX Warning: File `Bild/Sima Pro Start.JPG' not found on input line 220.
+
+<Bild/Sima Pro Start.JPG, id=502, 670.75594pt x 352.31625pt>
+File: Bild/Sima Pro Start.JPG Graphic file (type jpg)
+
+<use Bild/Sima Pro Start.JPG>
+Package pdftex.def Info: Bild/Sima Pro Start.JPG used on input line 220.
+(pdftex.def)             Requested size: 426.79135pt x 224.1699pt.
+
+
+LaTeX Warning: File `Bild/Sima Pro Schulungsangebot.JPG' not found on input lin
+e 227.
+
+<Bild/Sima Pro Schulungsangebot.JPG, id=503, 804.75656pt x 630.85687pt>
+File: Bild/Sima Pro Schulungsangebot.JPG Graphic file (type jpg)
+
+<use Bild/Sima Pro Schulungsangebot.JPG>
+Package pdftex.def Info: Bild/Sima Pro Schulungsangebot.JPG used on input line 
+227.
+(pdftex.def)             Requested size: 804.7546pt x 630.85533pt.
+
+Overfull \hbox (377.96324pt too wide) in paragraph at lines 225--228
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 51.96751pt on input line 229.
+
+<Bild/Audit-Sankey.JPG, id=505, 770.12718pt x 534.49687pt>
+File: Bild/Audit-Sankey.JPG Graphic file (type jpg)
+
+<use Bild/Audit-Sankey.JPG>
+Package pdftex.def Info: Bild/Audit-Sankey.JPG used on input line 238.
+(pdftex.def)             Requested size: 426.79135pt x 296.20886pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[14 <E:/Dropbox/Uni/Bachelorarbeit/Bild/Sima Pro Start.JPG>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[15 <E:/Dropbox/Uni/Bachelorarbeit/Bild/Sima Pro Schulungsangebot.JPG>]
+
+LaTeX Warning: File `Bild/Esankey Arbeitsbereiche Rauchgas.JPG' not found on in
+put line 243.
+
+
+<Bild/Esankey Arbeitsbereiche Rauchgas.JPG, id=518, 1133.73563pt x 621.07031pt>
+File: Bild/Esankey Arbeitsbereiche Rauchgas.JPG Graphic file (type jpg)
+<use Bild/Esankey Arbeitsbereiche Rauchgas.JPG>
+Package pdftex.def Info: Bild/Esankey Arbeitsbereiche Rauchgas.JPG used on inpu
+t line 243.
+(pdftex.def)             Requested size: 1133.73286pt x 621.06879pt.
+
+Overfull \hbox (867.19547pt too wide) in paragraph at lines 243--244
+[][]\T1/cmr/m/n/12 Arbeitsbereiche Rauch-gas.JPG [] 
+ []
+
+
+LaTeX Warning: Citation 'esankeyHandbuch032014' on page 16 undefined on input l
+ine 244.
+
+
+LaTeX Warning: Float too large for page by 32.91632pt on input line 245.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[16 <E:/Dropbox/Uni/Bachelorarbeit/Bild/Audit-Sankey.JPG>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[17 <E:/Dropbox/Uni/Bachelorarbeit/Bild/Esankey Arbeitsbereiche Rauchgas.JPG>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[18]
+Kapitel 3.
+
+LaTeX Warning: Citation 'balzert2009webdesign' on page 19 undefined on input li
+ne 325.
+
+
+LaTeX Warning: Citation 'herczeg2005software' on page 19 undefined on input lin
+e 325.
+
+
+LaTeX Warning: Citation 'kerkau2009usability' on page 19 undefined on input lin
+e 325.
+
+
+Overfull \hbox (45.73514pt too wide) in paragraph at lines 329--332
+\T1/cmr/m/n/12 tung ei-ner Be-nut-ze-ro-ber-flä-che im Vor-der-grund [vgl. Rich
+-ter et al. 2010, S. 3]. 
+ []
+
+<Bild/ISO_9126_Grafik.png, id=538, 511.9125pt x 341.02406pt>
+File: Bild/ISO_9126_Grafik.png Graphic file (type png)
+
+<use Bild/ISO_9126_Grafik.png>
+Package pdftex.def Info: Bild/ISO_9126_Grafik.png used on input line 336.
+(pdftex.def)             Requested size: 511.91125pt x 341.02322pt.
+
+Overfull \hbox (85.1199pt too wide) in paragraph at lines 336--337
+ [][][] 
+ []
+
+! Argument of \blx@citeargs@iii has an extra }.
+<inserted text> 
+                \par 
+l.337 ...ikipedia}{ISO 9126 Grafik Wikipedia\cite}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \blx@citeargs@iii was complete.
+<to be read again> 
+                   \par 
+l.337 ...ikipedia}{ISO 9126 Grafik Wikipedia\cite}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+LaTeX Warning: Citation 'herczeg2005software' on page 19 undefined on input lin
+e 341.
+
+[19
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[20 <E:/Dropbox/Uni/Bachelorarbeit/Bild/ISO_9126_Grafik.png>]
+
+LaTeX Warning: Citation 'zeidler1992software' on page 21 undefined on input lin
+e 344.
+
+
+LaTeX Warning: Citation 'herczeg2005software' on page 21 undefined on input lin
+e 345.
+
+
+Overfull \hbox (15.58253pt too wide) in paragraph at lines 344--348
+\T1/cmr/m/n/12 Ge-stal-tung der Mensch-Maschine-Interaktion so-wie der Be-rück-
+sich-ti-gung der Aufgaben-
+ []
+
+
+LaTeX Warning: Citation 'rudlof2006handbuch' on page 21 undefined on input line
+ 351.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[21]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[22]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[23]
+Overfull \hbox (14.11478pt too wide) in paragraph at lines 402--403
+[][]\T1/cmr/m/n/12 Frauenhofer FIT (http://www.usability-ux.fit.fraunhofer.de/d
+e/weiterbildungen-
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[24]
+Overfull \hbox (155.59114pt too wide) in paragraph at lines 403--404
+[]\T1/cmr/m/n/12 Usability-Academy auch als Mo-bi-le App für An-dro-id (http://
+usability-academy.com/cms/unternehmen.html) 
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[25]
+Kapitel 4.
+[26
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[27]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[28]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[29]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[30]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[31]
+
+LaTeX Warning: Citation 'BrainFact' on page 32 undefined on input line 540.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[32]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[33]
+Kapitel 5.
+[34
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[35]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[36]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[37]
+Kapitel 6.
+[38
+
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 657.
+
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Overfull \hbox (11.26671pt too wide) in paragraph at lines 661--661
+[]\T1/cmr/m/n/12 Franzjörg Baum-gart.   Entwicklungs-und Lern-theo-ri-en. In:
+ \T1/cmr/m/it/12 Erläuterungen-Texte-
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.661 \end
+          {document}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.661 \end
+          {document}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (46.96883pt too wide) in paragraph at lines 661--661
+\T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : []$\T1/cmtt/m/n/12 http : / / de . wikipedi
+a . org / wiki / Betriebliches _ Umweltinformationssystem$[]\T1/cmr/m/n/12 . 
+ []
+
+[39
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 661.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[40]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 661.
+ (E:\Dropbox\Uni\Bachelorarbeit\BA-document.aux
+(E:\Dropbox\Uni\Bachelorarbeit\title.aux)
+(E:\Dropbox\Uni\Bachelorarbeit\Acronym.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 661.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 661.
+Package rerunfilecheck Info: File `BA-document.out' has not changed.
+(rerunfilecheck)             Checksum: A7E47D1DEC032995487DE85F27E5B531;3682.
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                BA-document
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'BA-document.run.xml'.
+ ) 
 Here is how much of TeX's memory you used:
- 14925 strings out of 493304
- 235114 string characters out of 6139871
- 470031 words of memory out of 5000000
- 18209 multiletter control sequences out of 15000+600000
- 4702 words of font info for 16 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 46i,1n,71p,825b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 16411 strings out of 493921
+ 261615 string characters out of 3144870
+ 503591 words of memory out of 3000000
+ 19262 multiletter control sequences out of 15000+200000
+ 19701 words of font info for 43 fonts, out of 3000000 for 9000
+ 845 hyphenation exceptions out of 8191
+ 46i,9n,68p,1475b,2330s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1000.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx2074.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfcc1200.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfcc2074.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/cm-super/sfrm1440.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/cm-super/sfsl1200.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/cm-super/sfsx1200.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/cm-super/sfsx1440.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/cm-super/sfsx1728.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/cm-super/sfti1200.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/cm-super/sftt1200.pfb>
+Output written on BA-document.pdf (45 pages, 1966346 bytes).
+PDF statistics:
+ 780 PDF objects out of 1000 (max. 8388607)
+ 172 named destinations out of 1000 (max. 500000)
+ 474 words of extra memory for PDF output out of 10000 (max. 10000000)
+

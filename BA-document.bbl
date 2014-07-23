@@ -53,6 +53,54 @@
   \field{year}{2013}
 \endentry
 
+\entry{balzert2009lehrbuch}{book}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Balzert}{B.}%
+     {H.}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Balzert}{B.}%
+     {H.}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Koschke}{K.}%
+     {R.}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {L{\"a}mmel}{L.}%
+     {U.}{U.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Liggesmeyer}{L.}%
+     {P.}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Quante}{Q.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Spektrum Akademischer Verlag}%
+  }
+  \strng{namehash}{BH+1}
+  \strng{fullhash}{BHBHKRLULPQJ1}
+  \field{sortinit}{B}
+  \field{isbn}{9783827422477}
+  \field{series}{Lehrbuch der Software-Technik}
+  \field{title}{Lehrbuch Der Softwaretechnik}
+  \verb{url}
+  \verb http://books.google.de/books?id=vmfIb9R2QikC
+  \endverb
+  \field{year}{2009}
+\endentry
+
 \entry{baumgart1998entwicklungs}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -134,6 +182,26 @@
   \endverb
 \endentry
 
+\entry{SimaPro_Homepage}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Ciroth}{C.}%
+     {Dr.~Andreas}{D.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {GreenDelta GmbH, Berlin 2008-2014}%
+  }
+  \strng{namehash}{CDA1}
+  \strng{fullhash}{CDA1}
+  \field{sortinit}{C}
+  \field{title}{SimaPro Homepage}
+  \verb{url}
+  \verb http://www.simapro.de/Features-im-UEberblick.225.0.html
+  \endverb
+\endentry
+
 \entry{ISO9241}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -193,6 +261,38 @@
   \field{year}{2009}
 \endentry
 
+\entry{jurgens2001anforderungen}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {J{\"u}rgens}{J.}%
+     {Gunnar}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lang}{L.}%
+     {Claus}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Beucker}{B.}%
+     {Severin}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Loew}{L.}%
+     {Thomas}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{JG+1}
+  \strng{fullhash}{JGLCBSLT1}
+  \field{sortinit}{J}
+  \field{title}{Anforderungen an Betriebliche Umweltinformationssysteme (BUIS)
+  zur Unterst{\"u}tzung von Instrumenten des Umweltcontrolling}
+  \field{journaltitle}{Zwischenbericht des Forschungsberichts INTUS, Stuttgart}
+  \field{year}{2001}
+\endentry
+
 \entry{KOMET}{misc}{}
   \list{organization}{1}{%
     {HTW-Berlin FB2 - Betriebliche Umweltinformatik}%
@@ -231,6 +331,30 @@
   Online im Internet: http://online-campus.
   net/edumedia/publications/jahrb-pe-wb-b. pdf}
   \field{year}{2005}
+\endentry
+
+\entry{klopffer2009okobilanz}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Kl{\"o}pffer}{K.}%
+     {Walter}{W.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Grahl}{G.}%
+     {Birgit}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {John Wiley \& Sons}%
+  }
+  \strng{namehash}{KWGB1}
+  \strng{fullhash}{KWGB1}
+  \field{sortinit}{K}
+  \field{title}{{\"O}kobilanz (LCA): Ein Leitfaden f{\"u}r Ausbildung und
+  Beruf}
+  \field{year}{2009}
 \endentry
 
 \entry{cpux-f}{misc}{}
@@ -285,6 +409,49 @@
   \field{volume}{2005}
   \field{journaltitle}{eleed}
   \field{year}{2005}
+\endentry
+
+\entry{rautenstrauch1999betriebliche}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rautenstrauch}{R.}%
+     {Claus}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer}%
+  }
+  \strng{namehash}{RC1}
+  \strng{fullhash}{RC1}
+  \field{sortinit}{R}
+  \field{title}{Betriebliche Umweltinformationssysteme: Grundlagen, Konzepte
+  und Systeme; mit 8 Tabellen}
+  \field{year}{1999}
+\endentry
+
+\entry{richter2010usability}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Richter}{R.}%
+     {Michael}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Fl{\"u}ckiger}{F.}%
+     {Markus}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Spektrum Akademischer Verlag Heidelberg}%
+  }
+  \strng{namehash}{RMFM1}
+  \strng{fullhash}{RMFM1}
+  \field{sortinit}{R}
+  \field{title}{Usability Engineering kompakt: benutzbare Software gezielt
+  entwickeln}
+  \field{year}{2010}
 \endentry
 
 \entry{BLK}{misc}{}

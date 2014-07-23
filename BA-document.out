@@ -1,5 +1,5 @@
-\BOOKMARK [0][-]{chapter*.4}{Abbildungsverzeichnis}{}% 1
-\BOOKMARK [0][-]{chapter*.5}{Abk\374rzungsverzeichnis}{}% 2
+\BOOKMARK [0][-]{chapter*.5}{Abbildungsverzeichnis}{}% 1
+\BOOKMARK [0][-]{chapter*.6}{Abk\374rzungsverzeichnis}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 3
 \BOOKMARK [1][-]{section.1.1}{Motivation, Problemstellung}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.2}{Zielsetzung}{chapter.1}% 5
@@ -8,41 +8,44 @@
 \BOOKMARK [1][-]{section.2.1}{Definition}{chapter.2}% 8
 \BOOKMARK [1][-]{section.2.2}{Kategorisierung}{chapter.2}% 9
 \BOOKMARK [1][-]{section.2.3}{Nutzungskontext und Softwareergonomie Konformit\344t ausgew\344hlter BUIS}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.3.1}{Ecowebdesk Modul - Legal Complience}{section.2.3}% 11
-\BOOKMARK [2][-]{subsection.2.3.2}{umberto \(ifu\) - Umweltmanagement}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.1}{Umberto NXT der ifu Hamburg GmbH - Umweltmanagemetsystem}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.2}{Sima Pro - \326kocontroling}{section.2.3}% 12
 \BOOKMARK [2][-]{subsection.2.3.3}{e!sankey \(ifu\) - Stoffstrommanagement Visualisierung}{section.2.3}% 13
-\BOOKMARK [2][-]{subsection.2.3.4}{Sima Pro - \326kocontroling}{section.2.3}% 14
-\BOOKMARK [2][-]{subsection.2.3.5}{Fazit}{section.2.3}% 15
-\BOOKMARK [0][-]{chapter.3}{Grundlagen E-Learning}{}% 16
-\BOOKMARK [1][-]{section.3.1}{Lerntheorien}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.2}{E-learning}{chapter.3}% 18
-\BOOKMARK [2][-]{subsection.3.2.1}{Gestaltungsprinzipien f\374r E-learning Angebote}{section.3.2}% 19
-\BOOKMARK [2][-]{subsection.3.2.2}{Ausgew\344hlte Methoden des E-learning}{section.3.2}% 20
-\BOOKMARK [2][-]{subsection.3.2.3}{LCMS und LMS}{section.3.2}% 21
-\BOOKMARK [1][-]{section.3.3}{M-Learning}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.4}{Gamification als Instrument des E-Learning}{chapter.3}% 23
-\BOOKMARK [0][-]{chapter.4}{Usabiliy-Engineering}{}% 24
-\BOOKMARK [1][-]{section.4.1}{Software-Ergonomie}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.2}{Benchmark Analyse E-learning und M-Learning Tools mit Usability Inhalen}{chapter.4}% 26
-\BOOKMARK [0][-]{chapter.5}{Konzeption}{}% 27
-\BOOKMARK [1][-]{section.5.1}{Rahmenbedingungen}{chapter.5}% 28
-\BOOKMARK [2][-]{subsection.5.1.1}{Glossar sequentiell}{section.5.1}% 29
-\BOOKMARK [2][-]{subsection.5.1.2}{Glossar shuffle}{section.5.1}% 30
-\BOOKMARK [2][-]{subsection.5.1.3}{Begriff + Definition + Bild}{section.5.1}% 31
-\BOOKMARK [2][-]{subsection.5.1.4}{Quiz gegen einen Gegner direkt?}{section.5.1}% 32
-\BOOKMARK [2][-]{subsection.5.1.5}{Fragen}{section.5.1}% 33
-\BOOKMARK [1][-]{section.5.2}{Zielgruppe}{chapter.5}% 34
-\BOOKMARK [1][-]{section.5.3}{Seminarplanung}{chapter.5}% 35
-\BOOKMARK [2][-]{subsection.5.3.1}{Inhalt und Ziel des Seminars}{section.5.3}% 36
-\BOOKMARK [2][-]{subsection.5.3.2}{Funktionale Anforderungen}{section.5.3}% 37
-\BOOKMARK [2][-]{subsection.5.3.3}{Quiz}{section.5.3}% 38
-\BOOKMARK [2][-]{subsection.5.3.4}{L\374ckentext}{section.5.3}% 39
-\BOOKMARK [2][-]{subsection.5.3.5}{Memory}{section.5.3}% 40
-\BOOKMARK [1][-]{section.5.4}{LCMS Wahl}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.5}{Auswertung}{chapter.5}% 42
-\BOOKMARK [1][-]{section.5.6}{Zusammenfassung}{chapter.5}% 43
-\BOOKMARK [0][-]{chapter.6}{Praxisteil}{}% 44
-\BOOKMARK [1][-]{section.6.1}{Erweiterung des KOMET Code durch Kategorisierung}{chapter.6}% 45
-\BOOKMARK [1][-]{section.6.2}{Erweiterung des KOMET Code durch Bilder f\374r 98 Begriffe}{chapter.6}% 46
-\BOOKMARK [1][-]{section.6.3}{Prototyp Kombinations/ Zuordnungspiel}{chapter.6}% 47
-\BOOKMARK [0][-]{chapter*.16}{Quellen}{}% 48
+\BOOKMARK [0][-]{chapter.3}{Usabiliy}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Begriffskl\344rung}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.1.1}{Usability}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.2}{Software-Ergonomie}{section.3.1}% 17
+\BOOKMARK [2][-]{subsection.3.1.3}{Usability-Engineering}{section.3.1}% 18
+\BOOKMARK [1][-]{section.3.2}{Designkriterien der \(Web-\)Usability}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.3}{Benchmark Analyse E-learning und M-Learning Tools mit Usability Inhalen}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter.4}{Grundlagen E-Learning}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Lerntheorien}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{E-learning}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.2.1}{Begriffsdefinition E-Learning}{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.2}{Gestaltungsprinzipien f\374r E-learning Angebote}{section.4.2}% 25
+\BOOKMARK [2][-]{subsection.4.2.3}{Ausgew\344hlte Methoden des E-learning}{section.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.2.4}{LCMS und LMS}{section.4.2}% 27
+\BOOKMARK [1][-]{section.4.3}{M-Learning}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.4}{Gamification als Instrument des E-Learning}{chapter.4}% 29
+\BOOKMARK [0][-]{chapter.5}{Konzeption}{}% 30
+\BOOKMARK [1][-]{section.5.1}{Rahmenbedingungen}{chapter.5}% 31
+\BOOKMARK [2][-]{subsection.5.1.1}{Glossar sequentiell}{section.5.1}% 32
+\BOOKMARK [2][-]{subsection.5.1.2}{Glossar shuffle}{section.5.1}% 33
+\BOOKMARK [2][-]{subsection.5.1.3}{Begriff + Definition + Bild}{section.5.1}% 34
+\BOOKMARK [2][-]{subsection.5.1.4}{Quiz gegen einen Gegner direkt?}{section.5.1}% 35
+\BOOKMARK [2][-]{subsection.5.1.5}{Fragen}{section.5.1}% 36
+\BOOKMARK [1][-]{section.5.2}{Zielgruppe}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.3}{Seminarplanung}{chapter.5}% 38
+\BOOKMARK [2][-]{subsection.5.3.1}{Inhalt und Ziel des Seminars}{section.5.3}% 39
+\BOOKMARK [2][-]{subsection.5.3.2}{Funktionale Anforderungen}{section.5.3}% 40
+\BOOKMARK [2][-]{subsection.5.3.3}{Quiz}{section.5.3}% 41
+\BOOKMARK [2][-]{subsection.5.3.4}{L\374ckentext}{section.5.3}% 42
+\BOOKMARK [2][-]{subsection.5.3.5}{Memory}{section.5.3}% 43
+\BOOKMARK [1][-]{section.5.4}{LCMS Wahl}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.5}{Auswertung}{chapter.5}% 45
+\BOOKMARK [1][-]{section.5.6}{Zusammenfassung}{chapter.5}% 46
+\BOOKMARK [0][-]{chapter.6}{Praxisteil}{}% 47
+\BOOKMARK [1][-]{section.6.1}{Erweiterung des KOMET Code durch Kategorisierung}{chapter.6}% 48
+\BOOKMARK [1][-]{section.6.2}{Erweiterung des KOMET Code durch Bilder f\374r 98 Begriffe}{chapter.6}% 49
+\BOOKMARK [1][-]{section.6.3}{Prototyp Kombinations/ Zuordnungspiel}{chapter.6}% 50
+\BOOKMARK [0][-]{chapter*.32}{Literatur}{}% 51

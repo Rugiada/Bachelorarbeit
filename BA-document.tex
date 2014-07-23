@@ -55,9 +55,12 @@
 \geometry{includehead, includefoot, left=3.5cm,right=2.5cm,top=2.5cm,bottom=2cm}
 %\usepackage[headings]{fullpage}
 \usepackage[format=default,font=footnotesize,labelfont=bf]{caption}
+\newcommand*{\quelle}{% 
+  \footnotesize Quelle: 
+} 
 
 %Korrektur
-\usepackage[margins, adjustmargins]{trackchanges}
+%\usepackage[margins, adjustmargins]{trackchanges}
 %\note[topcorrect]{Kommentar}
 %\annote[topcorrect]{Textstelle}{Kommentar}
 %
@@ -87,141 +90,225 @@
 	Die Benutzbarkeit der meisten \ac{BUIS} ist gegenüber gängigen betrieblichen Anwendungen eingeschränkt. Programminhalte und Funktionsumfang sind meist nur Langweilig als Handbuch dokumentiert und werden bei Präsenzschulungen an Interessierte und Zahlungswillige vermittelt. Die Aufgaben und das Einsatzgebiet stehen im Vordergrund, so dass Benutzbarkeit bzw. ein motivierende Gestaltung des Programms bei der Entwicklung erst spät berücksichtigt werden.  
 	Darüber hinaus finden die Inhalte der Software-Ergonomie sowie der Usability nur kurze Auftritte in den Lehrveranstaltungen und innerhalb der Ausbildung vieler Entwickler. Dies führt dazu, dass sich im besonderen Entwickler Betrieblicher Umweltinformationsysteme meist im Berufsalltag mit der Thematik auseinandersetzten. Ein Bewusstsein für die Notwenigkeit dieser Auseinandersetzung wurde unter anderem bereits durch Comics wie in Abbildung 1 etabliert.
 	
-	\begin{figure}[h!]
+	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=0.7]{Bild/Usability_Comic.jpg}
 		\caption{Apple, Google, You by Eric Barcks}
 	\end{figure}
-	Nach dem die Notwendigkeit geklärt ist, sollte noch in Erfahrung gebracht was Entwicklern das Lernen erleichtert und welche Medien, wie eingesetzt werden können. 
-	Interaktivität und flexible Nutzbarkeit des Lernstoffes fördern die Bereitschaft von Schülern sich in  Eigeninitiative mit Lehrinhalten zu beschäftigen \cite[S.32 ff.]{beck2000eigenstandiges}. Was in jungen Jahren funktioniert sollte im laufe der Zeit nicht völlig versagen. Davon ausgehend ist das Web als Medium die erste Wahl sowohl für die formale wie auch informelle Vermittlung von Usability und Softwareergonomie Inhalten. 
+	Nach dem die Notwendigkeit geklärt ist, sollte noch in Erfahrung gebracht werden, was Entwicklern das Lernen erleichtert und welche Medien, wie eingesetzt werden können. 
+	Interaktivität und flexible Nutzbarkeit des Lernstoffes fördern die Bereitschaft von Schülern sich in  Eigeninitiative mit Lehrinhalten zu beschäftigen \cite[S.32 ff.]{beck2000eigenstandiges}. Was in jungen Jahren funktioniert sollte im laufe der Zeit nicht völlig versagen. Davon ausgehend ist das Web als Medium die erste Wahl sowohl für die formale wie auch informelle Vermittlung von Usability und User Experience Inhalten. 
 	%Nach dem E-Learning Hype der vergangenen Jahre wird nun klarer, dass Technik allein nicht gleich einen pedagigischen Mehrwert schafft. Die Kombination aus didaktischer Aufbereitung und interaktiver Medien versprechen mehr Erfolg. 
 	
-	Im folgenden wird davon ausgegangen, dass Interessierte sich für die Auseinandersetzung mit der Thematik Usability die Basiszertifizierung \ac{CPUX}-F des \ac{UXQB} auswählen um als "`Usability Professional"' zertifiziert zu werden. Hierfür gibt es zahlreiche Anbieter, die im folgenden auch Erwähnung finden, solange diese neben Präsenzseminaren auch E-learning Anwendungen und Plattformen bieten. 
+	Im folgenden wird davon ausgegangen, dass Interessierte sich für die Auseinandersetzung mit der Thematik Usability die Basiszertifizierung \ac{CPUX}-F des \ac{UXQB} auswählen um als "`Usability Professional"' zertifiziert zu werden. Hierfür gibt es zahlreiche Anbieter, einige sind auf der Webseite des \ac{UXQB} zu finden und andere finden im Laufe dieser Arbeit Erwähnung,  solange diese neben Präsenzseminaren auch E-learning Anwendungen und Plattformen anbieten. 
 	Die grundlegenden Konzepte, Begriffe und Definitionen werden vom \ac{UXQB} als Pdf veröffentlicht\cite{cpux-f}. Um das Selbststudium für die Basiszertifizierung zu erleichtern, soll im Rahmen des KOMET Projektes an der \ac{HTW Berlin} %Hochschule für Technik und Wirtschaft Berlin
-	in Kooperation mit der artop GmbH - Institut an der Humboldt-Universität zu Berlin eine webbasierte Anwendung entwickelt werden\cite{KOMET}. 
+	in Kooperation mit der artop GmbH - Institut an der Humboldt-Universität zu Berlin eine webbasierte Lernanwendung entwickelt werden\cite{KOMET}. 
 	
 		
 	\section{Zielsetzung}
 	Die nachfolgende Arbeit beschreibt die Konzeption für die bereits als Prototyp existierende Anwendung mit Methoden der Lernpsychologie, den gängigen E-learning Anwendungen und der "Gamification" von Lerninhalten. Unter der Fragestellung wie können die Begriffe und Definitionen des \ac{UXQB} Glossars am einfachsten vermittelt werden wird ein prototypisches Beispiel entwickelt welches eine alternative Aufbereitung des Glossars zum bestehenden Quiz bietet. "Lernen und Spielen sind keine Gegensätze" \cite{dewey1995erfahrung}
 	ist der Leitspruch dem mit ausgewählten Aufbereitungsmethoden nachgegangen werden soll. Der Lernerfolg soll hierbei durch die Förderung der intrinsischen Motivation erzielt werden. 
-	Primär soll in der nachfolgenden Arbeit das bereits als Prototyp entwickelte "Usability-Quiz" nach E-learning Methoden und Usability Richtlinien konzeptuell erfasst werden. Sekundär wird die weiter Entwicklung des Prototypen dokumentiert. Zum einen durch Zuordnung von Bildern zu den Begriffen zum anderen durch Kategorisierung der Begriffe um den Schwierigkeitsgrad zu steigern. Die didaktische Aufbereitung der Lehrinhalte sowie die Stärkung von Lernanreizen stehen im Mittelpunkt. Um einen Ausblick zu geben werden bestehende E-learning Angebote und Lernumgebungen erwähnt und zugeordnet. 
+	Primär soll in der nachfolgenden Arbeit das bereits als Prototyp entwickelte "`Usability-Quiz"' nach E-learning Methoden und Usability Richtlinien konzeptuell erfasst werden. Sekundär wird die weiter Entwicklung des Prototypen dokumentiert. Zum einen durch Zuordnung von Bildern zu den Begriffen zum anderen durch Kategorisierung der Begriffe um den Schwierigkeitsgrad zu steigern. Die didaktische Aufbereitung der Lehrinhalte sowie die Stärkung von Lernanreizen stehen im Mittelpunkt. Um einen Ausblick zu geben werden bestehende E-learning Angebote und Lernumgebungen erwähnt und zugeordnet. 
 	%Primäres Ziel ist die zur Basis Zertifizierung bereit gestellten Begriffe und Definitionen so aufzubereiten, dass Interessierten der Stoff einfach zugänglich gemacht ein Lernanreiz geschaffen wird. Einen Lernerfolg erzielen, abhängig von der Definition eines Lernerfolges. Blickbewegungsanalysen
 	%Wiedergeben können der Begriffe und Definitionen oder diese im Context von Usabilitytests anwenden können?
 	
 	%Kategorisierung der Usabilitybegriffe, streichen der Synonyme bzw. neue Fragestellung mit englischen Begriff bzw. den Synonymen, z.B. Unter welchem Begriff ist ... noch bekannt. 
 	\section{Aufbau der Arbeit}
-	Am Beispiel ausgewählter \ac{BUIS} wird unter Kapitel 2 die Umsetzung des Usability Glossar des \ac{UXQB} aufgezeigt. Diese basieren auf den Dialogprinzipien der Mensch-Computer-Interaktion nach der DIN EN ISO 9241\cite{cpux-f}.  
+	Am Beispiel ausgewählter \ac{BUIS} wird unter Kapitel 2 die Umsetzung des Usability Glossar des \ac{UXQB} aufgezeigt und die Schulungsangebote erwähnt. Was unter Usability verstanden wird und welches Wissen darüber vermittelt werden soll ist unter Kapitel 3 zu finden. 
 	% zum anderen der Einsatz von E-learning und Tutorials aufgezeigt.  
 	
-	Unter Kapitel 3 werden die gängigen Lerntheorien und Ihre Umsetzung beim lernen mit E-learning Anwendungen beschrieben. Hauptaugenmerk bei der Entwicklung der E-learning Anwendung soll die spielerische Umsetzung (Gamification) und Didaktische Aufbereitung von Lehrinhalten sein. 
-	Mit diesem Grundlagenwissen sowie den technischen Details wird unter Punkt 4 das Konzept beschrieben und die Umsetzung dokumentiert. Zum Abschluss wird noch einmal zusammengefasst was umgesetzt wurde und welche Potentiale noch in der Entwicklung des Usability Quiz stecken. 
+	In Kapitel 4 werden die gängigen Lerntheorien und Ihre Umsetzung beim lernen mit E-learning Anwendungen beschrieben. Hauptaugenmerk bei der Entwicklung der E-learning Anwendung soll die spielerische Umsetzung (Gamification) und Didaktische Aufbereitung von Lehrinhalten sein. 
+	Mit diesem Grundlagenwissen sowie den technischen Details wird unter Punkt 5 das Konzept beschrieben und die Umsetzung dokumentiert. 
+	Zum Abschluss wird noch einmal zusammengefasst was umgesetzt wurde und welche Potentiale noch in der Entwicklung des Usability Quiz stecken. 
 	
 	\chapter{Theoretische Grundlagen BUIS}
 	\section{Definition}
 	„Ein \ac{BUIS} %Betriebliches Umweltinformationssystem (BUIS)
 	ist eine Softwareanwendung, die für die Erfassung, Dokumentation und Bewertung betrieblicher Umweltwirkungen sowie  zur Generierung, Planung und Steuerung von Umweltschutzmaßnahmen genutzt wird und damit das betriebliche Umweltschutzmanagement in seinen Aufgaben unterstützt.“ \cite{wohlgemuth2008konzepte}
 	"Ein BUIS erfasst, verarbeitet und gibt umweltrelevante Daten aus und dient damit der Quantifizierung und Bewertung der Einflüsse unternehmerischen Handelns auf die natürliche Umwelt."'\cite{Wiki_BUIS} `
-	Dies sind zwei populäre Definitionen aus einer Vielzahl. Im Unternehmenskontext lassen sich \ac{BUIS} als Umwelmanagementsystemen  oder unter den \acs{ERP} wiederfinden und zuordnen.  
+	Die verfügbaren Definitionen des Begriffs \ac{BUIS} lassen sich grundsätzlich durch einen
+	organisatorischen und einen informationstechnisch geprägten Zugang zu dem Thema erklären. Die erste Definition schließt den organisatorischen und technischen Teil Umweltrelevanter Informationen mit ein. Im Unternehmenskontext lassen sich \ac{BUIS} den betrieblichen Informationssystemen den sog. \ac{ERP} Systemen zuordnen. 
+	Ein \ac{BUIS} kann demnach für die interne Dokumentation, für den Austausch mit Behörden oder der Öffentlichkeit angelegt sein, es kann Aufgaben bei der Planung und Kontrolle von Maßnahmen innerhalb	des Umweltmanagements übernehmen oder operative Funktionen z.B. der Rechtssicherheit erfüllen. In der EMAS - Verordnung werden \ac{BUIS} als informationstechnisches Werkzeug für eine effiziente Umsetzung dieser Verordnung gesehen\cite[S. 109ff]{rautenstrauch1999betriebliche}.  
+	 In älteren Nutzungskontexten wurden Anwendungen wie die manuell erstellte Umweltbilanz über Tabellenkalkulationen bereits als \ac{BUIS} bezeichnet. Aktuell und nach der Wikipedia Definition ist eine spezifische Software mit konkreten Aufgaben als \ac{BUIS} betitelt. Um der Komplexität der genannten Aufgaben gerecht zu werden sind die meisten Anwendungen selbst vielschichtig und komplex.
 	
 	\section{Kategorisierung}
-	Um der Komplexität der Aufgabe gerecht zu werden sind die meisten Programme selbst vielschichtig und komplex. \ac{BUIS} verfolgen einen ganzheitlichen Ansatz werden dennoch meist punktuell und für die konkreten Bedürfnisse in \ac{KMU} entwickelt. Dies führt dazu, dass nicht der Nutzer zentrierte Ansatz bei der Entwicklung verfolgt wird sonder meist der Nutzen zentrierte.  
+	 \ac{BUIS} verfolgen einen ganzheitlichen Ansatz werden dennoch meist punktuell und für die konkreten Bedürfnisse in \ac{KMU} entwickelt. Dies führt dazu, dass nicht der Nutzer zentrierte Ansatz bei der Entwicklung verfolgt wird sonder meist der Nutzen zentrierte. Die meisten \ac{BUIS} basieren auf dem Tabellenverarbeitungsprogramm Microsoft Excel und folgen den gleichen Handlungsanleitungen zur Erfüllung der Aufgaben. 
 	Eine Übersicht nach welchen Merkmalen \ac{BUIS} klassifiziert werden können und welchen Funktionsumfang Sie abdecken gibt der Morphologische Kasten.
 	
 	\begin{figure}[h!]
 		\includegraphics[width=\textwidth]{Bild/Morphologischer_Kasten_BUIS_Talus.png}
 		\caption{Morphologischer Kasten}
+		\quelle{}
 	\end{figure}
 	
-	Ausgehend von den markierten Aufgabenbereichen sollen 4 \ac{BUIS} als Repräsentanten für Ihren Nutzungskontext näher beleuchtet werden. Das Augenmerk liegt dabei auf der Umsetzung der DIN ISO EN 9124 (Teil 210 Ergomomics of human-centred design processes for interactive systems/ Ergonomie der Mensch-System-Interaktion) \cite{ISO9241} sowie der Erfüllung der ISO 9126 Qualitätskriterien für Software siehe Abbildung 2.2.
+	Ausgehend von den markierten Aufgabenbereichen sollen 4 \ac{BUIS} als Repräsentanten für Ihren Nutzungskontext näher beleuchtet werden. Das Augenmerk liegt dabei auf der Erfüllung der ISO 9126 Qualitätskriterien für Software\cite[S.463ff]{balzert2009lehrbuch} siehe Abbildung 2.2  und der Umsetzung der DIN ISO EN 9124 (Teil 210 Ergomomics of human-centred design processes for interactive systems/ Ergonomie der Mensch-System-Interaktion) \cite{ISO9241}, die darauf aufbaut. Die Begriffsklärung für Usability und die in der ISO Norm genutze Terminologie ist unter Kapitel 3 erklärt und zugeordnet. 
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[width=\textwidth]{Bild/ISO_9126_Grafik.png}
-		\caption[ISO 9126 Grafik]{ISO 9126 Grafik laut Wikipedia} %{\url{http://de.wikipedia.org/wiki/ISO/IEC_9126}}}
+		\includegraphics[width=\textwidth]{Bild/ISO 9126 WI Balzert S463ff.png}
+		\caption[ISO 9126 Qualitätsmerkmale von Software]{ISO 9126 Qualitätsmerkmale von Software laut Balzert 2008, S. 463ff\cite{balzert2009lehrbuch}} 
 	\end{figure} 
-	Weiterhin sollen die Schulungs- und Weiterbildungsangebote Erwähnung finden, um potenzielle Einsatzmöglichkeiten von E-Learning Angeboten aufzuzeigen.  
+	
+	Weiterhin finden die Schulungs- und Weiterbildungsangebote ausgewählter \ac{BUIS} Erwähnung, um potenzielle Einsatzmöglichkeiten von E-Learning Angeboten aufzuzeigen.  
 	%Teil 210: Prozess zur Gestaltung gebrauchstauglicher interaktiver Systeme (Ersatz für die EN ISO 13407)
 	
-	\section{Nutzungskontext und Softwareergonomie Konformität ausgewählter BUIS}
-	Aus einer Vielzahl von \ac{BUIS} ist im folgenden die Ecowebdesk Browserbasierte Software der Ecointense GmbH der Repräsentant für Rechtssicherheit Software(Legal Comliance). \\
-	Umberto der ifu Hambug GmbH dient als Beispiel für ein umfangreiches Umweltmanagementsystem.\\
-	Auch wenn Umberto auch die Ökobilanzierung abdeckt, ist die webbasierte SimaPro Software der GreenDelta GmbH Vertreter für Ökobilanzierungssoftware. \\
-	Als Visualisierungssoftware im Nutzungskontext des Stoffstrommanagement ist eSankey ebenfall aus dem Hause ifu Hamburg GmbH der Repräsentant. 
-	%\subsection{Ecowebdesk Modul - Legal Complience}
-%	
-%	EcoWebDesk ist eine modular aufgebaute und webbasierte Software, mit der alle Anforderungen des Umweltmanagements und der betrieblichen Arbeitssicherheit dokumentiert werden können.
-%	Das Grundsystem mit dem integrierten Dokumentenmanagement bildet die Basis für die Fachmodule wie unter anderem Legal Compliance. Die Benutzeroberfläche ist personalisiert und liefert von Terminen zu Aufgaben alles interessante und relevante auf der Startseite. Dies kann je nach Nutzer und Nutzungsverhalten nach einer überladenen Seite aussehen. 
-%	
-%	Die Auditvorbereitung für interne oder extern wird untersttzt und sieht folgendermaßen aus:
-%	
-%	%Gut vorbereitet für interne und externe Audits
-%	%Gefährdungsbeurteilungen und Betriebsanweisungen per Mausklick
-%	%Einschlägige Normen im Rechtskataster pflegen
-%	Für den Nutzer relevante Rechtskataster sind über folgende schritte zu pflegen. 
-%	%Verbräuche und Ressourcenströme immer im Blick
-%	%Zahlreiche Funktionen zum Dokumentieren, Organisieren, Auswerten
-%	%Übersicht der EcoWebDesk-Fachmodule
-%	
-%	%Mehr Rechtssicherheit 
-%	%Zertifizierung leicht gemacht
-%	%Vereinfachte Kommunikation  
-%	
-%	%Software für umfassende Rechtssicherheit
-%	%
-%	%EcoWebDesk Legal Compliance
-%	%
-%	%Die Software für Legal Compliance erleichtert Ihnen die Beurteilung des rechtlichen Handlungsbedarfs gegenüber den umfangreichen Bestimmungen aus dem Arbeitsschutz- und Umweltrecht. Erfüllen Sie Ihre Sorgfaltspflichten vorschriftsmäßig, minimieren Sie Ihr Haftungsrisiko und weisen Sie rechtskonformes Handeln in allen Bereichen nach.  
-%	%Unternehmensweites Rechtskataster
-%	%In EcoWebDesk Legal Compliance verzeichnen Sie alle einschlägigen Rechtsnormen auf einfache Weise im Rechtskataster. Normen und Geltungsbereiche, resultierende Rechtspflichten und Verantwortlichkeiten sind zentral zugänglich und komfortabel zu pflegen.
-%	%Schnittstelle zu Online-Rechtsdatenbank
-%	%Dank der integrierten Schnittstelle zu einer Online-Rechtsdatenbank sparen Sie wertvolle Zeit: Automatische E-Mail-Benachrichtigungen informieren Sie regelmäßig über relevante Änderungen von Rechtsnormen und zeigen gezielt den Handlungsbedarf auf.
-%	%Genehmigungen und Anlagenkataster
-%	%Erfassen Sie genehmigungspflichtige Anlagen und Maschinen vorschriftsmäßig im Anlagenkataster von EcoWebDesk. Vom Antrag bis zum abschließenden Bescheid werden alle Handlungsschritte und Dokumente im System hinterlegt. So werden Fristen, Auflagen und Gültigkeiten transparent.
-%	%Technische Prüfungen
-%	%Stellen Sie den einwandfreien Betrieb Ihrer Anlagen sicher und planen Sie Ihre technischen Prüfungen effizient mit EcoWebDesk. Anforderungen, Intervalle und Ergebnisse sind einheitlich dokumentiert, Prüfer und Teilnehmer direkt per E-Mail informiert. 
-	\subsection{umberto (ifu) - Umweltmanagement}
-	Umberto ist eine besonders komplexe Anwendung, die eine Bandbreite an Anwendungsmöglichkeiten bietet. Von der Ökobilanzierung zur Visualisierung deckt es alle Anforderungen an ein Stoffstrommanagement Tool, vorausgesetzt man kann es bedienen. 
+	\section{Nutzungskontext und Softwareergonomie Konformität ausgewählter \ac{BUIS}}
+	Aus einer Vielzahl von Anwendungen und Software angeboten wurden die folgenden nach der Verfügbarkeit von Zugängen und Demoversionen ausgewählt. Die folgenden Screenshots und dazugehörigen Anmerkungen dienen als Beispiel für die Unterstreichung des Thema Usability und E-learning im Kontext betrieblicher Umweltinformationssysteme und sind keine Ergebnisse einer Wissenschaftlichen Erhebung. 
+	%die Browser basierte Software der Ecointense GmbH der Repräsentant für Rechtssicherheit Software(Legal Comliance). \\
+	\begin{enumerate}
+	\item Umberto der ifu Hambug GmbH dient als Beispiel für ein Umweltmanagementsystem zur Prozessoptimierung.\\
+	\item Die webbasierte SimaPro Software der GreenDelta GmbH ist Vertreter für Ökobilanzierungssoftware. \\
+	\item eSankey, die Visualisierungssoftware für Stoff- und Energieströme ebenfall aus dem Hause ifu Hamburg GmbH dient als Repräsentant für ein Stoffstrommanagement. 
+	\item EcoWebDesk als Umweltmanagement Software für Rechtssicherheit mit dem Modul - Legal Compliance
+	\end{enumerate}
+
+Die Herangehensweise ist folgende: Als Mitarbeiter eines Unternehmens in dem das ausgewählte \ac{BUIS} neu eingeführt wurde, sollen die Alltagsgeschäfte damit durch geführt werden. Das bedeutet im Fall von SimaPro, erstelle ich eine Ökobilanz für ein Produkt unseres Unternehmens. Im Fall von e!sankey skizziere ich Diagramme zu den Prozessen im Unternehmen. Mit Umberto wird der Produktionsprozess eines Produktes mit all seinen Material- und Energieströmen modelliert um Optimierungspotentiale zu entdecken. EcoWebDesk möchte keine vergleiche und wird daher nur mit den Schulungsangeboten aufgeführt.    
+Folgende Fragen sollen beantwortet werden:
+\begin{itemize}
+\item Wie sieht der Start Display aus?
+\item Wo befindet sich die Navigation und ist mir diese schon bekannt?
+\item 
+\end{itemize}
 	
+\subsection{Umberto NXT der ifu Hamburg GmbH - Umweltmanagemetsystem} 
+
+	Umberto ist eine besonders komplexes Umweltmanagement Software, die eine Bandbreite an Anwendungsmöglichkeiten bietet. Von der Ökobilanzierung zur Simulation von Prozessen und Ihrer Visualisierung deckt es alle Anforderungen an ein Stoffstrommanagement Tool. %, vorausgesetzt man weißes zu nutzen.
+	Umberto findet Anwendung in der Strategischen Planung von \ac{KMU} unter der Fragestellung "`Mit welchem Maßnahmen-Mix erreichen wir am besten unsere Innovations-, Umwelt- und Kostenziele?"'
+		
 	\begin{figure}
-		\includegraphics[width=\textwidth]{Bild/Umberto NXT LCA.png}
+	\includegraphics[width=\textwidth]{Bild/Umberto_NXT_LCA.png}
+%		\includegraphics[width=\textwidth]{Bild/Umberto NXT LCA.png}
 		\caption{Umberto LCA Beispielbild} 
 	\end{figure}
 	
 	Im der Abbildung Umberto LCA sind Beispielhaft einige Positionen markiert, die den Usability Richtlinen nicht gerecht werden. 
 	Trotz der Komplexität des Programmes, gäbe es an den Markierten punkten Verbesserungspotentiale zur Benutzbarkeit der Software. 
 	
+\subsection{Sima Pro - Ökocontroling}
+\subsubsection{Ökobilanzierung}
+Der deutsche Begriff Ökobilanzierung ist besser bekannt als \ac{LCA}zu deutsch eine Lebenszyklusanalyse und wird in dieser Arbeit verwendet\cite{klopffer2009okobilanz}.
+Die Norm DIN EN ISO 14040 "Umweltmanagement - Produkt-Ökobilanz - Prinzipien und allgemeine Anforderungen" sowie die darauf aufbauenden DIN EN ISO 14041, 14042 und 14043 geben die Schritte für eine Ökobilanz vor, um z. B. den Lebensweg eines Produktes "von der Wiege bis zur Bahre" analysieren und bewerten zu können. Die Norm kann in allen Branchen sowohl für Dienstleistungen als auch für Produkte angewendet werden.
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Bild/ISO 14040 Oekobilanz1.pdf}
+\caption{Arbeitsschritte einer Ökobilanz nach ISO 14040\cite{klopffer2009okobilanz}}
+\end{figure}
+Ziel für unser Beispiel, wir möchten die CO2 Bilanz der Kaffeemaschine A mit der Kaffeemaschine B vergleichen. Das Szenario ist als Tutorial bereits in der Demosoftware integriert.
+\subsubsection{SimaPro Compact}
+SimaPro ist eine Weltweit vertriebene Desktop Software für \ac{LCA} die Ihre Daten aus zahlreichen mitgelieferten Datenbanken bezieht. Von ELCD über LCA Food und nationalen Input/Output-Datenbanken bis zu ecoinventder Ecoinvet Datenbank sind die Lizensen beim Kauf von SimaPro inbegriffen\cite{SimaPro_Homepage}. Dies ist ein Vorteil im Vergleich zu OpenSource alternativen, bei denen die Datenbanken nicht inbegriffen sind. 
+%SimaPro provides you with a professional tool to collect, analyze and monitor the sustainability performance of products and services.
+Nutzungskontext der SimaPro Compact Software ist, dass ein Mitarbeiter eines Unternehmens ein \ac{LCA} für ein bestehendes Produkt berechnen möchte. Die gewählten Mengen, Materialien sowie das Produkt sind fiktiv und stellen keine Grundlage für eine Berechnung dar. Die Abbildung zeigt den Wizard, wie er den Nutzer Schritt für Schritt durch den Entwicklungsprozess leitet. Der Dialog ist vom Nutzer frei zu starten, fortzusetzen, Einzelschritte zu wiederholen und zu beenden. Ausgehend vom fertigen Produkt( siehe Markierung 3. in Abbildung ) fragt der Wizard ob Material oder ein Prozess hinzugefügt werden soll.  
+Die Markierung 1. in Abbildung  kennzeichnet die Navigation, welche Erwartungskonform ist mit den Konventionen von Desktop-basierter Software sowie den Kenntnissen eines Mitarbeiters im Bereich des Umweltmanagement. Die Legende unter 2. in Abbildung zeigt mehr als nötig, ist weder skalierbar noch veränderbar was Farbgebung angeht.  
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{Bild/SimaPro LCA Demo Material Process.JPG}
+\caption{SimaPro LCA Wizard Demo}
+\end{figure}
+Die Datenbankinformationen berufen sich auf einige Annahmen die nicht herausgestellt werden. Dies verleitet zur Absolution des \ac{LCA} und der Prozesses welches nicht der Realität und den tatsächlich verfügbaren Daten entspricht. 
+Die \ac{LCA} Prozesse werden lediglich nach dem Bottem-Up Prinzip visualisiert jedoch nach dem Top-Down Prinzip modelliert. Die Veränderung der Darstellung ist dem Nutzer nicht möglich.
+Über den LCA Explorer lassen sich Prozesse, Produktphasen, Abfalltypen, Parameter, Methoden und Berechnungs-Setups hinzufügen verändern und wieder entfernen. Diese Funktionen sind zwar Erwartungskonform, gewähren jedoch kaum Fehlertoleranzen, da die Eintragung eines neuen Parameter nur erfolgt wenn der Datensatz vollständig eingegeben wird. 
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Bild/Sima Pro Coffee Prozesse.JPG}
+\caption{SimaPro LCA Explorer}
+\end{figure}
+Im LCA-Explorer ist jedes Element anklickbar, wird jedoch nicht so markiert. Der Kursor verändert sich nicht und bietet auch keine Informationen zum Untergrund beim drüberfahren. Dies sind kleine Hilfestellungen für die Usability steigerung von SimaPro.  
+
+\subsubsection{Schulungen und E-Learningangebote}
+Die Demoversion der SimaPro Software bietet zwei Einführungsfunktionen in die Nutzung des \ac{LCA}-Tool. Für eine Einführung in die wichtigsten Funktionen von SimaPro die "Guided Tour(with coffee)" und der LCA Wizard demonstriert die Modellierung eines \ac{LCA} für ein spezifisches Produkt. Siehe Abbildung 
+
+\begin{figure}{h!}
+\centering
+\includegraphics[width=\textwidth]{Bild/Sima Pro Start.JPG}
+\caption{SimaPro Start Display der Demoversion Compact}
+\end{figure}
+Neben diesen interaktiven Methoden gibt es natürlich noch das Handbuch und die Dokumentation als Pdf. 
+Präsenzschulungen werden sowohl inhouse, online sowie wie auch in der Räumen der GreenDelta GmbH für Gruppen wie Einzelpersonen angeboten. Die Schulungen sind Kompaktkurse die über 1,5 Tage gehen und ohne Zertifikat abschließen. Die Onlineschulung ist ein Webinar, welches der selben didaktischen Aufbereitung des Präsenzseminars entspricht und lediglich die Übungsphasen und Selbstversuche der Teilnehmer aussen vor lässt.  
+\begin{figure}{h!}
+\centering
+\includegraphics{Bild/Sima Pro Schulungsangebot.JPG}
+\caption{Schulungsangebot von SimaPro}{Schulungsangebot von SimaPro laut \cite[Website vom 13.07.2014]{SimaPro_Homepage}}
+\end{figure}
+
+\subsection{e!sankey (ifu) - Stoffstrommanagement Visualisierung}
+	\subsubsection{Stoffstrom }
+\subsubsection{e!sankey}
+e!sankey als einfaches Stoffstrommanagement Tool, dient zur Visualisierung von Prozessen und Stoffströmen. Unter dem Motto "show the flow" lassen sich Flusskostenberechnungen farbenfroh und mit Logos oder Grafiken darstellen. Dies kann zum Beispiel so aussehen:
+% und sich mit einem klick von aus einer Umberto Kalkulation erstellen lassen:
+\begin{figure}{h!}
+\centering
+\includegraphics[width=\textwidth]{Bild/Audit-Sankey.JPG}
+\caption{Audit-Sankey}{Audit-Senkey Flussmengendarstellung \cite[S.40]{jurgens2001anforderungen}}
+\end{figure}	
+
+\begin{figure}
+\includegraphics{Bild/Esankey Arbeitsbereiche Rauchgas.JPG}
+\caption{e!sankey Arbeitsbereiche}{e!sankey Arbeitsbereiche\cite{esankeyHandbuch032014}}
+\end{figure}
+Dinge die sich von selbst erklären?
+	1. Die Zeichenfläche (mehrere Diagramme können gleichzeitig geöffnet werden) 
+	2. Übersicht: zeigt eine verkleinerte Ansicht des Sankey-Diagramms 
+	3. Eigenschaften: ermöglicht die Bearbeitung der Eigenschaften von markierten
+	Elementen 
+	4. Einträge: Auflistung von Materialien, Energie und benutzerdefinierten Einträgen,
+	die in den Pfeilen als Flüsse des Sankey-Diagramms verwendet werden 
+	5. Controller: ermöglicht die Skalierung von Flüssen nach Basiseinheiten (kg, MJ) 
 	
-	%\subsection{Umsys (Inplus GmbH)}
-	%- Anlagenkataster
-	%- anlagenbezogen
-	%%
-	%UMsys ist ein integriertes Programmsystem für Umwelt-Management und Datenvernetzung. Es ist gleichermaßen für die Anforderungen von Überwachungs-Behörden wie von Industrie-Betrieben geeignet. Es umfasst u.a. die Bereiche:
-	%	Abfallwirtschaft, gewerbliche und Sonderabfälle
-	%	Bodenschutz, Altlasten-Management
-	%	Gewässerschutz, Wasser-gefährdende Stoffe und Indirekteinleitung
-	%	Immissionsschutz, Genehmigungs-Verfahren und Auflagen, Anlagen-Überwachung
-	%	beliebige weitere Bereiche durch freie Konfigurierbarkeit
-	%Der Anwender kann mit UMsys:
-	%\begin{itemize}
-	%\item	ein hierarchisches Anlagen-Kataster aufbauen
-	%\item		Stoffdaten, Messwerte und Vorschriften mit dem Anlagen-Kataster verbinden
-	%\item	den ordnungsgemäßen Betrieb von Anlagen überwachen und dokumentieren
-	%\item		Anlagen und Dokumente verbinden (Dokumenten-Management)
-	%\item	Geografische Informationssysteme (GIS) einbinden
-	%\item		alle Vorgänge durch eine Vorgangsbearbeitung unterstützen
-	%\item		in einer Wissensbasis recherchieren
-	%\item		neue Umweltobjekte mit ihren Merkmalen definieren (Konfiguration/Customizing)
-	%\item		Daten mit Word und Excel austauschen, Serienschreiben erzeugen
-	%\item		IT-Lösungen über UMsys integrieren
-	%\end{itemize}
-	%
-	%\subsection{ehsm (technidata/sap)}
-	%
-	\subsection{e!sankey (ifu) - Stoffstrommanagement Visualisierung}
-	e!sankey als einfaches Stoffstrommanagement Tool, dient zur Visualisierung von Prozessen und Stoffströmen. Unter dem Motto "show the flow" 
+	Exklusiv bei e!Sankey pro: 'Live Link to Microsoft Excel', der automatisierte Import von Flusswerten aus Microsoft Excel Tabellenkalkulations-Dateien (erfordert Microsoft Excel 2002 oder höher)
+	Export des Sankey-Diagramms als Grafik (BMP, GIF, JPG, EMF, PNG)
+	Export als .sankey Datei (kann von anderen Tools z.B. Umberto gelesen werden)
+	Einstellung der Bildqualität beim Export (geringe Auflösung/hohe Auflösung/Web/Druck)
+	Prozesse und Verbindungen mit graphischen Elementen: Rechteck, abgerundetes Rechteck, Ellipse, etc.
+	Textelemente frei rotierbar
+	Verwendung von Bildern
+	Leistungsfähiges Farbmanagement für anschauliche Sankey-Diagramme
+	Farbverläufe innerhalb der Pfeile
+	Legende
+	Editor-Eigenschaften: Raster, am Raster ausrichten
+	Zoom
+	Rückgängig/Wiederherstellen
+	Mehrfachbearbeitung von graphischen Elementen
+	Ausrichten und Anpassen Größe der Prozesssymbole von mehreren Prozessen an einem Referenzprozess
+	Höhe/Breite von Prozessen an einen zugehörigen Pfeil anpassen
+	Pfeile ziehen ohne den Prozess vorher anzulegen (sichtbare/unsichtbare Prozesse)
+	Umhängen von Pfeilen an andere Prozesse
+	Ausblenden von Pfeilen mit der Flussmenge null und den dazugehörigen Prozessen
+	minimale Pixelgrenzen für Pfeile (dünne Pfeile bleiben sichtbar)
+	Pfeil-Informationen wie Label und Menge werden beim Überfahren mit der Maus angezeigt
+	Export/Import von Farbpaletten
+\subsubsection{Schulungen und E-Learningangebote}
 	
-	\subsection{Sima Pro - Ökocontroling}
+	%		\subsection{Ecowebdesk Modul - Legal Complience}
+	%	EcoWebDesk ist eine modular aufgebaute und webbasierte Software, mit der alle Anforderungen des Umweltmanagements und der betrieblichen Arbeitssicherheit dokumentiert werden können.
+	%	Das Grundsystem mit dem integrierten Dokumentenmanagement bildet die Basis für die Fachmodule wie unter anderem Legal Compliance. Die Benutzeroberfläche ist personalisiert und liefert von Terminen zu Aufgaben alles interessante und relevante auf der Startseite. Dies kann je nach Nutzer und Nutzungsverhalten nach einer überladenen Seite aussehen. 
+	%	
+	%	Die Auditvorbereitung für interne oder extern wird untersttzt und sieht folgendermaßen aus:
+	%	
+	%	%Gut vorbereitet für interne und externe Audits
+	%	%Gefährdungsbeurteilungen und Betriebsanweisungen per Mausklick
+	%	%Einschlägige Normen im Rechtskataster pflegen
+	%	Für den Nutzer relevante Rechtskataster sind über folgende schritte zu pflegen. 
+	%	%Verbräuche und Ressourcenströme immer im Blick
+	%	%Zahlreiche Funktionen zum Dokumentieren, Organisieren, Auswerten
+	%	%Übersicht der EcoWebDesk-Fachmodule
+	%	
+	%	%Mehr Rechtssicherheit 
+	%	%Zertifizierung leicht gemacht
+	%	%Vereinfachte Kommunikation  
+	%	
+	%	%Software für umfassende Rechtssicherheit
+	%	%
+	%	%EcoWebDesk Legal Compliance
+	%	%
+	%	%Die Software für Legal Compliance erleichtert Ihnen die Beurteilung des rechtlichen Handlungsbedarfs gegenüber den umfangreichen Bestimmungen aus dem Arbeitsschutz- und Umweltrecht. Erfüllen Sie Ihre Sorgfaltspflichten vorschriftsmäßig, minimieren Sie Ihr Haftungsrisiko und weisen Sie rechtskonformes Handeln in allen Bereichen nach.  
+	%	%Unternehmensweites Rechtskataster
+	%	%In EcoWebDesk Legal Compliance verzeichnen Sie alle einschlägigen Rechtsnormen auf einfache Weise im Rechtskataster. Normen und Geltungsbereiche, resultierende Rechtspflichten und Verantwortlichkeiten sind zentral zugänglich und komfortabel zu pflegen.
+	%	%Schnittstelle zu Online-Rechtsdatenbank
+	%	%Dank der integrierten Schnittstelle zu einer Online-Rechtsdatenbank sparen Sie wertvolle Zeit: Automatische E-Mail-Benachrichtigungen informieren Sie regelmäßig über relevante Änderungen von Rechtsnormen und zeigen gezielt den Handlungsbedarf auf.
+	%	%Genehmigungen und Anlagenkataster
+	%	%Erfassen Sie genehmigungspflichtige Anlagen und Maschinen vorschriftsmäßig im Anlagenkataster von EcoWebDesk. Vom Antrag bis zum abschließenden Bescheid werden alle Handlungsschritte und Dokumente im System hinterlegt. So werden Fristen, Auflagen und Gültigkeiten transparent.
+	%	%Technische Prüfungen
+	%	%Stellen Sie den einwandfreien Betrieb Ihrer Anlagen sicher und planen Sie Ihre technischen Prüfungen effizient mit EcoWebDesk. Anforderungen, Intervalle und Ergebnisse sind einheitlich dokumentiert, Prüfer und Teilnehmer direkt per E-Mail informiert.
 	
-	\subsection{Fazit}
+%	\subsection{Fazit}
 	%Die Notwendigkeit liegt nicht im Einsatz von E-learning Tools für die Vermittlung von Usability Inhalten als mehr für als eher in der Vermittlung von 
 	%Warum ist es sinnvoll E-Learning Tools für BUIS entwickler anzubieten?
 	% Ursprung der Probleme bei der Nutzung ist oft die geringe Beachtung von Usability Richtlinien und Werten bei der Entwicklung der BUIS. 
@@ -231,7 +318,92 @@
 	%Probleme bei den Kategorien und alles kann sich auf die Konzeption und Entwicklung zurück führen lassen.
 	%Buis können gestärkt werden durch erleichtere und bessere Anwendbarkeit
 	%Das sind die Probleme
+
+\chapter{Usabiliy}
+\section{Begriffsklärung}
+	\subsection{Usability}
+	Für das Schlagwort Usability gibt es in der Literatur zahlreiche Definitionen vgl. \cite[S.3]{balzert2009webdesign}, \cite[]{herczeg2005software}, \cite[S.9]{kerkau2009usability} und Übersetzungen aus dem englischen die ins deutsche als Benutzbarkeit eines Systems siehe ISO 9126 oder Benutzerfreundlichkeit bzw. Gebrauchstauglichkeit laut ISO 9241 übersetzt wurden.
+	Usability sollte immer im Kontext eines Arbeitsumfeldes und der damit verbundenen Aufgaben gesehen werden. Die ISO 9241-11 greift diesen Aspekt mit auf und definiert Usability unter der Bezeichnung Gebrauchstauglichkeit wie folgt:
+	„Das Ausmaß, in dem ein Produkt durch bestimmte Benutzer in einem bestimmten Nutzungskontext genutzt werden kann, um bestimmte Ziele effektiv, effizient und zufriedenstellend zu erreichen“\cite[S. 4]{ISO9241}
 	
+	Manchmal steht bei der Definition von Usability lediglich eine gestalterische
+	Bewertung einer Benutzeroberfläche im Vordergrund [vgl. Richter et al. 2010,
+	S. 3]. 
+	
+	ISO 9126 Informationstechnik, beurteilen der Qualität von Softwareprodukten anhand von 6 Merkmalen: Funktionalität, Zuverlässigkeit, Effizients, Benutzbarkeit (Usability), Änderbarkeit.
+	\begin{figure}
+	\centering
+	\includegraphics{Bild/ISO_9126_Grafik.png}
+	\caption{ISO 9126 Grafik Wikipedia}{ISO 9126 Grafik Wikipedia\cite{}}
+	\end{figure}
+	
+	\subsection{Software-Ergonomie}
+	„Ergonomie ist ein wissenschaftlicher Ansatz, damit wir aus diesem Leben die besten Früchte bei der geringsten Anstrengung und mit der höchsten Befriedigung für das eigene und das allgemeine Wohl ernten.“\cite[Jastrzebowski 1857]{herczeg2005software} 
+	Diese älteste bekannte Definition für Ergonomie wurde 1949 durch Murell wieder aufgegriffen und unter "ergonomics" zu einer wissenschaftlichen Disziplin erhoben. Ergonomie ist ein Zusammenschluss der beiden altgriechischen Wörter ergon – Arbeit, Werk, Tat und nomos – Gesetz, Brauch, Übereinkunft. Im heutigen Sprachgebrauch wird Human Factors häufig als Synonym für Ergonomie verwendet.\cite[]{richter2010usability}
+		
+	„Software-Ergonomie befasst sich disziplinübergreifend mit der benutzergerechten Gestaltung der Mensch-Maschine-Interaktion sowie der Berücksichtigung der Aufgaben- und Organisationserfordernisse und der Benutzerbelange.“ \cite[S. 7]{zeidler1992software}
+	Die Software-Ergonomie beschäftigt sich mit der Anpassung der Benutzerschnittstelle einer Software an die kognitiven Fähigkeiten des Menschen. Die Möglichkeiten zur Aufnahme und Verarbeitung von Informationen werden betrachtet. Die Benutzungsschnittstelle (User Interface), welche nach Herczeg\cite{herczeg2005software} die Bedienoberfläche mit den Eingabemöglichkeiten des Benutzers und den Ausgabemöglichkeiten des Computersystems darstellt, ist die Abbildung der Mensch-Computer-Kommunikation. 
+	Mit Ein- und Ausgabemöglichkeiten sind die softwareseitigen Konstrukte der Dialoggestaltung wie Kommandodialoge, Menüs oder die direkte Manipulation gemeint. Dadurch findet eine wechselseitige Beeinflussung zwischen Mensch und Computer statt, die Interaktion.
+	Die Software-Ergonomie hat die Motivation, den Mangel an Bedienbarkeit für die programmtechnische Benutzungsoberfläche interaktiver Computersysteme zu beseitigen. Denn versteht ein Benutzer die Art und Weise der Bedienung der Software nicht, wird er auch nicht fähig sein, ihre Vielseitigkeit zu nutzen.
+	
+	\subsection{Usability-Engineering}
+\centering{75\% aller Software-Mängel werden während der Entwicklung verursacht.\\
+Davon bleiben 80\% bis zur Nutzung unerkannt.}\cite{rudlof2006handbuch}
+
+Die Notwendigkeit von Usability Engineering lässt sich durch die beiden Aussagen "Wir alle sind Benutzer" und "Der Benutzer ist nicht wie ich" \cite{richter2010usability} sehr anschaulich begründen. Jeder von uns kommt im täglichen Leben mit verschiedenen interaktiven Produkten in Berührung, sei es im privaten Bereich mit Unterhaltungselektronik und Smartphones und den dazugehörigen Applikationen oder im beruflichen Alltag mit verschiedenen IT-Geräten und der zugehörigen Software. Die Erfahrungen fallen hier sehr unterschiedlich aus, einige Produkte lassen sich gut bedienen, andere hingegen bewerten wir als schlecht oder gar nicht benutzbar. Usability Engineering hat zur Aufgabe, die Entwicklung von schlecht benutzbaren Produkten zu vermeiden. Die zweite Aussage verdeutlicht, wie es zu eben diesen Entwicklungen kommt. Die Entwicklung von interaktiven Systemen bzw. Produkten ist ein sehr komplexer Prozess an dem Spezialisten beteiligt sind, die oftmals nicht die Sichtweise des späteren Anwenders teilen. Gerade in der Softwareentwicklung ist der Anwender für das Einsatzgebiet der Software der Experte und eben nicht der Entwickler\cite[vgl. S. 1ff]{richter2010usability}. 
+		
+		
+		
+	
+		
+		
+		\section{Designkriterien der (Web-)Usability}
+	Das Web als Werkzeug bietet dem Benutzer nicht nur eine Vielzahl von Webseiten zum Finden von Informationen, sondern immer mehr Verwaltungsaufgaben können online erledigt werden. Überzeugen kann eine solche Anwendung, wenn der Nutzer sich schnell zurechtfindet und einfach seine Ziele erreichen kann. Usability (Gebrauchstauglichkeit) ist im Web so wie bei Mobilen Anwendungen ein entscheidendes Merkmal, um sich in der Vielfalt behaupten zu können. Auch E-learning Anwendungen müssen dem Nutzer hohe Usability bieten, um als brauchbares Werkzeug bestehen zu können.\newline
+				
+	
+		Es sind vier Faktoren zu berücksichtigen, wenn es darum geht, die Benutzungsschnittstelle benutzergerecht zu gestalten:
+		
+		Menschengerechte Gestaltung
+		
+		Im Gegensatz zu rein technischen Schnittstellen (zwischen zwei Maschinen) hat die Benutzungsschnittstelle dem Menschen Rechnung zu tragen. Der Benutzer kann mit seinen Stärken, Schwächen, Bedürfnissen und Unterschieden in der Entwicklung nur schwer formal beschrieben werden. Dennoch muss eine Anpassung der Software an den Menschen (nicht umgekehrt) erfolgen, um benutzergerecht zu sein. Dazu werden „Kenntnisse über menschliche Wahrnehmung, Denken und Problemlösen sowie über Lernen, Kommunikation und Kooperation benötigt“ [Eberleh, Oberquelle \& Oppermann 1994, S 4]. Im Abschnitt 1.3 werden einige dieser psychologischen Grundlagen vorgestellt.
+		
+		Aufgabenangemessene Gestaltung
+		
+		Software wird vom Benutzer für einen bestimmten Zweck verwendet. Meist möchte der Benutzer eine konkrete Aufgabe, insbesondere im Arbeitsleben, damit lösen. Aufgabenangemessen kann nur gestaltet werden, wenn Kenntnisse über die Aufgaben der Benutzer und ihre Vorgehensweise beim Erledigen der Aufgaben bekannt sind. Doch diese Aufgaben müssen zuerst menschengerecht formuliert werden bevor eine aufgabenangemessene Funktionalität der Software bei der Erledigung Unterstützung bieten kann. Hierzu werden Kenntnisse der Arbeitswissenschaften in der Software-Ergonomie angewandt.
+		
+		Technikbewusste Gestaltung
+		
+		Bei der Vielfalt an technischen Optionen, die heutzutage angeboten werden, fällt es nicht leicht, diese auch benutzergerecht einzusetzen. Häufig werden neue Technologien nur zum Selbstzweck eingesetzt. Für die benutzergerechte Gestaltung ist es notwendig, die verfügbaren technischen Möglichkeiten zum Wohle des Benutzers einzusetzen. Das kann bedeuten, dass der Schritt zu einer innovativen Technologie gewagt wird, oder aber etablierte, traditionelle Techniken verwendet werden. Letztlich müssen hier ökonomische und im Einzelfall auch ökologische Rahmenbedingungen bei der Entscheidung berücksichtigt werden.
+		
+		Organisationsgerechte Gestaltung
+		
+		Benutzer handeln sowohl im Arbeitsleben als auch im Privatleben meist in einem Netzwerk zusammen. Daneben findet durch die Verbreitung des Internets und der Computer auch eine technische Vernetzung statt. Diese beiden Aspekte der sozialen und technischen Vernetzung müssen durch eine organisationsgerechte Gestaltung berücksichtigt werden. Dabei muss die jeweils vorhandene organisatorische Einbindung des Softwarebenutzers beachtet werden, wenn Kenntnisse über den Menschen und seine Aufgaben gewonnen werden.
+		
+		Über menschengerechte und aufgabenangemessene Gestaltung existiert ein weites Spektrum fundierten Wissens durch die Forschungsarbeit der Software-Ergonomie. Die letzteren Aspekte, technikbewusste und organisationsgerechte Gestaltung, haben erst Mitte der neunziger Jahre an Bedeutung gewonnen. Als Grund dafür können die Verbreitung des Internets sowie
+		
+		Software-Ergonomie – theoretische Grundlagen und praktischer Einsatz Gegenstand und Ziele der Software-Ergonomie 5
+		
+		die Entwicklung von „haushaltstauglichen“ PCs angesehen werden. Heutzutage haben alle vier Aspekte eine große Bedeutung, wenn es um die Gestaltung neuer Software geht.
+		
+		Beispielsweise ermöglichen neue Technologien den Einsatz von bekannter Software in neuen Formaten. PocketPCs und die Multifunktionalität von Mobiltelefonen seien als Beispiele für Geräte genannt, die eine Anpassung der Benutzerschnittstelle an ein vergleichsweise kleines Ausgabegerät (im Gegensatz zum Desktop-Monitor) und das damit verbundene Benutzerverhalten erfordern. Technikbewusst muss auch der Einsatz von Computern als eingebettete Systeme (Embedded Systems) in modernen technischen Geräten betrachtet werden. Hinzu kommt, dass Software damit nicht mehr als grafische Oberfläche in Erscheinung tritt. Bei der Entwicklung ergonomischer Richtlinien für eingebettete Systeme verwischt die Grenze zwischen Software- und Hardware-Ergonomie zunehmend.
+		
+		Es sollte auch nicht vergessen werden, dass Computersysteme nicht mehr nur zur Arbeit genutzt werden, sondern auch im Freizeitbereich. Gerade hier kann die Nutzungsdauer sogar länger als am Arbeitsplatz sein, da die Software meist zum Vergnügen genutzt wird. In diesem Zusammenhang ist auch wieder die Hardware-Ergonomie gefragt, welche die körperlichen Belastungen durch lange Nutzung des Computersystems minimieren soll.
+		
+		Auch die veränderte Alterstruktur der Benutzer muss in der Software-Ergonomie berücksichtigt werden. Sowohl Kinder und Jugendliche als auch Senioren nutzen Computer in einem höheren Maße als noch vor einigen Jahren und stellen spezielle Anforderungen an die Hardware und Software durch ihre körperlichen und geistigen Fähigkeiten.
+		
+			
+	
+	
+	
+	
+	\section{Benchmark Analyse E-learning und M-Learning Tools mit Usability Inhalen}
+	Auf dem deutschsprachigen Markt beschränkt gibt es neben der Schulungsangeboten der vom \ac{UXQB} Anerkannten zahlreiche weitere. Es werden im folgenden nur jene aufgeführt und für den Vergleich herangezogen die ein E-learning Tool bzw. M-Learning Tool anbieten. 
+	\begin{enumerate}
+		\item Frauenhofer FIT (http://www.usability-ux.fit.fraunhofer.de/de/weiterbildungen-usability-und-user-experience-design/engineer-praxis.html)
+		\item Usability-Academy  auch als Mobile App für Android (http://usability-academy.com/cms/unternehmen.html)
+		\item http://en.tt-s.com/software/tt-knowledge-force/
+	\end{enumerate}
+		
 	\chapter{Grundlagen E-Learning}
 	\section{Lerntheorien}
 	{Lernmodelle}\newline
@@ -246,7 +418,12 @@
 	Ein typischer Programmablauf eines auf dem behavioristischen Modell basierenden System sind Frage-Antwort-Sequenzen mit sofortiger Rückmeldung. Der Schwierigkeitsgrad steigt Linear und es können keine Teile des Programms übersprungen werden. Diese Variante von Lernprogrammen werden als Drill-and-Practice-Programme bezeichnet. Hauptkritik an den meist aus Tierexperimenten und Laborversuchen gewonnenen Erkenntnisse ist, dass diese nicht zwingend auf aktuelle E-Learning Umgebungen übertragbar sind.
 	Auch wenn die behavioristische Lerntheorie nicht das aktuellste Modell darstellt, finden die aufgeführten Verstärker, strikt lineare Abfolgen und ständige Wiederholungen im Bereich der webbasierten Lernangebote Anwendung zum Beispiel bei Vokabellernprogrammen. Ein großer Vorteil dieser Programme ist, dass Sie meist nach eigenem Tempo durch laufen werden können\cite[65 ff.]{niegemann2005}. 
 	
-	Die Kognitionspsychologischen Ansätze gehen auf den Menschen und seine Fähigkeit Informationen aufzunehmen und zu verarbeiten ein. Der Prozess des Lernens von der Wahrnehmung über die Bildung kognitiver Schemata und mentaler Modelle sind die Grundpfeiler kognitiver Lernmodelle. Lernen ist somit ein Informationsverarbeitungsprozess. Diesem Lernmodell liegen einige Annahmen zugrunde: Der Mensch als Informationsverarbeitungssystem hat 2 Kanäle, die visuelle/bildhafte und die auditive/verbale Informationsaufnahme. Die zweite Annahme ist, dass das Gedächtnis eine begrenzte Kapazität für die Verarbeitung von Informationen hat.   Ziel bei der Gestaltung von Lernmaterialien ist es, nach Möglichkeit beide Kanäle bei der Verarbeitung von Informationen zu aktivieren den Lernenden jedoch nicht mit zu vielen Informationseinheiten kognitiv überreizen. \cite{baumgart1998entwicklungs}
+	Die Kognitionspsychologischen Ansätze gehen auf den Menschen und seine Fähigkeit Informationen aufzunehmen und zu verarbeiten ein. Der Prozess des Lernens von der Wahrnehmung über die Bildung kognitiver Schemata und mentaler Modelle sind die Grundpfeiler kognitiver Lernmodelle. Lernen ist somit ein Informationsverarbeitungsprozess. Diesem Lernmodell liegen einige Annahmen zugrunde: 
+	\begin{enumerate}
+	\item Der Mensch als Informationsverarbeitungssystem hat 2 Kanäle, die visuelle/bildhafte und die auditive/verbale Informationsaufnahme. 
+	\item Die zweite Annahme ist, dass das Gedächtnis eine begrenzte Kapazität für die Verarbeitung von Informationen hat.   
+	\end{enumerate} 
+	Ziel bei der Gestaltung von Lernmaterialien ist es, nach Möglichkeit beide Kanäle bei der Verarbeitung von Informationen zu aktivieren den Lernenden jedoch nicht mit zu vielen Informationseinheiten kognitiv überreizen. \cite{baumgart1998entwicklungs}
 	Bezogen auf multimediales Lernen, ist die Erkenntnis die hervorgehoben werden soll, dass die bildhafte Darbietung von Informationen mentale Modelle fördert und somit das lernen erleichtert.
 	
 	Um zu einem mentalen Modell zu gelangen, bedarf es des Aufbaus diverser Strategien, Wissen zu strukturieren. Diese haben verschiedene Strukturen zum Inhalt:
@@ -261,7 +438,7 @@
 	Webbasierte, interaktive E-learning Angebote %wie das Glossar zur Basiszertifizierung CPUX-F des UXQBU 
 	werden diesem Lernmodel sehr gut gerecht: Die Lernenden können dort einsteigen wo Sie wollen und der Zugang ist wahlweise über Smartphone, Tablet oder PC möglich. 
 	
-	Lernen im Konstruktivismus wird verstanden als die Konstruktion von Wissen auf der Basis individuellen Vorwissens; -> daher muss immer auf den einzelnen Lernenden Eingegangen werden. \cite[S.8]{Ludwig}
+	Lernen im Konstruktivismus wird verstanden als die Konstruktion von Wissen auf der Basis individuellen Vorwissens; -> daher muss immer auf den einzelnen Lernenden Eingegangen werden. \cite[S.30ff]{issing2009online}
 	
 	Der Begriff Konstruktivismus wird im E-Learning Kontext von verschiedenen Forschern unterschiedlich definiert. Im Folgenden soll darunter ein Lernansatz verstanden werden, der Lernende als selbstverantwortliche, aktive Personen im Hinblick auf ihren Wissenserwerbsprozess begreift (Loyens und Gijbels, 2008). Konstruktivistische Lernumgebungen beinhalten mehrere Merkmale, die den Lernprozess unterstützen sollen (Loyens und Gijbels, 2008):
 	
@@ -293,7 +470,7 @@
 	Die Simulation menschlichen Lernens mittels neuronaler Netze wird unter anderem hinsichtlich ihrer fragwürdigen biologischen Plausibilität kritisiert. Viele neuronale Netze widersprechen biologischen Grundannahmen und sind daher als Modelle zur Erklärung menschlichen Lernens nur bedingt geeignet (Rey und Wender, 2008). Allerdings trifft dieser Kritikpunkt meist in noch stärkerem Maße auf behavioristische, kognitive und konstruktivistische Modelle zu. Neben der fragwürdigen biologischen Plausibilität besitzen einige neuronale Netze aufgrund ihrer zahlreich enthaltenen Parameter und Variablen die Gefahr, jede denkbare menschliche Verhaltensweise beim Lernen abbilden zu können. Dadurch wäre das Modell nicht mehr falsifizierbar, d.h. nicht mehr durch empirisch gewonnene Daten widerlegbar, sondern könnte durch die Wahl geeigneter Parameter immer vor der Falsifikation geschützt werden (vgl. Popper, 1996; Rey und Wender, 2008). Trotz dieser und weiterer Kritikpunkte wurden neuronale Netze bereits in vielen Bereichen inner- und außerhalb der Psychologie erfolgreich eingesetzt (Rey und Wender, 2008). Der Einsatz neuronaler Netze als Erklärungsansatz zum menschlichen Lehren und Lernen mittels elektronischer Medien erscheint schon deshalb äußerst ergiebig, weil Begriffe wie Lernen und Wissenserwerb bei beiden eine zentrale Bedeutung einnehmen. Insofern plädiere ich für eine Verknüpfung dieser beiden Forschungsgebiete.
 	
 	\section{E-learning}
-	\textbf{Der Begriff E-Learning}
+	\subsection{Begriffsdefinition E-Learning}
 	Auf der deutschen Wikipedia Seite wird die Definition von Michael Kerres aufgegriffen:
 	"Unter E-Learning (englisch electronic learning = „elektronisch unterstütztes Lernen“, wörtlich: „elektronisches Lernen“), auch als E-Lernen (E-Didaktik) bezeichnet, werden alle Formen von Lernen verstanden, bei denen elektronische oder digitale Medien für die Präsentation und Distribution von Lernmaterialien und/oder zur Unterstützung zwischenmenschlicher Kommunikation zum Einsatz kommen.
 	Für E-Learning finden sich als Synonyme auch Begriffe wie: Online-Lernen (Onlinelernen), Telelernen, multimediales Lernen, computergestütztes Lernen, Computer-based Training, Open and Distance-Learning u. a."\cite{kerres2005learning}
@@ -359,84 +536,10 @@
 	\section{M-Learning}
 	
 	\section{Gamification als Instrument des E-Learning}
+Game play helps to exercise (and motivate) our mental muscles.
+Believe it or not, playing games is actually good for your brain. Not only does it help to engage learners in the eLearning process itself, but it also serves to remedy the boredom that so often leads to unsuccessful learning experiences (Free eBook - How Gamification Reshapes Learning). A report that was released by Leicha Bragg of Deakin University details a study that was conducted in three different schools, which involved 240 students [5].According to the research, students were more motivated to learn mathematics when the information was presented in a gaming format. Even their attitude toward the subject changed, as did their confidence regarding the various concepts involved. The students were also more motivated to learn the information, which improved their overall success and alleviated the boredom that is often associated with repetition (especially relating to problem solving).\cite{BrainFact}	
 	
-	
-	\chapter{Usabiliy-Engineering}
-	Das Web als Werkzeug bietet dem Benutzer nicht nur eine Vielzahl von Webseiten zum Finden von Informationen, sondern immer mehr Verwaltungsaufgaben können online erledigt werden. Überzeugen kann eine solche Anwendung, wenn der Nutzer sich schnell zurechtfindet und einfach seine Ziele erreichen kann. Usability (Gebrauchstauglichkeit) ist im Web so wie bei Mobilen Anwendungen ein entscheidendes Merkmal, um sich in der Vielfalt behaupten zu können. Auch E-learning Anwendungen müssen dem Nutzer hohe Usability bieten, um als brauchbares Werkzeug bestehen zu können.\newline
-	
-	\textbf{Begriffsklärung}
-	Usability ist ein aus dem englischen übernommener Begriff der ins deutsche sowohl als Benutzbarkeit (ISO 9126) wie auch als Gebrauchstauglichkeit (ISO 9241) übersetzt wurde. 
-	
-	ISO 9126 Informationstechnik, beurteilen der Qualität von Softwareprodukten anhand von 6 Merkmalen: Funktionalität, Zuverlässigkeit, Effizients, Benutzbarkeit (Usability), Änderbarkeit, 
-	
-	Softwareergonomie Standards ISO 9241 Teil 10-17 Ergonomische Anforderungen für Tätigkeiten mit Bildschirmgeräten
-	Anpassung der Arbeitsbedingungen bei der Mensch Computer Interaktion an die Sensumotorischen und koktiviven Fähigkeiten und Prozesse auf den Menschen.
-	
-	Weg von Mensch-Computer Interaktion hin zur Softwareergonomie seit den 1980er Jahren bis hin zum Didaktischen Design im Rahmen der Usability-Engineering. 
-	
-	\section{Software-Ergonomie}
-	„Ergonomie ist ein wissenschaftlicher Ansatz, damit wir aus diesem Leben die besten Früchte bei der geringsten Anstrengung und mit der höchsten Befriedigung für das eigene und das allgemeine Wohl ernten.“ [Jastrzebowski 1857]
-	
-	Diese älteste bekannte Definition für Ergonomie war bis Ende der sechziger Jahre in Vergessenheit geraten. Deshalb schlug Murrell 1949 in England ergonomics als Begriff für eine neue wissenschaftliche Disziplin vor. Für dieses Kunstwort führte er die beiden altgriechischen Wörter ergon – Arbeit, Werk, Tat und nomos – Gesetz, Brauch, Übereinkunft zusammen. Human Factors wird häufig als Synonym für Ergonomie verwendet.
-	
-	Die IEA (International Ergonomics Association) gab 2000 die offizielle Definition von Ergonomie heraus:
-	
-	„Ergonomics (or human factors) is the scientific discipline concerned with the understanding of interactions among humans and other elements of a system, and the profession that applies theory, principles, data and methods to design in order to optimize human well-being and overall system performance.“ [IEA 2006]
-	
-	So allgemeingültig diese Definition auch ist, sie berücksichtigt die Tatsache, dass die Ergonomie nicht mehr nur in der Arbeitswelt beachtet werden muss. Auch in der Freizeit gilt es Interaktionen zwischen Menschen und anderen Elementen eines Systems (hierzu zählen nicht nur technische Geräte, sondern auch Alltagsgegenstände) so zu gestalten, dass sie an die physischen Eigenschaften und psychischen Fähigkeiten des Menschen angepasst sind.
-	
-	„Software-Ergonomie befasst sich disziplinübergreifend mit der benutzergerechten Gestaltung der Mensch-Maschine-Interaktion sowie der Berücksichtigung der Aufgaben- und Organisationserfordernisse und der Benutzerbelange.“ [GI-Fachgruppe Software Ergonomie 2005, S 7]
-	
-	Die Mensch-Maschine-Interaktion kann für die Software-Ergonomie auf die Mensch- Computer-Interaktion (MCI) oder Human-Computer-Interaction (HCI) eingegrenzt werden. Im englischsprachigen Raum wird letztgenannter Begriff synonym zum deutschen Begriff Software-Ergonomie verwendet, obwohl die HCI der Gegenstand der Software-Ergonomie als auch der Hardware-Ergonomie ist.
-	
-	Die Software-Ergonomie beschäftigt sich mit der Anpassung an die kognitiven Fähigkeiten (Möglichkeiten zur Verarbeitung von Informationen) des Menschen. Benutzungsschnittstelle (User Interface), welche nach Herczeg die Bedienoberfläche mit den Eingabemöglichkeiten des Benutzers und den Ausgabemöglichkeiten des Computersystems, die Regeln der Ein- und Ausgabevorgänge an der Bedienoberfläche sowie  Systeme zur Unterstützung der Mensch-Computer-Kommunikation enthält. [vgl. Herczeg 2005]
-	
-	Mit Ein- und Ausgabemöglichkeiten sind nicht nur die technischen Geräte wie Maus oder Monitor gemeint (Hardware-Ergonomie), sondern auch die softwareseitigen Konstrukte der Dialoggestaltung wie Kommandodialoge, Menüs oder die direkte Manipulation (Software- Ergonomie). Dadurch findet eine wechselseitige Beeinflussung zwischen Mensch und Computer statt, die Interaktion.
-	
-	Computerbasierte Werkzeuge haben gegenüber traditionellen Werkzeugen eine enorme Vielseitigkeit zu bieten. In ihrer Bedienbarkeit erleiden sie dadurch aber meist einen Rückschritt. Ursache dafür ist neben der Komplexität selbst das Fehlen langjähriger und evolutionärer Entwicklungsprozesse und die damit verbundene Anpassung an den Menschen aufgrund ihrer vergleichsweise kurzen Geschichte.
-	
-	Die Software-Ergonomie hat die Motivation, den Mangel an Bedienbarkeit für die programmtechnische Benutzungsoberfläche interaktiver Computersysteme zu beseitigen. Denn versteht ein Benutzer die Art und Weise der Bedienung der Software nicht, wird er auch nicht fähig sein, ihre Vielseitigkeit zu nutzen.
-	
-	Es sind vier Faktoren zu berücksichtigen, wenn es darum geht, die Benutzungsschnittstelle benutzergerecht zu gestalten:
-	
-	Menschengerechte Gestaltung
-	
-	Im Gegensatz zu rein technischen Schnittstellen (zwischen zwei Maschinen) hat die Benutzungsschnittstelle dem Menschen Rechnung zu tragen. Der Benutzer kann mit seinen Stärken, Schwächen, Bedürfnissen und Unterschieden in der Entwicklung nur schwer formal beschrieben werden. Dennoch muss eine Anpassung der Software an den Menschen (nicht umgekehrt) erfolgen, um benutzergerecht zu sein. Dazu werden „Kenntnisse über menschliche Wahrnehmung, Denken und Problemlösen sowie über Lernen, Kommunikation und Kooperation benötigt“ [Eberleh, Oberquelle \& Oppermann 1994, S 4]. Im Abschnitt 1.3 werden einige dieser psychologischen Grundlagen vorgestellt.
-	
-	Aufgabenangemessene Gestaltung
-	
-	Software wird vom Benutzer für einen bestimmten Zweck verwendet. Meist möchte der Benutzer eine konkrete Aufgabe, insbesondere im Arbeitsleben, damit lösen. Aufgabenangemessen kann nur gestaltet werden, wenn Kenntnisse über die Aufgaben der Benutzer und ihre Vorgehensweise beim Erledigen der Aufgaben bekannt sind. Doch diese Aufgaben müssen zuerst menschengerecht formuliert werden bevor eine aufgabenangemessene Funktionalität der Software bei der Erledigung Unterstützung bieten kann. Hierzu werden Kenntnisse der Arbeitswissenschaften in der Software-Ergonomie angewandt.
-	
-	Technikbewusste Gestaltung
-	
-	Bei der Vielfalt an technischen Optionen, die heutzutage angeboten werden, fällt es nicht leicht, diese auch benutzergerecht einzusetzen. Häufig werden neue Technologien nur zum Selbstzweck eingesetzt. Für die benutzergerechte Gestaltung ist es notwendig, die verfügbaren technischen Möglichkeiten zum Wohle des Benutzers einzusetzen. Das kann bedeuten, dass der Schritt zu einer innovativen Technologie gewagt wird, oder aber etablierte, traditionelle Techniken verwendet werden. Letztlich müssen hier ökonomische und im Einzelfall auch ökologische Rahmenbedingungen bei der Entscheidung berücksichtigt werden.
-	
-	Organisationsgerechte Gestaltung
-	
-	Benutzer handeln sowohl im Arbeitsleben als auch im Privatleben meist in einem Netzwerk zusammen. Daneben findet durch die Verbreitung des Internets und der Computer auch eine technische Vernetzung statt. Diese beiden Aspekte der sozialen und technischen Vernetzung müssen durch eine organisationsgerechte Gestaltung berücksichtigt werden. Dabei muss die jeweils vorhandene organisatorische Einbindung des Softwarebenutzers beachtet werden, wenn Kenntnisse über den Menschen und seine Aufgaben gewonnen werden.
-	
-	Über menschengerechte und aufgabenangemessene Gestaltung existiert ein weites Spektrum fundierten Wissens durch die Forschungsarbeit der Software-Ergonomie. Die letzteren Aspekte, technikbewusste und organisationsgerechte Gestaltung, haben erst Mitte der neunziger Jahre an Bedeutung gewonnen. Als Grund dafür können die Verbreitung des Internets sowie
-	
-	Software-Ergonomie – theoretische Grundlagen und praktischer Einsatz Gegenstand und Ziele der Software-Ergonomie 5
-	
-	die Entwicklung von „haushaltstauglichen“ PCs angesehen werden. Heutzutage haben alle vier Aspekte eine große Bedeutung, wenn es um die Gestaltung neuer Software geht.
-	
-	Beispielsweise ermöglichen neue Technologien den Einsatz von bekannter Software in neuen Formaten. PocketPCs und die Multifunktionalität von Mobiltelefonen seien als Beispiele für Geräte genannt, die eine Anpassung der Benutzerschnittstelle an ein vergleichsweise kleines Ausgabegerät (im Gegensatz zum Desktop-Monitor) und das damit verbundene Benutzerverhalten erfordern. Technikbewusst muss auch der Einsatz von Computern als eingebettete Systeme (Embedded Systems) in modernen technischen Geräten betrachtet werden. Hinzu kommt, dass Software damit nicht mehr als grafische Oberfläche in Erscheinung tritt. Bei der Entwicklung ergonomischer Richtlinien für eingebettete Systeme verwischt die Grenze zwischen Software- und Hardware-Ergonomie zunehmend.
-	
-	Es sollte auch nicht vergessen werden, dass Computersysteme nicht mehr nur zur Arbeit genutzt werden, sondern auch im Freizeitbereich. Gerade hier kann die Nutzungsdauer sogar länger als am Arbeitsplatz sein, da die Software meist zum Vergnügen genutzt wird. In diesem Zusammenhang ist auch wieder die Hardware-Ergonomie gefragt, welche die körperlichen Belastungen durch lange Nutzung des Computersystems minimieren soll.
-	
-	Auch die veränderte Alterstruktur der Benutzer muss in der Software-Ergonomie berücksichtigt werden. Sowohl Kinder und Jugendliche als auch Senioren nutzen Computer in einem höheren Maße als noch vor einigen Jahren und stellen spezielle Anforderungen an die Hardware und Software durch ihre körperlichen und geistigen Fähigkeiten.
-	
-	\textbf{Richtlinien }
-	
-	\section{Benchmark Analyse E-learning und M-Learning Tools mit Usability Inhalen}
-	Auf dem deutschsprachigen Markt beschränkt gibt es neben der Schulungsangeboten der vom \ac{UXQB} Anerkannten zahlreiche weitere. Es werden im folgenden nur jene aufgeführt und für den Vergleich herangezogen die ein E-learning Tool bzw. M-Learning Tool anbieten. 
-	\begin{enumerate}
-		\item Frauenhofer FIT (http://www.usability-ux.fit.fraunhofer.de/de/weiterbildungen-usability-und-user-experience-design/engineer-praxis.html)
-		\item Usability-Academy  auch als Mobile App für Android (http://usability-academy.com/cms/unternehmen.html)
-		\item http://en.tt-s.com/software/tt-knowledge-force/
-	\end{enumerate}
-	
+
 	
 	\chapter{Konzeption} //Skizzierung dessen was kommt 
 	\section{Rahmenbedingungen}
@@ -488,6 +591,8 @@
 	\end{enumerate}
 	
 	\section{Zielgruppe}
+	Die Zielgruppe des Usability - Quiz sind Menschen mit einer Vorqualifizierung. Sie sind routiniert am Computer und zählen diesen zu Ihrem täglichen Arbeitswerkzeug. 
+	Ihr Auge ist geschult im surfen durch das Web und selektieren von relevanten Informationen. 
 	Entwickler und andere Personen die sich seriös für Usability und der User Experience interessieren und hierfür weiterbilden möchten. 
 	
 	\section{Seminarplanung}
@@ -548,8 +653,9 @@
 	\section{Erweiterung des KOMET Code durch Bilder für 98 Begriffe}
 	\section{Prototyp Kombinations/ Zuordnungspiel}
 	
-	\addchap{Quellen}
-%	\printbibliography[heading=subbibliography,title=Literatur, nottype=Web]
-	\printbibliography[heading=subbibliography,title=Internet,type=web]
-	
+	%\addchap{Quellen}
+	\printbibliography
+%	[heading=subbibliography,title=Literatur,nottype=Web]
+%	\printbibliography[heading=subbibliography,title=Internet,type=web]
+%	
 \end{document}
